@@ -51,7 +51,6 @@ class QuickChapterSelectDialog:DialogFragment() {
         dialog.setView(view)
         dialog.setNegativeButton("취소",null)
         dialog.setPositiveButton("확인", DialogInterface.OnClickListener { dialog, which ->
-            Toast.makeText(context,"${view.np_quick_chapter_chapter.value},${view.np_quick_chapter_phrase.value}",Toast.LENGTH_SHORT).show()
             currentChapter = view.np_quick_chapter_chapter.value
             currentPhrase = view.np_quick_chapter_phrase.value
 

@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.kasania.theartofwar.R
 import kotlinx.android.synthetic.main.fragment_study_main.view.*
 
@@ -26,22 +25,26 @@ class StudyMainFragment : Fragment(){
 //
     fun newInstance(chapter:Int = 0,phrase:Int = 0): StudyMainFragment
     {
-        Companion.currentChapter = chapter
-        Companion.currentPhrase = phrase
+        currentChapter = chapter
+        currentPhrase = phrase
         return newInstance()
     }
 
-    fun newInstance():StudyMainFragment{
-        val args = Bundle()
-        val frag = StudyMainFragment()
-        return frag
+    private fun newInstance():StudyMainFragment{
+        return StudyMainFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {
 
         val view = inflater.inflate(R.layout.fragment_study_main, container, false)
-        val currentChapterText = "${resources.getString(R.string.chapter_prefix_name)} $currentChapter ${resources.getString(R.string.chapter_postfix_name)}"
+
+        val displayPhrase = when (currentPhrase){
+            0-> "총괄"
+            else -> "$currentPhrase 절"
+        }
+
+        val currentChapterText = "${resources.getString(R.string.chapter_prefix_name)} $currentChapter ${resources.getString(R.string.chapter_postfix_name)} $displayPhrase"
 
         view.tv_study_current_chapter.text = currentChapterText
 
@@ -60,18 +63,18 @@ class StudyMainFragment : Fragment(){
         }
 
         view.btn_study_phrase_prev.setOnClickListener { v->
-            updatePhraseWithOffset(-1)
+            updateStudyFragmentWithOffset(-1)
         }
 
 
         view.btn_study_phrase_next.setOnClickListener { v->
-            updatePhraseWithOffset(+1)
+            updateStudyFragmentWithOffset(+1)
         }
 
         return view
     }
 
-    fun updatePhraseWithOffset(phraseOffset:Int){
+    private fun updateStudyFragmentWithOffset(phraseOffset:Int){
 
         var phrase = currentPhrase!! + phraseOffset
         var chapter = currentChapter!!
@@ -86,24 +89,16 @@ class StudyMainFragment : Fragment(){
 
         }else if(phrase > maxPhraseNum[currentChapter!!]){
             //plus
-
             chapter++
-
             if (chapter > maxChapterNum){
                 chapter = minChapterNum
             }
-
-            phrase -= 1
-
+            phrase -= (maxPhraseNum[currentChapter!!] + 1)
         }
 
         currentChapter = chapter
         currentPhrase = phrase
-
-        Toast.makeText(context,"$currentChapter,$currentPhrase",Toast.LENGTH_SHORT).show()
-
         fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,StudyMainFragment().newInstance())?.commit()
     }
-
 
 }
