@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">손자병법</string>
+    <string name="title_home">홈</string>
+    <string name="title_study">학습</string>
+    <string name="title_search">검색</string>
+    <string name="title_profile">내 정보</string>
+
+    <string name="button_home_continue">이어서 학습하기</string>
+    <string name="button_home_quote">오늘의 구절</string>
+    <string name="button_home_favorite">즐겨찾기</string>
+    <string name="button_home_setting"> 설 정 </string>
+    <string name="tv_home_level">LV</string>
+    <string name="tv_home_default_level_value">000</string>
+    <string name="tv_home_default_level_percent">00%</string>
+
+    <string name="subject_1_name">총\n론\n\n\n\n\n</string>
+    <string name="subject_2_3_name">전\n쟁\n준\n비\n\n\n</string>
+    <string name="subject_4_name">전\n투\n준\n비\n태\n세\n</string>
+    <string name="subject_5_6_7_name">병\n력\n운\n용\n\n\n</string>
+    <string name="subject_8_9_10_11_name">작\n전\n실\n시\n\n\n</string>
+    <string name="subject_12_name">전\n후\n처\n리\n\n\n</string>
+    <string name="subject_13_name">정\n보\n전\n\n\n\n</string>
+
+    <string name="subject_1_chapter">1\n\n\n</string>
+    <string name="subject_2_3_chapter">2\n3\n\n</string>
+    <string name="subject_4_chapter">4\n\n\n</string>
+    <string name="subject_5_6_7_chapter">5\n6\n7\n</string>
+    <string name="subject_8_9_10_11_chapter">8\n9\n10\n11</string>
+    <string name="subject_12_chapter">12\n\n\n</string>
+    <string name="subject_13_chapter">13\n\n\n</string>
+
+    <string name="chapter_prefix_name">제</string>
+    <string name="chapter_postfix_name">편</string>
+
+    <string name="chapter_1_name">1</string>
+    <string name="chapter_2_name">2</string>
+    <string name="chapter_3_name">3</string>
+    <string name="chapter_4_name">4</string>
+    <string name="chapter_5_name">5</string>
+    <string name="chapter_6_name">6</string>
+    <string name="chapter_7_name">7</string>
+    <string name="chapter_8_name">8</string>
+    <string name="chapter_9_name">9</string>
+    <string name="chapter_10_name">10</string>
+    <string name="chapter_11_name">11</string>
+    <string name="chapter_12_name">12</string>
+    <string name="chapter_13_name">13</string>
+
+    <string name="study_contents_tab_1">내용 풀이</string>
+    <string name="study_contents_tab_2">어휘 풀이</string>
+    <string name="study_contents_tab_3">내용 요약</string>
+
+    <string name="study_contents_voice">음성 안내</string>
+    <string name="study_contents_quick_select">빠른 이동</string>
+
+</resources>

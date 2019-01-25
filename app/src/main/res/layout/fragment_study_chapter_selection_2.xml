@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guideline38"
+            app:layout_constraintGuide_percent="0.5"/>
+    <Button
+            android:text="@string/chapter_2_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/btn_study_gochapter2"
+            app:layout_constraintBottom_toTopOf="@+id/guideline38"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/darkRed" android:textColor="@color/realYellow"
+            android:layout_marginBottom="1dp"/>
+    <Button
+            android:text="@string/chapter_3_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/btn_study_gochapter3"
+            app:layout_constraintTop_toTopOf="@+id/guideline38" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/darkRed" android:textColor="@color/realYellow"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/btn_backPage2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="0dp" android:background="@android:drawable/ic_delete"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/guideline42"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="@+id/guideline43"
+            android:layout_marginLeft="8dp"/>
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guideline42"
+            app:layout_constraintGuide_percent="0.1"/>
+    <android.support.constraint.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline43" app:layout_constraintGuide_percent="0.85"/>
+</android.support.constraint.ConstraintLayout>
