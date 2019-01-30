@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="chapterSummary1"></string>
+    <string name="chapterSummary2"></string>
+    <string name="chapterSummary3"></string>
+    <string name="chapterSummary4"></string>
+    <string name="chapterSummary5"></string>
+    <string name="chapterSummary6"></string>
+    <string name="chapterSummary7"></string>
+    <string name="chapterSummary8"></string>
+    <string name="chapterSummary9"></string>
+    <string name="chapterSummary10"></string>
+    <string name="chapterSummary11"></string>
+    <string name="chapterSummary12"></string>
+    <string name="chapterSummary13"></string>
+
+    <string name="hanja_1_1">孫子曰. /兵者, 國之大事, /死生之地, /存亡之道, /不可不察也.</string>
+    <string name="sound_1_1">손자왈. /병자, 국지대사, /사생지지, /존망지도, /불가불찰야.</string>
+    <string name="interpret_1_1">손자가 말했다. /전쟁은 국가의 중대사로서 /국민의 생사가 나뉘는 곳이며 /국가의 존망이 결정되는 길이니 /신중하게 검토하고 \n세심하게 관찰해야 한다.</string>
+    <string name="voca_1_1">兵|군대, 병기, 병사, 군사, 전쟁, 전투력 등/地|-하는 바, ~하는 곳    </string>
+    <string name="comment_1_1">전쟁이 끊이지 않던 옛날 중국에 살았던 손자는 ‘전쟁은 백성의 생사와 국가의 멸망이 달려 있는 중요한 일이므로 신중하게 결정하여야 하고, 반드시 결정에 앞서 생각하고 또 생각해야 한다.’ 라고 주장하였다. 전쟁을 시작하였을 때 얻는 것과 잃는 것을 철저히 계산하여야 하며, 이길 가능성이 있으면 전쟁을 하고, 이길 가능성이 없으면 전쟁에 뛰어 들지 말라는 숨은 뜻을 가지고 있는 것이다. 전쟁을 결정한다는 것이 어떤 의미인지 잘 몰랐던 지도자들이 저지른 1, 2차 세계대전은 전쟁을 수행하고자 할 때 왜 신중해야하는지 알려주는 적절한 사례이다. 손자는 이런 전쟁 대신 전쟁 없이 적을 무릎 꿇게 하는 방법을 찾으라고 주장하였다. </string>
+
+    <string name="hanja_1_2">故經之以五事, /校之以計, /而索其情. /一曰道, 二曰天, /三曰地, 四曰將, /五曰法.</string>
+    <string name="sound_1_2">고경지이오사, /교지이계, /이색기정. /일왈도, 이왈천, /삼왈지, 사왈장, /오왈법.</string>
+    <string name="interpret_1_2">그러므로 아래 다섯 가지 요건을 국방의 핵심 요소로 삼고 /계책을 비교·분석해 /각각의 정세를 정확하게 파악해야 한다. /첫째는 도의(道義), 둘째는 천시(天時), /셋째는 지리(地利), 넷째는 장령(將領), /다섯째는 법규(法規)이다.</string>
+    <string name="voca_1_2">經|헤아린다. 잰다./情|실정, 정황, 상황</string>
+    <string name="comment_1_2"></string>
+
+    <string name="hanja_1_3">道者, 令民與上同意也. /故可與之死, 可與之生, /而民不畏危也.</string>
+    <string name="sound_1_3">도자, 영민여상동의야. /고가여지사, 가여지생, /이민불외위야.</string>
+    <string name="interpret_1_3">도의(道義)는 백성들이 군주와 뜻을 같이하여/ (군주를 믿고 따르며) 생사를 함께하니 /위태로움에 처해도 두려워하지 않음을 의미한다.</string>
+    <string name="voca_1_3">令|하여금, 명령하다./畏|두려워하다.</string>
+    <string name="comment_1_3"></string>
+
+    <string name="hanja_1_4">天者, 陰陽, /寒署, 時制也. /地者, 遠近, /險易, /廣狹, /死生也.</string>
+    <string name="sound_1_4">천자, 음양, /한서, 시제야. /지자, 원근, /험이, /광협, /사생야.</string>
+    <string name="interpret_1_4">천시(天時)란 낮과 밤, /추위와 더위, 시간을 말한다. /지리(地利)란 상대국과의 거리, /지세의 험함과 평탄함, /지형의 넓고 좁음, / 공격과 수비, 진격과 퇴각을 할 수 없는 곳과 있는 곳 등을 말한다.</string>
+    <string name="voca_1_4">天|시간과 시간의 연속적인 흐름 속에서 나타나는 자연적인 현상 /陰陽|변화를 읽고 적당한 때를 선택하는 것을 의미 /寒署|기후 및 기상변화를 알고 이용하는 것을 의미 /時制|나에게 유리한 때를 만들어 가는 것을 의미 /地|지리적 조건</string>
+    <string name="comment_1_4"></string>
+
+    <string name="hanja_1_5">將者, /智 信 仁 勇 嚴也. /法者, 曲制, 官道, 主用也.</string>
+    <string name="sound_1_5">장자, /지 신 인 용 엄야. /법자, 곡제, 관도, 주용야.</string>
+    <string name="interpret_1_5">장령이란 장수가 갖춰야 할 자질로, /지혜, 신의, 인애, 용기, 위엄 등을 의미한다. /법규란 군의 조직과 편성, 지휘체계와 규율, 군수품의 보급을 말한다.</string>
+    <string name="voca_1_5">曲制|군의 편성, 제도, 조직 /官道|군의 규율, 계통 /主用|군용물자와 관련된 병참제도</string>
+    <string name="comment_1_5"></string>
+
+    <string name="hanja_1_6">凡此五者, 將莫不聞, /知之者勝, /不知者不勝.</string>
+    <string name="sound_1_6">범차오자, 장막불문, /지지자승, /부지자불승.</string>
+    <string name="interpret_1_6">모름지기 이 다섯 가지는 장수라면 들어보지 않았을 리 없으니, /이것들을 정확히 알고 지휘하는 자는 승리하고, /그렇지 못한 자는 승리하지 못한다.</string>
+    <string name="voca_1_6"></string>
+    <string name="comment_1_6"></string>
+
+    <string name="hanja_1_7"></string>
+    <string name="sound_1_7"></string>
+    <string name="interpret_1_7"></string>
+    <string name="voca_1_7"></string>
+    <string name="comment_1_7"></string>
+
+    <string name="hanja_1_8"></string>
+    <string name="sound_1_8"></string>
+    <string name="interpret_1_8"></string>
+    <string name="voca_1_8"></string>
+    <string name="comment_1_8"></string>
+
+    <string name="hanja_1_9"></string>
+    <string name="sound_1_9"></string>
+    <string name="interpret_1_9"></string>
+    <string name="voca_1_9"></string>
+    <string name="comment_1_9"></string>
+
+    <string name="hanja_1_10"></string>
+    <string name="sound_1_10"></string>
+    <string name="interpret_1_10"></string>
+    <string name="voca_1_10"></string>
+    <string name="comment_1_10"></string>
+
+    <string name="hanja_1_11"></string>
+    <string name="sound_1_11"></string>
+    <string name="interpret_1_11"></string>
+    <string name="voca_1_11"></string>
+    <string name="comment_1_11"></string>
+
+    <string name="hanja_1_12"></string>
+    <string name="sound_1_12"></string>
+    <string name="interpret_1_12"></string>
+    <string name="voca_1_12"></string>
+    <string name="comment_1_12"></string>
+
+    <string name="hanja_2_1"></string>
+    <string name="sound_2_1"></string>
+    <string name="interpret_2_1"></string>
+    <string name="voca_2_1"></string>
+    <string name="comment_2_1"></string>
+
+    <string name="hanja_2_2"></string>
+    <string name="sound_2_2"></string>
+    <string name="interpret_2_2"></string>
+    <string name="voca_2_2"></string>
+    <string name="comment_2_2"></string>
+
+    <string name="hanja_2_3"></string>
+    <string name="sound_2_3"></string>
+    <string name="interpret_2_3"></string>
+    <string name="voca_2_3"></string>
+    <string name="comment_2_3"></string>
+
+    <string name="hanja_2_4"></string>
+    <string name="sound_2_4"></string>
+    <string name="interpret_2_4"></string>
+    <string name="voca_2_4"></string>
+    <string name="comment_2_4"></string>
+
+    <string name="hanja_2_5"></string>
+    <string name="sound_2_5"></string>
+    <string name="interpret_2_5"></string>
+    <string name="voca_2_5"></string>
+    <string name="comment_2_5"></string>
+
+    <string name="hanja_2_6"></string>
+    <string name="sound_2_6"></string>
+    <string name="interpret_2_6"></string>
+    <string name="voca_2_6"></string>
+    <string name="comment_2_6"></string>
+
+    <string name="hanja_2_7"></string>
+    <string name="sound_2_7"></string>
+    <string name="interpret_2_7"></string>
+    <string name="voca_2_7"></string>
+    <string name="comment_2_7"></string>
+
+    <string name="hanja_2_8"></string>
+    <string name="sound_2_8"></string>
+    <string name="interpret_2_8"></string>
+    <string name="voca_2_8"></string>
+    <string name="comment_2_8"></string>
+
+    <string name="hanja_2_9"></string>
+    <string name="sound_2_9"></string>
+    <string name="interpret_2_9"></string>
+    <string name="voca_2_9"></string>
+    <string name="comment_2_9"></string>
+
+    <string name="hanja_2_10"></string>
+    <string name="sound_2_10"></string>
+    <string name="interpret_2_10"></string>
+    <string name="voca_2_10"></string>
+    <string name="comment_2_10"></string>
+
+    <string name="hanja_2_11"></string>
+    <string name="sound_2_11"></string>
+    <string name="interpret_2_11"></string>
+    <string name="voca_2_11"></string>
+    <string name="comment_2_11"></string>
+
+    <string name="hanja_2_12"></string>
+    <string name="sound_2_12"></string>
+    <string name="interpret_2_12"></string>
+    <string name="voca_2_12"></string>
+    <string name="comment_2_12"></string>
+
+    <string name="hanja_3_1"></string>
+    <string name="sound_3_1"></string>
+    <string name="interpret_3_1"></string>
+    <string name="voca_3_1"></string>
+    <string name="comment_3_1"></string>
+
+    <string name="hanja_3_2"></string>
+    <string name="sound_3_2"></string>
+    <string name="interpret_3_2"></string>
+    <string name="voca_3_2"></string>
+    <string name="comment_3_2"></string>
+
+    <string name="hanja_3_3"></string>
+    <string name="sound_3_3"></string>
+    <string name="interpret_3_3"></string>
+    <string name="voca_3_3"></string>
+    <string name="comment_3_3"></string>
+
+    <string name="hanja_3_4"></string>
+    <string name="sound_3_4"></string>
+    <string name="interpret_3_4"></string>
+    <string name="voca_3_4"></string>
+    <string name="comment_3_4"></string>
+
+    <string name="hanja_3_5"></string>
+    <string name="sound_3_5"></string>
+    <string name="interpret_3_5"></string>
+    <string name="voca_3_5"></string>
+    <string name="comment_3_5"></string>
+
+    <string name="hanja_3_6"></string>
+    <string name="sound_3_6"></string>
+    <string name="interpret_3_6"></string>
+    <string name="voca_3_6"></string>
+    <string name="comment_3_6"></string>
+
+    <string name="hanja_3_7"></string>
+    <string name="sound_3_7"></string>
+    <string name="interpret_3_7"></string>
+    <string name="voca_3_7"></string>
+    <string name="comment_3_7"></string>
+
+    <string name="hanja_3_8"></string>
+    <string name="sound_3_8"></string>
+    <string name="interpret_3_8"></string>
+    <string name="voca_3_8"></string>
+    <string name="comment_3_8"></string>
+
+    <string name="hanja_3_9"></string>
+    <string name="sound_3_9"></string>
+    <string name="interpret_3_9"></string>
+    <string name="voca_3_9"></string>
+    <string name="comment_3_9"></string>
+
+    <string name="hanja_3_10"></string>
+    <string name="sound_3_10"></string>
+    <string name="interpret_3_10"></string>
+    <string name="voca_3_10"></string>
+    <string name="comment_3_10"></string>
+
+    <string name="hanja_3_11"></string>
+    <string name="sound_3_11"></string>
+    <string name="interpret_3_11"></string>
+    <string name="voca_3_11"></string>
+    <string name="comment_3_11"></string>
+
+    <string name="hanja_4_1"></string>
+    <string name="sound_4_1"></string>
+    <string name="interpret_4_1"></string>
+    <string name="voca_4_1"></string>
+    <string name="comment_4_1"></string>
+
+    <string name="hanja_4_2"></string>
+    <string name="sound_4_2"></string>
+    <string name="interpret_4_2"></string>
+    <string name="voca_4_2"></string>
+    <string name="comment_4_2"></string>
+
+    <string name="hanja_4_3"></string>
+    <string name="sound_4_3"></string>
+    <string name="interpret_4_3"></string>
+    <string name="voca_4_3"></string>
+    <string name="comment_4_3"></string>
+
+    <string name="hanja_4_4"></string>
+    <string name="sound_4_4"></string>
+    <string name="interpret_4_4"></string>
+    <string name="voca_4_4"></string>
+    <string name="comment_4_4"></string>
+
+    <string name="hanja_4_5"></string>
+    <string name="sound_4_5"></string>
+    <string name="interpret_4_5"></string>
+    <string name="voca_4_5"></string>
+    <string name="comment_4_5"></string>
+
+    <string name="hanja_4_6"></string>
+    <string name="sound_4_6"></string>
+    <string name="interpret_4_6"></string>
+    <string name="voca_4_6"></string>
+    <string name="comment_4_6"></string>
+
+    <string name="hanja_4_7"></string>
+    <string name="sound_4_7"></string>
+    <string name="interpret_4_7"></string>
+    <string name="voca_4_7"></string>
+    <string name="comment_4_7"></string>
+
+    <string name="hanja_4_8"></string>
+    <string name="sound_4_8"></string>
+    <string name="interpret_4_8"></string>
+    <string name="voca_4_8"></string>
+    <string name="comment_4_8"></string>
+
+    <string name="hanja_4_9"></string>
+    <string name="sound_4_9"></string>
+    <string name="interpret_4_9"></string>
+    <string name="voca_4_9"></string>
+    <string name="comment_4_9"></string>
+
+    <string name="hanja_4_10"></string>
+    <string name="sound_4_10"></string>
+    <string name="interpret_4_10"></string>
+    <string name="voca_4_10"></string>
+    <string name="comment_4_10"></string>
+
+    <string name="hanja_5_1"></string>
+    <string name="sound_5_1"></string>
+    <string name="interpret_5_1"></string>
+    <string name="voca_5_1"></string>
+    <string name="comment_5_1"></string>
+
+    <string name="hanja_5_2"></string>
+    <string name="sound_5_2"></string>
+    <string name="interpret_5_2"></string>
+    <string name="voca_5_2"></string>
+    <string name="comment_5_2"></string>
+
+    <string name="hanja_5_3"></string>
+    <string name="sound_5_3"></string>
+    <string name="interpret_5_3"></string>
+    <string name="voca_5_3"></string>
+    <string name="comment_5_3"></string>
+
+    <string name="hanja_5_4"></string>
+    <string name="sound_5_4"></string>
+    <string name="interpret_5_4"></string>
+    <string name="voca_5_4"></string>
+    <string name="comment_5_4"></string>
+
+    <string name="hanja_5_5"></string>
+    <string name="sound_5_5"></string>
+    <string name="interpret_5_5"></string>
+    <string name="voca_5_5"></string>
+    <string name="comment_5_5"></string>
+
+    <string name="hanja_5_6"></string>
+    <string name="sound_5_6"></string>
+    <string name="interpret_5_6"></string>
+    <string name="voca_5_6"></string>
+    <string name="comment_5_6"></string>
+
+    <string name="hanja_5_7"></string>
+    <string name="sound_5_7"></string>
+    <string name="interpret_5_7"></string>
+    <string name="voca_5_7"></string>
+    <string name="comment_5_7"></string>
+
+    <string name="hanja_5_8"></string>
+    <string name="sound_5_8"></string>
+    <string name="interpret_5_8"></string>
+    <string name="voca_5_8"></string>
+    <string name="comment_5_8"></string>
+
+    <string name="hanja_5_9"></string>
+    <string name="sound_5_9"></string>
+    <string name="interpret_5_9"></string>
+    <string name="voca_5_9"></string>
+    <string name="comment_5_9"></string>
+
+    <string name="hanja_5_10"></string>
+    <string name="sound_5_10"></string>
+    <string name="interpret_5_10"></string>
+    <string name="voca_5_10"></string>
+    <string name="comment_5_10"></string>
+
+    <string name="hanja_6_1"></string>
+    <string name="sound_6_1"></string>
+    <string name="interpret_6_1"></string>
+    <string name="voca_6_1"></string>
+    <string name="comment_6_1"></string>
+
+    <string name="hanja_6_2"></string>
+    <string name="sound_6_2"></string>
+    <string name="interpret_6_2"></string>
+    <string name="voca_6_2"></string>
+    <string name="comment_6_2"></string>
+
+    <string name="hanja_6_3"></string>
+    <string name="sound_6_3"></string>
+    <string name="interpret_6_3"></string>
+    <string name="voca_6_3"></string>
+    <string name="comment_6_3"></string>
+
+    <string name="hanja_6_4"></string>
+    <string name="sound_6_4"></string>
+    <string name="interpret_6_4"></string>
+    <string name="voca_6_4"></string>
+    <string name="comment_6_4"></string>
+
+    <string name="hanja_6_5"></string>
+    <string name="sound_6_5"></string>
+    <string name="interpret_6_5"></string>
+    <string name="voca_6_5"></string>
+    <string name="comment_6_5"></string>
+
+    <string name="hanja_6_6"></string>
+    <string name="sound_6_6"></string>
+    <string name="interpret_6_6"></string>
+    <string name="voca_6_6"></string>
+    <string name="comment_6_6"></string>
+
+    <string name="hanja_6_7"></string>
+    <string name="sound_6_7"></string>
+    <string name="interpret_6_7"></string>
+    <string name="voca_6_7"></string>
+    <string name="comment_6_7"></string>
+
+    <string name="hanja_6_8"></string>
+    <string name="sound_6_8"></string>
+    <string name="interpret_6_8"></string>
+    <string name="voca_6_8"></string>
+    <string name="comment_6_8"></string>
+
+    <string name="hanja_6_9"></string>
+    <string name="sound_6_9"></string>
+    <string name="interpret_6_9"></string>
+    <string name="voca_6_9"></string>
+    <string name="comment_6_9"></string>
+
+    <string name="hanja_6_10"></string>
+    <string name="sound_6_10"></string>
+    <string name="interpret_6_10"></string>
+    <string name="voca_6_10"></string>
+    <string name="comment_6_10"></string>
+
+    <string name="hanja_6_11"></string>
+    <string name="sound_6_11"></string>
+    <string name="interpret_6_11"></string>
+    <string name="voca_6_11"></string>
+    <string name="comment_6_11"></string>
+
+    <string name="hanja_6_12"></string>
+    <string name="sound_6_12"></string>
+    <string name="interpret_6_12"></string>
+    <string name="voca_6_12"></string>
+    <string name="comment_6_12"></string>
+
+    <string name="hanja_6_13"></string>
+    <string name="sound_6_13"></string>
+    <string name="interpret_6_13"></string>
+    <string name="voca_6_13"></string>
+    <string name="comment_6_13"></string>
+
+    <string name="hanja_6_14"></string>
+    <string name="sound_6_14"></string>
+    <string name="interpret_6_14"></string>
+    <string name="voca_6_14"></string>
+    <string name="comment_6_14"></string>
+
+    <string name="hanja_6_15"></string>
+    <string name="sound_6_15"></string>
+    <string name="interpret_6_15"></string>
+    <string name="voca_6_15"></string>
+    <string name="comment_6_15"></string>
+
+    <string name="hanja_6_16"></string>
+    <string name="sound_6_16"></string>
+    <string name="interpret_6_16"></string>
+    <string name="voca_6_16"></string>
+    <string name="comment_6_16"></string>
+
+    <string name="hanja_6_17"></string>
+    <string name="sound_6_17"></string>
+    <string name="interpret_6_17"></string>
+    <string name="voca_6_17"></string>
+    <string name="comment_6_17"></string>
+
+    <string name="hanja_7_1"></string>
+    <string name="sound_7_1"></string>
+    <string name="interpret_7_1"></string>
+    <string name="voca_7_1"></string>
+    <string name="comment_7_1"></string>
+
+    <string name="hanja_7_2"></string>
+    <string name="sound_7_2"></string>
+    <string name="interpret_7_2"></string>
+    <string name="voca_7_2"></string>
+    <string name="comment_7_2"></string>
+
+    <string name="hanja_7_3"></string>
+    <string name="sound_7_3"></string>
+    <string name="interpret_7_3"></string>
+    <string name="voca_7_3"></string>
+    <string name="comment_7_3"></string>
+
+    <string name="hanja_7_4"></string>
+    <string name="sound_7_4"></string>
+    <string name="interpret_7_4"></string>
+    <string name="voca_7_4"></string>
+    <string name="comment_7_4"></string>
+
+    <string name="hanja_7_5"></string>
+    <string name="sound_7_5"></string>
+    <string name="interpret_7_5"></string>
+    <string name="voca_7_5"></string>
+    <string name="comment_7_5"></string>
+
+    <string name="hanja_7_6"></string>
+    <string name="sound_7_6"></string>
+    <string name="interpret_7_6"></string>
+    <string name="voca_7_6"></string>
+    <string name="comment_7_6"></string>
+
+    <string name="hanja_7_7"></string>
+    <string name="sound_7_7"></string>
+    <string name="interpret_7_7"></string>
+    <string name="voca_7_7"></string>
+    <string name="comment_7_7"></string>
+
+    <string name="hanja_7_8"></string>
+    <string name="sound_7_8"></string>
+    <string name="interpret_7_8"></string>
+    <string name="voca_7_8"></string>
+    <string name="comment_7_8"></string>
+
+    <string name="hanja_7_9"></string>
+    <string name="sound_7_9"></string>
+    <string name="interpret_7_9"></string>
+    <string name="voca_7_9"></string>
+    <string name="comment_7_9"></string>
+
+    <string name="hanja_7_10"></string>
+    <string name="sound_7_10"></string>
+    <string name="interpret_7_10"></string>
+    <string name="voca_7_10"></string>
+    <string name="comment_7_10"></string>
+
+    <string name="hanja_7_11"></string>
+    <string name="sound_7_11"></string>
+    <string name="interpret_7_11"></string>
+    <string name="voca_7_11"></string>
+    <string name="comment_7_11"></string>
+
+    <string name="hanja_7_12"></string>
+    <string name="sound_7_12"></string>
+    <string name="interpret_7_12"></string>
+    <string name="voca_7_12"></string>
+    <string name="comment_7_12"></string>
+
+    <string name="hanja_7_13"></string>
+    <string name="sound_7_13"></string>
+    <string name="interpret_7_13"></string>
+    <string name="voca_7_13"></string>
+    <string name="comment_7_13"></string>
+
+    <string name="hanja_7_14"></string>
+    <string name="sound_7_14"></string>
+    <string name="interpret_7_14"></string>
+    <string name="voca_7_14"></string>
+    <string name="comment_7_14"></string>
+
+    <string name="hanja_7_15"></string>
+    <string name="sound_7_15"></string>
+    <string name="interpret_7_15"></string>
+    <string name="voca_7_15"></string>
+    <string name="comment_7_15"></string>
+
+    <string name="hanja_8_1"></string>
+    <string name="sound_8_1"></string>
+    <string name="interpret_8_1"></string>
+    <string name="voca_8_1"></string>
+    <string name="comment_8_1"></string>
+
+    <string name="hanja_8_2"></string>
+    <string name="sound_8_2"></string>
+    <string name="interpret_8_2"></string>
+    <string name="voca_8_2"></string>
+    <string name="comment_8_2"></string>
+
+    <string name="hanja_8_3"></string>
+    <string name="sound_8_3"></string>
+    <string name="interpret_8_3"></string>
+    <string name="voca_8_3"></string>
+    <string name="comment_8_3"></string>
+
+    <string name="hanja_8_4"></string>
+    <string name="sound_8_4"></string>
+    <string name="interpret_8_4"></string>
+    <string name="voca_8_4"></string>
+    <string name="comment_8_4"></string>
+
+    <string name="hanja_8_5"></string>
+    <string name="sound_8_5"></string>
+    <string name="interpret_8_5"></string>
+    <string name="voca_8_5"></string>
+    <string name="comment_8_5"></string>
+
+    <string name="hanja_8_6"></string>
+    <string name="sound_8_6"></string>
+    <string name="interpret_8_6"></string>
+    <string name="voca_8_6"></string>
+    <string name="comment_8_6"></string>
+
+    <string name="hanja_8_7"></string>
+    <string name="sound_8_7"></string>
+    <string name="interpret_8_7"></string>
+    <string name="voca_8_7"></string>
+    <string name="comment_8_7"></string>
+
+    <string name="hanja_9_1"></string>
+    <string name="sound_9_1"></string>
+    <string name="interpret_9_1"></string>
+    <string name="voca_9_1"></string>
+    <string name="comment_9_1"></string>
+
+    <string name="hanja_9_2"></string>
+    <string name="sound_9_2"></string>
+    <string name="interpret_9_2"></string>
+    <string name="voca_9_2"></string>
+    <string name="comment_9_2"></string>
+
+    <string name="hanja_9_3"></string>
+    <string name="sound_9_3"></string>
+    <string name="interpret_9_3"></string>
+    <string name="voca_9_3"></string>
+    <string name="comment_9_3"></string>
+
+    <string name="hanja_9_4"></string>
+    <string name="sound_9_4"></string>
+    <string name="interpret_9_4"></string>
+    <string name="voca_9_4"></string>
+    <string name="comment_9_4"></string>
+
+    <string name="hanja_9_5"></string>
+    <string name="sound_9_5"></string>
+    <string name="interpret_9_5"></string>
+    <string name="voca_9_5"></string>
+    <string name="comment_9_5"></string>
+
+    <string name="hanja_9_6"></string>
+    <string name="sound_9_6"></string>
+    <string name="interpret_9_6"></string>
+    <string name="voca_9_6"></string>
+    <string name="comment_9_6"></string>
+
+    <string name="hanja_9_7"></string>
+    <string name="sound_9_7"></string>
+    <string name="interpret_9_7"></string>
+    <string name="voca_9_7"></string>
+    <string name="comment_9_7"></string>
+
+    <string name="hanja_9_8"></string>
+    <string name="sound_9_8"></string>
+    <string name="interpret_9_8"></string>
+    <string name="voca_9_8"></string>
+    <string name="comment_9_8"></string>
+
+    <string name="hanja_9_9"></string>
+    <string name="sound_9_9"></string>
+    <string name="interpret_9_9"></string>
+    <string name="voca_9_9"></string>
+    <string name="comment_9_9"></string>
+
+    <string name="hanja_9_10"></string>
+    <string name="sound_9_10"></string>
+    <string name="interpret_9_10"></string>
+    <string name="voca_9_10"></string>
+    <string name="comment_9_10"></string>
+
+    <string name="hanja_9_11"></string>
+    <string name="sound_9_11"></string>
+    <string name="interpret_9_11"></string>
+    <string name="voca_9_11"></string>
+    <string name="comment_9_11"></string>
+
+    <string name="hanja_9_12"></string>
+    <string name="sound_9_12"></string>
+    <string name="interpret_9_12"></string>
+    <string name="voca_9_12"></string>
+    <string name="comment_9_12"></string>
+
+    <string name="hanja_9_13"></string>
+    <string name="sound_9_13"></string>
+    <string name="interpret_9_13"></string>
+    <string name="voca_9_13"></string>
+    <string name="comment_9_13"></string>
+
+    <string name="hanja_9_14"></string>
+    <string name="sound_9_14"></string>
+    <string name="interpret_9_14"></string>
+    <string name="voca_9_14"></string>
+    <string name="comment_9_14"></string>
+
+    <string name="hanja_9_15"></string>
+    <string name="sound_9_15"></string>
+    <string name="interpret_9_15"></string>
+    <string name="voca_9_15"></string>
+    <string name="comment_9_15"></string>
+
+    <string name="hanja_9_16"></string>
+    <string name="sound_9_16"></string>
+    <string name="interpret_9_16"></string>
+    <string name="voca_9_16"></string>
+    <string name="comment_9_16"></string>
+
+    <string name="hanja_9_17"></string>
+    <string name="sound_9_17"></string>
+    <string name="interpret_9_17"></string>
+    <string name="voca_9_17"></string>
+    <string name="comment_9_17"></string>
+
+    <string name="hanja_9_18"></string>
+    <string name="sound_9_18"></string>
+    <string name="interpret_9_18"></string>
+    <string name="voca_9_18"></string>
+    <string name="comment_9_18"></string>
+
+    <string name="hanja_9_19"></string>
+    <string name="sound_9_19"></string>
+    <string name="interpret_9_19"></string>
+    <string name="voca_9_19"></string>
+    <string name="comment_9_19"></string>
+
+    <string name="hanja_10_1"></string>
+    <string name="sound_10_1"></string>
+    <string name="interpret_10_1"></string>
+    <string name="voca_10_1"></string>
+    <string name="comment_10_1"></string>
+
+    <string name="hanja_10_2"></string>
+    <string name="sound_10_2"></string>
+    <string name="interpret_10_2"></string>
+    <string name="voca_10_2"></string>
+    <string name="comment_10_2"></string>
+
+    <string name="hanja_10_3"></string>
+    <string name="sound_10_3"></string>
+    <string name="interpret_10_3"></string>
+    <string name="voca_10_3"></string>
+    <string name="comment_10_3"></string>
+
+    <string name="hanja_10_4"></string>
+    <string name="sound_10_4"></string>
+    <string name="interpret_10_4"></string>
+    <string name="voca_10_4"></string>
+    <string name="comment_10_4"></string>
+
+    <string name="hanja_10_5"></string>
+    <string name="sound_10_5"></string>
+    <string name="interpret_10_5"></string>
+    <string name="voca_10_5"></string>
+    <string name="comment_10_5"></string>
+
+    <string name="hanja_10_6"></string>
+    <string name="sound_10_6"></string>
+    <string name="interpret_10_6"></string>
+    <string name="voca_10_6"></string>
+    <string name="comment_10_6"></string>
+
+    <string name="hanja_10_7"></string>
+    <string name="sound_10_7"></string>
+    <string name="interpret_10_7"></string>
+    <string name="voca_10_7"></string>
+    <string name="comment_10_7"></string>
+
+    <string name="hanja_10_8"></string>
+    <string name="sound_10_8"></string>
+    <string name="interpret_10_8"></string>
+    <string name="voca_10_8"></string>
+    <string name="comment_10_8"></string>
+
+    <string name="hanja_10_9"></string>
+    <string name="sound_10_9"></string>
+    <string name="interpret_10_9"></string>
+    <string name="voca_10_9"></string>
+    <string name="comment_10_9"></string>
+
+    <string name="hanja_10_10"></string>
+    <string name="sound_10_10"></string>
+    <string name="interpret_10_10"></string>
+    <string name="voca_10_10"></string>
+    <string name="comment_10_10"></string>
+
+    <string name="hanja_10_11"></string>
+    <string name="sound_10_11"></string>
+    <string name="interpret_10_11"></string>
+    <string name="voca_10_11"></string>
+    <string name="comment_10_11"></string>
+
+    <string name="hanja_10_12"></string>
+    <string name="sound_10_12"></string>
+    <string name="interpret_10_12"></string>
+    <string name="voca_10_12"></string>
+    <string name="comment_10_12"></string>
+
+    <string name="hanja_10_13"></string>
+    <string name="sound_10_13"></string>
+    <string name="interpret_10_13"></string>
+    <string name="voca_10_13"></string>
+    <string name="comment_10_13"></string>
+
+    <string name="hanja_10_14"></string>
+    <string name="sound_10_14"></string>
+    <string name="interpret_10_14"></string>
+    <string name="voca_10_14"></string>
+    <string name="comment_10_14"></string>
+
+    <string name="hanja_10_15"></string>
+    <string name="sound_10_15"></string>
+    <string name="interpret_10_15"></string>
+    <string name="voca_10_15"></string>
+    <string name="comment_10_15"></string>
+
+    <string name="hanja_10_16"></string>
+    <string name="sound_10_16"></string>
+    <string name="interpret_10_16"></string>
+    <string name="voca_10_16"></string>
+    <string name="comment_10_16"></string>
+
+    <string name="hanja_11_1"></string>
+    <string name="sound_11_1"></string>
+    <string name="interpret_11_1"></string>
+    <string name="voca_11_1"></string>
+    <string name="comment_11_1"></string>
+
+    <string name="hanja_11_2"></string>
+    <string name="sound_11_2"></string>
+    <string name="interpret_11_2"></string>
+    <string name="voca_11_2"></string>
+    <string name="comment_11_2"></string>
+
+    <string name="hanja_11_3"></string>
+    <string name="sound_11_3"></string>
+    <string name="interpret_11_3"></string>
+    <string name="voca_11_3"></string>
+    <string name="comment_11_3"></string>
+
+    <string name="hanja_11_4"></string>
+    <string name="sound_11_4"></string>
+    <string name="interpret_11_4"></string>
+    <string name="voca_11_4"></string>
+    <string name="comment_11_4"></string>
+
+    <string name="hanja_11_5"></string>
+    <string name="sound_11_5"></string>
+    <string name="interpret_11_5"></string>
+    <string name="voca_11_5"></string>
+    <string name="comment_11_5"></string>
+
+    <string name="hanja_11_6"></string>
+    <string name="sound_11_6"></string>
+    <string name="interpret_11_6"></string>
+    <string name="voca_11_6"></string>
+    <string name="comment_11_6"></string>
+
+    <string name="hanja_11_7"></string>
+    <string name="sound_11_7"></string>
+    <string name="interpret_11_7"></string>
+    <string name="voca_11_7"></string>
+    <string name="comment_11_7"></string>
+
+    <string name="hanja_11_8"></string>
+    <string name="sound_11_8"></string>
+    <string name="interpret_11_8"></string>
+    <string name="voca_11_8"></string>
+    <string name="comment_11_8"></string>
+
+    <string name="hanja_11_9"></string>
+    <string name="sound_11_9"></string>
+    <string name="interpret_11_9"></string>
+    <string name="voca_11_9"></string>
+    <string name="comment_11_9"></string>
+
+    <string name="hanja_11_10"></string>
+    <string name="sound_11_10"></string>
+    <string name="interpret_11_10"></string>
+    <string name="voca_11_10"></string>
+    <string name="comment_11_10"></string>
+
+    <string name="hanja_11_11"></string>
+    <string name="sound_11_11"></string>
+    <string name="interpret_11_11"></string>
+    <string name="voca_11_11"></string>
+    <string name="comment_11_11"></string>
+
+    <string name="hanja_11_12"></string>
+    <string name="sound_11_12"></string>
+    <string name="interpret_11_12"></string>
+    <string name="voca_11_12"></string>
+    <string name="comment_11_12"></string>
+
+    <string name="hanja_11_13"></string>
+    <string name="sound_11_13"></string>
+    <string name="interpret_11_13"></string>
+    <string name="voca_11_13"></string>
+    <string name="comment_11_13"></string>
+
+    <string name="hanja_11_14"></string>
+    <string name="sound_11_14"></string>
+    <string name="interpret_11_14"></string>
+    <string name="voca_11_14"></string>
+    <string name="comment_11_14"></string>
+
+    <string name="hanja_11_15"></string>
+    <string name="sound_11_15"></string>
+    <string name="interpret_11_15"></string>
+    <string name="voca_11_15"></string>
+    <string name="comment_11_15"></string>
+
+    <string name="hanja_11_16"></string>
+    <string name="sound_11_16"></string>
+    <string name="interpret_11_16"></string>
+    <string name="voca_11_16"></string>
+    <string name="comment_11_16"></string>
+
+    <string name="hanja_11_17"></string>
+    <string name="sound_11_17"></string>
+    <string name="interpret_11_17"></string>
+    <string name="voca_11_17"></string>
+    <string name="comment_11_17"></string>
+
+    <string name="hanja_11_18"></string>
+    <string name="sound_11_18"></string>
+    <string name="interpret_11_18"></string>
+    <string name="voca_11_18"></string>
+    <string name="comment_11_18"></string>
+
+    <string name="hanja_11_19"></string>
+    <string name="sound_11_19"></string>
+    <string name="interpret_11_19"></string>
+    <string name="voca_11_19"></string>
+    <string name="comment_11_19"></string>
+
+    <string name="hanja_11_20"></string>
+    <string name="sound_11_20"></string>
+    <string name="interpret_11_20"></string>
+    <string name="voca_11_20"></string>
+    <string name="comment_11_20"></string>
+
+    <string name="hanja_11_21"></string>
+    <string name="sound_11_21"></string>
+    <string name="interpret_11_21"></string>
+    <string name="voca_11_21"></string>
+    <string name="comment_11_21"></string>
+
+    <string name="hanja_11_22"></string>
+    <string name="sound_11_22"></string>
+    <string name="interpret_11_22"></string>
+    <string name="voca_11_22"></string>
+    <string name="comment_11_22"></string>
+
+    <string name="hanja_11_23"></string>
+    <string name="sound_11_23"></string>
+    <string name="interpret_11_23"></string>
+    <string name="voca_11_23"></string>
+    <string name="comment_11_23"></string>
+
+    <string name="hanja_11_24"></string>
+    <string name="sound_11_24"></string>
+    <string name="interpret_11_24"></string>
+    <string name="voca_11_24"></string>
+    <string name="comment_11_24"></string>
+
+    <string name="hanja_11_25"></string>
+    <string name="sound_11_25"></string>
+    <string name="interpret_11_25"></string>
+    <string name="voca_11_25"></string>
+    <string name="comment_11_25"></string>
+
+    <string name="hanja_11_26"></string>
+    <string name="sound_11_26"></string>
+    <string name="interpret_11_26"></string>
+    <string name="voca_11_26"></string>
+    <string name="comment_11_26"></string>
+
+    <string name="hanja_12_1"></string>
+    <string name="sound_12_1"></string>
+    <string name="interpret_12_1"></string>
+    <string name="voca_12_1"></string>
+    <string name="comment_12_1"></string>
+
+    <string name="hanja_12_2"></string>
+    <string name="sound_12_2"></string>
+    <string name="interpret_12_2"></string>
+    <string name="voca_12_2"></string>
+    <string name="comment_12_2"></string>
+
+    <string name="hanja_12_3"></string>
+    <string name="sound_12_3"></string>
+    <string name="interpret_12_3"></string>
+    <string name="voca_12_3"></string>
+    <string name="comment_12_3"></string>
+
+    <string name="hanja_12_4"></string>
+    <string name="sound_12_4"></string>
+    <string name="interpret_12_4"></string>
+    <string name="voca_12_4"></string>
+    <string name="comment_12_4"></string>
+
+    <string name="hanja_12_5"></string>
+    <string name="sound_12_5"></string>
+    <string name="interpret_12_5"></string>
+    <string name="voca_12_5"></string>
+    <string name="comment_12_5"></string>
+
+    <string name="hanja_12_6"></string>
+    <string name="sound_12_6"></string>
+    <string name="interpret_12_6"></string>
+    <string name="voca_12_6"></string>
+    <string name="comment_12_6"></string>
+
+    <string name="hanja_13_1"></string>
+    <string name="sound_13_1"></string>
+    <string name="interpret_13_1"></string>
+    <string name="voca_13_1"></string>
+    <string name="comment_13_1"></string>
+
+    <string name="hanja_13_2"></string>
+    <string name="sound_13_2"></string>
+    <string name="interpret_13_2"></string>
+    <string name="voca_13_2"></string>
+    <string name="comment_13_2"></string>
+
+    <string name="hanja_13_3"></string>
+    <string name="sound_13_3"></string>
+    <string name="interpret_13_3"></string>
+    <string name="voca_13_3"></string>
+    <string name="comment_13_3"></string>
+
+    <string name="hanja_13_4"></string>
+    <string name="sound_13_4"></string>
+    <string name="interpret_13_4"></string>
+    <string name="voca_13_4"></string>
+    <string name="comment_13_4"></string>
+
+    <string name="hanja_13_5"></string>
+    <string name="sound_13_5"></string>
+    <string name="interpret_13_5"></string>
+    <string name="voca_13_5"></string>
+    <string name="comment_13_5"></string>
+
+    <string name="hanja_13_6"></string>
+    <string name="sound_13_6"></string>
+    <string name="interpret_13_6"></string>
+    <string name="voca_13_6"></string>
+    <string name="comment_13_6"></string>
+
+    <string name="hanja_13_7"></string>
+    <string name="sound_13_7"></string>
+    <string name="interpret_13_7"></string>
+    <string name="voca_13_7"></string>
+    <string name="comment_13_7"></string>
+
+    <string name="hanja_13_8"></string>
+    <string name="sound_13_8"></string>
+    <string name="interpret_13_8"></string>
+    <string name="voca_13_8"></string>
+    <string name="comment_13_8"></string>
+
+    <string name="hanja_13_9"></string>
+    <string name="sound_13_9"></string>
+    <string name="interpret_13_9"></string>
+    <string name="voca_13_9"></string>
+    <string name="comment_13_9"></string>
+
+    <string name="hanja_13_10"></string>
+    <string name="sound_13_10"></string>
+    <string name="interpret_13_10"></string>
+    <string name="voca_13_10"></string>
+    <string name="comment_13_10"></string>
+
+    <string name="hanja_13_11"></string>
+    <string name="sound_13_11"></string>
+    <string name="interpret_13_11"></string>
+    <string name="voca_13_11"></string>
+    <string name="comment_13_11"></string>
+
+    <string name="hanja_13_12"></string>
+    <string name="sound_13_12"></string>
+    <string name="interpret_13_12"></string>
+    <string name="voca_13_12"></string>
+    <string name="comment_13_12"></string>
+
+</resources>

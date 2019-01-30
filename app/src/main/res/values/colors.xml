@@ -6,6 +6,10 @@
     <color name="darkRed">#580707</color>
     <color name="realYellow">#FFFF00</color>
 
+    <color name="background">#EEEEEE</color>
+
+    <color name="PrimaryMain">#4DB6AC</color>
+
 
     <color name="testPrimary">#FCE4EC</color>
     <color name="testPrimary2">#FAFAFA</color>

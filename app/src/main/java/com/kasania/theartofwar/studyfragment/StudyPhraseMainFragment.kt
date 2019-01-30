@@ -17,15 +17,15 @@ class StudyPhraseMainFragment : Fragment() {
     {
         val view = inflater.inflate(R.layout.fragment_study_phrase_main, container, false)
 
-        fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseSummaryFragment())?.commit()
+        fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseInterpretFragment())?.commit()
 
         view.tabbar_study_contents.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
 
                 when(view.tabbar_study_contents.selectedTabPosition){
-                    0 -> fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseSummaryFragment())?.commit()
-                    1 -> fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseExplainFragment())?.commit()
-                    2 -> fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseVocaFragment())?.commit()
+                    0 -> fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseInterpretFragment())?.commit()
+                    1 -> fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseVocaFragment())?.commit()
+                    2 -> fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseCommentFragment())?.commit()
                 }
             }
 

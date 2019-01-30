@@ -1,24 +1,22 @@
 package com.kasania.theartofwar.studyfragment
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.kasania.theartofwar.R
+import android.widget.TableLayout
+import com.kasania.theartofwar.*
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_study_main.view.*
 
 class StudyMainFragment : Fragment(){
 
     companion object {
-
-
-        const val minChapterNum = 1
-        const val maxChapterNum = 13
-        var currentChapter: Int? = null
-        var currentPhrase: Int? = null
-        val maxPhraseNum = intArrayOf(0,12,12,11,10,10,17,15,7,19,16,26,26,12)
-        val displayPhraseName  = arrayOf("총괄","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26")
+        var currentChapter: Int = 1
+        var currentPhrase: Int = 0
     }
 //
 //
@@ -31,13 +29,17 @@ class StudyMainFragment : Fragment(){
     }
 
     private fun newInstance():StudyMainFragment{
-        return StudyMainFragment()
+        val fragment = StudyMainFragment()
+
+        return fragment
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {
 
         val view = inflater.inflate(R.layout.fragment_study_main, container, false)
+
+       activity?.tabbar_main?.visibility = TableLayout.GONE
 
         val displayPhrase = when (currentPhrase){
             0-> "총괄"
@@ -46,7 +48,28 @@ class StudyMainFragment : Fragment(){
 
         val currentChapterText = "${resources.getString(R.string.chapter_prefix_name)} $currentChapter ${resources.getString(R.string.chapter_postfix_name)} $displayPhrase"
 
+
         view.tv_study_current_chapter.text = currentChapterText
+        view.tv_study_current_chapter.setOnClickListener {
+            MainActivity.toggleBookMark(currentChapter, currentPhrase)
+
+            //----------------------------for Test
+            if(MainActivity.isCheckedBookMark(currentChapter, currentPhrase)){
+                view.tv_study_current_chapter.setBackgroundColor(ContextCompat.getColor(context!!, R.color.darkRed))
+            }else{
+                view.tv_study_current_chapter.setBackgroundColor(ContextCompat.getColor(context!!, R.color.PrimaryMain))
+            }
+            //----------------------------for Test
+
+        }
+
+        //---------------------------for Test
+        if(MainActivity.isCheckedBookMark(currentChapter, currentPhrase)){
+            view.tv_study_current_chapter.setBackgroundColor(ContextCompat.getColor(context!!, R.color.darkRed))
+        }else{
+            view.tv_study_current_chapter.setBackgroundColor(ContextCompat.getColor(context!!, R.color.PrimaryMain))
+        }
+        //----------------------------for Test
 
         if(currentPhrase == 0) {
             fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_main,StudyChapterSummaryFragment())?.commit()
@@ -54,30 +77,44 @@ class StudyMainFragment : Fragment(){
             fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_main,StudyPhraseMainFragment()/*.newInstance(currentChapter!!,currentPhrase!!)*/)?.commit()
         }
 
-        view.btn_study_back_to_chapter.setOnClickListener { v->
+        view.btn_study_back_to_chapter.setOnClickListener {
             fragmentManager!!.beginTransaction().replace(R.id.contents_panel_main,SubjectSelectFragment()).commit()
         }
 
-        view.btn_study_quick_select.setOnClickListener { v->
+        view.btn_study_quick_select.setOnClickListener {
             QuickChapterSelectDialog().newInstance().show(fragmentManager,"Quick Select")
         }
 
-        view.btn_study_phrase_prev.setOnClickListener { v->
+        view.btn_study_phrase_prev.setOnClickListener {
             updateStudyFragmentWithOffset(-1)
         }
 
 
-        view.btn_study_phrase_next.setOnClickListener { v->
+        view.btn_study_phrase_next.setOnClickListener {
             updateStudyFragmentWithOffset(+1)
         }
 
         return view
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        activity?.tabbar_main?.visibility = TableLayout.VISIBLE
+    }
+
+    override fun onStop() {
+        super.onStop()
+        activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit()
+            .putInt(SharedPrefKeyLastChapter, currentChapter).putInt(
+            SharedPrefKeyLastPhrase, currentPhrase).apply()
+
+    }
+
+
     private fun updateStudyFragmentWithOffset(phraseOffset:Int){
 
-        var phrase = currentPhrase!! + phraseOffset
-        var chapter = currentChapter!!
+        var phrase = currentPhrase + phraseOffset
+        var chapter = currentChapter
 
         if(phrase< 0){
             //minus
@@ -87,13 +124,13 @@ class StudyMainFragment : Fragment(){
             }
             phrase = maxPhraseNum[chapter] + (phrase + 1)
 
-        }else if(phrase > maxPhraseNum[currentChapter!!]){
+        }else if(phrase > maxPhraseNum[currentChapter]){
             //plus
             chapter++
             if (chapter > maxChapterNum){
                 chapter = minChapterNum
             }
-            phrase -= (maxPhraseNum[currentChapter!!] + 1)
+            phrase -= (maxPhraseNum[currentChapter] + 1)
         }
 
         currentChapter = chapter

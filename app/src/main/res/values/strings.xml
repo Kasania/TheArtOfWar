@@ -5,10 +5,10 @@
     <string name="title_search">검색</string>
     <string name="title_profile">내 정보</string>
 
-    <string name="button_home_continue">이어서 학습하기</string>
-    <string name="button_home_quote">오늘의 구절</string>
-    <string name="button_home_favorite">즐겨찾기</string>
-    <string name="button_home_setting"> 설 정 </string>
+    <string name="btn_home_continue">이어서 학습하기</string>
+    <string name="btn_home_quote">오늘의 구절</string>
+    <string name="btn_home_favorite">즐겨찾기</string>
+    <string name="btn_home_setting"> 설 정 </string>
     <string name="tv_home_level">LV</string>
     <string name="tv_home_default_level_value">000</string>
     <string name="tv_home_default_level_percent">00%</string>
@@ -46,11 +46,17 @@
     <string name="chapter_12_name">12</string>
     <string name="chapter_13_name">13</string>
 
-    <string name="study_contents_tab_1">내용 풀이</string>
-    <string name="study_contents_tab_2">어휘 풀이</string>
-    <string name="study_contents_tab_3">내용 요약</string>
+    <string name="study_contents_tab_1">문장 해석</string>
+    <string name="study_contents_tab_2">중요 어휘</string>
+    <string name="study_contents_tab_3">구절 해설</string>
 
     <string name="study_contents_voice">음성 안내</string>
     <string name="study_contents_quick_select">빠른 이동</string>
 
+
+
+
+
+
 </resources>
+

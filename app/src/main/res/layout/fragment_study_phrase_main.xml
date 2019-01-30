@@ -22,16 +22,16 @@
         <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/study_contents_tab_3" android:id="@+id/tab_study_summary"/>
-        <android.support.design.widget.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/study_contents_tab_1" android:id="@+id/tab_study_meaning"/>
 
         <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/study_contents_tab_2" android:id="@+id/tab_study_voca"/>
+        <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/study_contents_tab_3" android:id="@+id/tab_study_summary"/>
 
     </android.support.design.widget.TabLayout>
     <android.support.constraint.ConstraintLayout

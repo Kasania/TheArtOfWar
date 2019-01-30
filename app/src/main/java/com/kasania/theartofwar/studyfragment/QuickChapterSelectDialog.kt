@@ -8,10 +8,10 @@ import android.support.v4.app.DialogFragment
 import android.widget.NumberPicker
 import android.widget.Toast
 import com.kasania.theartofwar.R
+import com.kasania.theartofwar.displayPhraseName
+import com.kasania.theartofwar.maxPhraseNum
 import com.kasania.theartofwar.studyfragment.StudyMainFragment.Companion.currentChapter
-import com.kasania.theartofwar.studyfragment.StudyMainFragment.Companion.displayPhraseName
 import com.kasania.theartofwar.studyfragment.StudyMainFragment.Companion.currentPhrase
-import com.kasania.theartofwar.studyfragment.StudyMainFragment.Companion.maxPhraseNum
 import kotlinx.android.synthetic.main.dialog_study_quick_chepter_select.view.*
 
 class QuickChapterSelectDialog:DialogFragment() {
@@ -30,8 +30,8 @@ class QuickChapterSelectDialog:DialogFragment() {
 
         val view = activity!!.layoutInflater.inflate(R.layout.dialog_study_quick_chepter_select,null)
 
-        var targetChapter = currentChapter!!
-        var targetPhrase = currentPhrase!!
+        var targetChapter = currentChapter
+        var targetPhrase = currentPhrase
 
         view.np_quick_chapter_chapter.minValue = 1
         view.np_quick_chapter_chapter.maxValue = 13
@@ -50,14 +50,14 @@ class QuickChapterSelectDialog:DialogFragment() {
 
         dialog.setView(view)
         dialog.setNegativeButton("취소",null)
-        dialog.setPositiveButton("확인", DialogInterface.OnClickListener { dialog, which ->
+        dialog.setPositiveButton("확인") { dialog, which ->
             currentChapter = view.np_quick_chapter_chapter.value
             currentPhrase = view.np_quick_chapter_phrase.value
 
             fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,StudyMainFragment().newInstance(
-                currentChapter!!, currentPhrase!!))?.commit()
+                currentChapter, currentPhrase))?.commit()
 
-        })
+        }
         return dialog.create()
     }
 
