@@ -17,7 +17,6 @@
             app:layout_constraintBottom_toTopOf="@+id/guideline38"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="@color/darkRed" android:textColor="@color/realYellow"
             android:layout_marginBottom="1dp"/>
     <Button
             android:text="@string/chapter_3_name"
@@ -26,7 +25,6 @@
             android:id="@+id/btn_study_gochapter3"
             app:layout_constraintTop_toTopOf="@+id/guideline38" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="@color/darkRed" android:textColor="@color/realYellow"
             app:layout_constraintBottom_toBottomOf="parent"/>
     <Button
 

@@ -2,8 +2,8 @@ package com.kasania.theartofwar.studyfragment
 
 import android.os.Build
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import android.support.v4.app.Fragment
-import android.support.v4.widget.TextViewCompat
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -12,8 +12,13 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.kasania.theartofwar.R
 import kotlinx.android.synthetic.main.fragment_study_phrase_interpret.view.*
+import android.speech.tts.TextToSpeech.ERROR
+import java.util.*
+
 
 class StudyPhraseInterpretFragment : Fragment() {
+
+    lateinit var tts : TextToSpeech
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_study_phrase_interpret, container, false)
@@ -26,41 +31,63 @@ class StudyPhraseInterpretFragment : Fragment() {
         val soundValue = getText(soundId).split("/")
         val interpretValue = getText(interpretId).split("/")
 
+        tts = TextToSpeech(context, TextToSpeech.OnInitListener { status ->
+            if (status != ERROR) {
+                tts.language = Locale.KOREAN
+
+            }
+        })
+
+
+
         for (i in 0.. hanjaValue.lastIndex){
             val interpretSet = LinearLayout(context)
-            interpretSet.orientation = LinearLayout.VERTICAL
+            interpretSet.orientation = LinearLayout.HORIZONTAL
             interpretSet.gravity = Gravity.LEFT
 
+            interpretSet.setOnClickListener{
+
+            }
+
+            val hanjaSet = LinearLayout(context)
+            hanjaSet.orientation = LinearLayout.VERTICAL
+            hanjaSet.layoutParams = LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.MATCH_PARENT,0.45f)
 
             val hanjaView = TextView(context)
-
             hanjaView.text = hanjaValue[i]
             hanjaView.textSize=24.0f
-            hanjaView.gravity = Gravity.LEFT
+            hanjaView.gravity = Gravity.CENTER
 
 
             val soundView = TextView(context)
             soundView.text = soundValue[i]
             soundView.textSize=24.0f
-            soundView.gravity = Gravity.LEFT
+            soundView.gravity = Gravity.CENTER
 
             val interpretView = TextView(context)
             interpretView.text = interpretValue[i]
             interpretView.textSize=24.0f
-            interpretView.gravity = Gravity.FILL
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                interpretView.setAutoSizeTextTypeUniformWithConfiguration(20,80,4,TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM)
-            }
+            interpretView.gravity = Gravity.CENTER
+            interpretView.layoutParams = LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.MATCH_PARENT,0.55f)
 
-            interpretSet.addView(hanjaView)
-            interpretSet.addView(soundView)
+
+            hanjaSet.addView(hanjaView)
+            hanjaSet.addView(soundView)
+
+            interpretSet.addView(hanjaSet)
             interpretSet.addView(interpretView)
-
-
             view.sv_phrase_interpret.addView(interpretSet)
         }
 
 
         return view
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if(tts != null){
+            tts.stop()
+            tts.shutdown()
+        }
     }
 }

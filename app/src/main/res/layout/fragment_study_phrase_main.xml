@@ -4,7 +4,7 @@
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent"
-                                             android:background="@color/colorPrimary">
+                                             android:background="@color/Background">
 
     <android.support.constraint.Guideline
             android:orientation="horizontal"
@@ -40,7 +40,7 @@
             app:layout_constraintTop_toTopOf="@+id/guideline51"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/contents_panel_study_phrase" android:background="@color/design_default_color_primary_dark">
+            android:id="@+id/contents_panel_study_phrase" android:background="@color/Background">
 
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

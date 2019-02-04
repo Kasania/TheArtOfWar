@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#2B2B2B</color>
-    <color name="colorAccent">#FF0000</color>
-    <color name="darkRed">#580707</color>
-    <color name="realYellow">#FFFF00</color>
-
-    <color name="background">#EEEEEE</color>
+    <color name="Background">#EEEEEE</color>
+    <color name ="Surface">#A7C0CD</color>
+    <color name="SurfaceDark">#78909C</color>
 
     <color name="PrimaryMain">#4DB6AC</color>
+    <color name="PrimaryLight">#82E9DE</color>
+    <color name="PrimaryDark">#00867D</color>
+    <color name="OnPrimary">#FAFAFA</color>
 
+    <color name="SecondaryMain">#311B92</color>
+    <color name="SecondaryLight">#6746C3</color>
+    <color name="SecondaryDark">#000063</color>
 
-    <color name="testPrimary">#FCE4EC</color>
-    <color name="testPrimary2">#FAFAFA</color>
-
-    <color name="testSecondary">#263238</color>
-    <color name="testSecondary2">#FAFAFA</color>
-
-    <color name="testSurface">#f5f5f5</color>
-    <color name="testSurface2">#fafafa</color>
-
-    <color name="testBackground">#E1F5FE</color>
-    <color name="testBackground2">#fafafa</color>
 </resources>

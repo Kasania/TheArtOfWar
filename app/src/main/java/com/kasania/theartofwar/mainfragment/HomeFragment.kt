@@ -20,8 +20,8 @@ open class HomeFragment :Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        view.exp_percent_bar.max = 100
-        view.tv_home_level_percent.text = "${view.exp_percent_bar.progress}%"
+//        view.exp_percent_bar.max = 100
+//        view.tv_home_level_percent.text = "${view.exp_percent_bar.progress}%"
 
         view.btn_home_bookmark.setOnClickListener {
             Toast.makeText(context,"${MainActivity.isCheckedBookMark(1,0)}",Toast.LENGTH_SHORT).show()
@@ -37,7 +37,6 @@ open class HomeFragment :Fragment() {
         val displayContinueButtonText = "${getText(R.string.btn_home_continue)}\n $chapter 장 $displayPhrase"
         view.btn_home_continue.text = displayContinueButtonText
         view.btn_home_continue.setOnClickListener {
-            activity!!.tabbar_main.getTabAt(1)?.select()
             fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,StudyMainFragment().newInstance(chapter,phrase))?.commit()
         }
 

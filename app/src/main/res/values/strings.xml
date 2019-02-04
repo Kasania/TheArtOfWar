@@ -13,21 +13,21 @@
     <string name="tv_home_default_level_value">000</string>
     <string name="tv_home_default_level_percent">00%</string>
 
-    <string name="subject_1_name">총\n론\n\n\n\n\n</string>
-    <string name="subject_2_3_name">전\n쟁\n준\n비\n\n\n</string>
-    <string name="subject_4_name">전\n투\n준\n비\n태\n세\n</string>
-    <string name="subject_5_6_7_name">병\n력\n운\n용\n\n\n</string>
-    <string name="subject_8_9_10_11_name">작\n전\n실\n시\n\n\n</string>
-    <string name="subject_12_name">전\n후\n처\n리\n\n\n</string>
-    <string name="subject_13_name">정\n보\n전\n\n\n\n</string>
+    <string name="subject_1_name">총론</string>
+    <string name="subject_2_name">전쟁준비</string>
+    <string name="subject_3_name">전투준비태세</string>
+    <string name="subject_4_name">병력운용</string>
+    <string name="subject_5_name">작전실시</string>
+    <string name="subject_6_name">전후처리</string>
+    <string name="subject_7_name">정보전</string>
 
-    <string name="subject_1_chapter">1\n\n\n</string>
-    <string name="subject_2_3_chapter">2\n3\n\n</string>
-    <string name="subject_4_chapter">4\n\n\n</string>
-    <string name="subject_5_6_7_chapter">5\n6\n7\n</string>
-    <string name="subject_8_9_10_11_chapter">8\n9\n10\n11</string>
-    <string name="subject_12_chapter">12\n\n\n</string>
-    <string name="subject_13_chapter">13\n\n\n</string>
+    <string name="subject_1_chapter">- 1 편 -</string>
+    <string name="subject_2_chapter">- 2, 3 편 -</string>
+    <string name="subject_3_chapter">- 4 편 -</string>
+    <string name="subject_4_chapter">- 5, 6, 7 편 -</string>
+    <string name="subject_5_chapter">- 8, 9, 10, 11 편 -</string>
+    <string name="subject_6_chapter">- 12 편 -</string>
+    <string name="subject_7_chapter">- 13 편 -</string>
 
     <string name="chapter_prefix_name">제</string>
     <string name="chapter_postfix_name">편</string>

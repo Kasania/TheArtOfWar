@@ -7,6 +7,7 @@ import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TableLayout
 import com.kasania.theartofwar.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -18,9 +19,6 @@ class StudyMainFragment : Fragment(){
         var currentChapter: Int = 1
         var currentPhrase: Int = 0
     }
-//
-//
-//
     fun newInstance(chapter:Int = 0,phrase:Int = 0): StudyMainFragment
     {
         currentChapter = chapter
@@ -39,7 +37,12 @@ class StudyMainFragment : Fragment(){
 
         val view = inflater.inflate(R.layout.fragment_study_main, container, false)
 
-       activity?.tabbar_main?.visibility = TableLayout.GONE
+        activity?.contents_main_bottom_buttons?.visibility = LinearLayout.GONE
+
+        val fm = fragmentManager
+        fm?.addOnBackStackChangedListener {
+            fragmentManager!!.beginTransaction().replace(R.id.contents_panel_main,MainActivity.subjectSelectFragment).commit()
+        }
 
         val displayPhrase = when (currentPhrase){
             0-> "총괄"
@@ -55,7 +58,7 @@ class StudyMainFragment : Fragment(){
 
             //----------------------------for Test
             if(MainActivity.isCheckedBookMark(currentChapter, currentPhrase)){
-                view.tv_study_current_chapter.setBackgroundColor(ContextCompat.getColor(context!!, R.color.darkRed))
+//                view.tv_study_current_chapter.setBackgroundColor(ContextCompat.getColor(context!!, R.color.darkRed))
             }else{
                 view.tv_study_current_chapter.setBackgroundColor(ContextCompat.getColor(context!!, R.color.PrimaryMain))
             }
@@ -65,7 +68,7 @@ class StudyMainFragment : Fragment(){
 
         //---------------------------for Test
         if(MainActivity.isCheckedBookMark(currentChapter, currentPhrase)){
-            view.tv_study_current_chapter.setBackgroundColor(ContextCompat.getColor(context!!, R.color.darkRed))
+//            view.tv_study_current_chapter.setBackgroundColor(ContextCompat.getColor(context!!, R.color.darkRed))
         }else{
             view.tv_study_current_chapter.setBackgroundColor(ContextCompat.getColor(context!!, R.color.PrimaryMain))
         }
@@ -74,11 +77,11 @@ class StudyMainFragment : Fragment(){
         if(currentPhrase == 0) {
             fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_main,StudyChapterSummaryFragment())?.commit()
         }else{
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_main,StudyPhraseMainFragment()/*.newInstance(currentChapter!!,currentPhrase!!)*/)?.commit()
+            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_main,StudyPhraseMainFragment())?.commit()
         }
 
         view.btn_study_back_to_chapter.setOnClickListener {
-            fragmentManager!!.beginTransaction().replace(R.id.contents_panel_main,SubjectSelectFragment()).commit()
+            fragmentManager!!.beginTransaction().replace(R.id.contents_panel_main,MainActivity.subjectSelectFragment).commit()
         }
 
         view.btn_study_quick_select.setOnClickListener {
@@ -99,7 +102,8 @@ class StudyMainFragment : Fragment(){
 
     override fun onDestroy() {
         super.onDestroy()
-        activity?.tabbar_main?.visibility = TableLayout.VISIBLE
+
+        activity?.contents_main_bottom_buttons?.visibility = LinearLayout.VISIBLE
     }
 
     override fun onStop() {
@@ -117,7 +121,7 @@ class StudyMainFragment : Fragment(){
         var chapter = currentChapter
 
         if(phrase< 0){
-            //minus
+            //negative
             chapter--
             if (chapter < minChapterNum){
                 chapter = maxChapterNum
@@ -125,7 +129,7 @@ class StudyMainFragment : Fragment(){
             phrase = maxPhraseNum[chapter] + (phrase + 1)
 
         }else if(phrase > maxPhraseNum[currentChapter]){
-            //plus
+            //positive
             chapter++
             if (chapter > maxChapterNum){
                 chapter = minChapterNum
@@ -137,5 +141,7 @@ class StudyMainFragment : Fragment(){
         currentPhrase = phrase
         fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,StudyMainFragment().newInstance())?.commit()
     }
+
+
 
 }

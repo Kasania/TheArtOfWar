@@ -9,6 +9,7 @@ import com.kasania.theartofwar.mainfragment.ProfileFragment
 import com.kasania.theartofwar.mainfragment.SearchFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import android.support.design.widget.TabLayout
+import com.kasania.theartofwar.studyfragment.StudyMainFragment
 import com.kasania.theartofwar.studyfragment.SubjectSelectFragment
 import java.io.FileNotFoundException
 
@@ -33,14 +34,37 @@ class MainActivity : AppCompatActivity() {
             return false
         }
 
-
+        val homeFragment = HomeFragment()
+        val subjectSelectFragment = SubjectSelectFragment()
+        val searchFragment = SearchFragment()
     }
 
-    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         //Bookmark
+        loadFavorite()
+        bottomButtonAction(0)
+        btn_main_bottom_home.setOnClickListener {
+            bottomButtonAction(0)
+        }
+        btn_main_bottom_study.setOnClickListener {
+            bottomButtonAction(1)
+        }
+        btn_main_bottom_search.setOnClickListener {
+            bottomButtonAction(2)
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        val output = openFileOutput(BookmarkDataFileName, Context.MODE_PRIVATE)
+        output.write(BookmarkData)
+        output.close()
+    }
+
+    private fun loadFavorite(){
         try {
             val input = openFileInput(BookmarkDataFileName)
             input.read(BookmarkData)
@@ -51,26 +75,22 @@ class MainActivity : AppCompatActivity() {
             output.write(BookmarkData)
             output.close()
         }
-
-        supportFragmentManager.beginTransaction().replace(R.id.contents_panel_main,HomeFragment()).commit()
-        tabbar_main.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab) {
-                when(tabbar_main.selectedTabPosition){
-                    0 -> supportFragmentManager.beginTransaction().replace(R.id.contents_panel_main,HomeFragment()).commit()
-                    1 -> supportFragmentManager.beginTransaction().replace(R.id.contents_panel_main,SubjectSelectFragment()).commit()
-                    2 -> supportFragmentManager.beginTransaction().replace(R.id.contents_panel_main,SearchFragment()).commit()
-                    3 -> supportFragmentManager.beginTransaction().replace(R.id.contents_panel_main,ProfileFragment()).commit()
-                }
-            }
-            override fun onTabUnselected(tab: TabLayout.Tab) {}
-            override fun onTabReselected(tab: TabLayout.Tab) {}
-        })
     }
 
-    override fun onStop() {
-        super.onStop()
-        val output = openFileOutput(BookmarkDataFileName, Context.MODE_PRIVATE)
-        output.write(BookmarkData)
-        output.close()
+    private fun bottomButtonAction(action:Int){
+        when (action){
+            0->supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.contents_panel_main,homeFragment)
+                .commit()
+            1-> supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.contents_panel_main, subjectSelectFragment)
+                .commit()
+            2->supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.contents_panel_main,searchFragment)
+                .commit()
+        }
     }
 }
