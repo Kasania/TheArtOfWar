@@ -12,12 +12,14 @@
     <android.support.constraint.ConstraintLayout
             android:id="@+id/contents_panel_main"
             android:layout_weight="0.9"
-            android:layout_width="match_parent" android:layout_height="0dp">
+            android:layout_width="match_parent" android:layout_height="0dp" android:animationCache="true"
+            android:background="@color/Background">
     </android.support.constraint.ConstraintLayout>
     <android.support.constraint.ConstraintLayout
             android:layout_weight="0.1"
             android:layout_width="match_parent"
-            android:layout_height="0dp" android:id="@+id/contents_main_bottom_buttons">
+            android:layout_height="0dp" android:id="@+id/contents_main_bottom_buttons"
+            android:animateLayoutChanges="true" android:background="@color/Background">
 
         <android.support.constraint.Guideline
                 android:orientation="vertical"
@@ -45,20 +47,22 @@
                 app:layout_constraintEnd_toStartOf="@+id/guideline19"
                 app:layout_constraintStart_toStartOf="@+id/guideline18"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" android:background="@drawable/btn_main_home"
+                android:layout_margin="2dp"/>
         <Button
                 android:id="@+id/btn_main_bottom_study"
                 app:layout_constraintEnd_toStartOf="@+id/guideline20"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline19" android:layout_width="0dp"
-                android:layout_height="0dp"/>
+                android:layout_height="0dp" android:background="@drawable/btn_main_study" android:layout_margin="2dp"/>
         <Button
                 android:id="@+id/btn_main_bottom_search"
                 app:layout_constraintEnd_toStartOf="@+id/guideline21"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline20"
-                app:layout_constraintTop_toTopOf="parent" android:layout_height="0dp" android:layout_width="0dp"/>
+                app:layout_constraintTop_toTopOf="parent" android:layout_height="0dp" android:layout_width="0dp"
+                android:background="@drawable/btn_main_search" android:layout_margin="2dp"/>
     </android.support.constraint.ConstraintLayout>
 
 </LinearLayout>

@@ -17,14 +17,14 @@ class ChapterSelection3ItemFragment : Fragment() {
         view.btn_backPage3.setOnClickListener { v->
             fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,SubjectSelectFragment())?.commit()
         }
-        view.btn_study_gochapter5.setOnClickListener { v->
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,StudyMainFragment().newInstance(5))?.commit()
+        view.btn_study_gochapter5.setOnClickListener {
+            StudyMainFragment.changeStudyContents(fragmentManager,5)
         }
         view.btn_study_gochapter6.setOnClickListener { v->
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,StudyMainFragment().newInstance(6))?.commit()
+            StudyMainFragment.changeStudyContents(fragmentManager,6)
         }
         view.btn_study_gochapter7.setOnClickListener { v->
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,StudyMainFragment().newInstance(7))?.commit()
+            StudyMainFragment.changeStudyContents(fragmentManager,7)
         }
         return view
     }

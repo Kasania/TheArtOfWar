@@ -52,6 +52,7 @@ class StudyPhraseInterpretFragment : Fragment() {
             val hanjaSet = LinearLayout(context)
             hanjaSet.orientation = LinearLayout.VERTICAL
             hanjaSet.layoutParams = LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.MATCH_PARENT,0.45f)
+            hanjaSet.gravity = Gravity.CENTER
 
             val hanjaView = TextView(context)
             hanjaView.text = hanjaValue[i]

@@ -14,22 +14,21 @@ class ChapterSelection4ItemFragment : Fragment() {
     {
         val view = inflater.inflate(R.layout.fragment_study_chapter_selection_4, container, false)
         view.btn_backPage.setOnClickListener { v->
-            val fm = fragmentManager
-            val ft = fm!!.beginTransaction()
-            ft!!.replace(R.id.contents_panel_main,SubjectSelectFragment())
-            ft!!.commit()
+            fragmentManager!!.beginTransaction()
+            .replace(R.id.contents_panel_main,SubjectSelectFragment())
+            .commit()
         }
-        view.btn_study_gochapter8.setOnClickListener { v->
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,StudyMainFragment().newInstance(8))?.commit()
+        view.btn_study_gochapter8.setOnClickListener {
+            StudyMainFragment.changeStudyContents(fragmentManager,8)
         }
-        view.btn_study_gochapter9.setOnClickListener { v->
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,StudyMainFragment().newInstance(9))?.commit()
+        view.btn_study_gochapter9.setOnClickListener {
+            StudyMainFragment.changeStudyContents(fragmentManager,9)
         }
-        view.btn_study_gochapter10.setOnClickListener { v->
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,StudyMainFragment().newInstance(10))?.commit()
+        view.btn_study_gochapter10.setOnClickListener {
+            StudyMainFragment.changeStudyContents(fragmentManager,10)
         }
-        view.btn_study_gochapter11.setOnClickListener { v->
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,StudyMainFragment().newInstance(11))?.commit()
+        view.btn_study_gochapter11.setOnClickListener {
+            StudyMainFragment.changeStudyContents(fragmentManager,11)
         }
         return view
     }

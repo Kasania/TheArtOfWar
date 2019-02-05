@@ -37,7 +37,7 @@ open class HomeFragment :Fragment() {
         val displayContinueButtonText = "${getText(R.string.btn_home_continue)}\n $chapter 장 $displayPhrase"
         view.btn_home_continue.text = displayContinueButtonText
         view.btn_home_continue.setOnClickListener {
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,StudyMainFragment().newInstance(chapter,phrase))?.commit()
+            StudyMainFragment.changeStudyContents(fragmentManager,chapter,phrase)
         }
 
 

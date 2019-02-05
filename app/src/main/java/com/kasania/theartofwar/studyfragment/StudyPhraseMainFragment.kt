@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.kasania.theartofwar.R
+import kotlinx.android.synthetic.main.fragment_study_main.view.*
 import kotlinx.android.synthetic.main.fragment_study_phrase_main.view.*
 
 
@@ -16,6 +17,7 @@ class StudyPhraseMainFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {
         val view = inflater.inflate(R.layout.fragment_study_phrase_main, container, false)
+
 
         fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseInterpretFragment())?.commit()
 
