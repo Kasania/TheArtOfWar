@@ -13,8 +13,6 @@ class SubjectSelectFragment : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {
         val view = inflater.inflate(R.layout.fragment_study_subject_select, container, false)
-        view.contents_subject_1
-
         initClick(view)
 
         return view
@@ -28,7 +26,11 @@ class SubjectSelectFragment : Fragment(){
 
 
         view.contents_subject_2.setOnClickListener {
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,ChapterSelection2ItemFragment())?.commit()
+            fragmentManager?.
+                beginTransaction()?.
+                replace(R.id.contents_panel_main,ChapterSelection2ItemFragment())?.
+                addToBackStack(null)?.
+                commit()
         }
 
         view.contents_subject_3.setOnClickListener {
@@ -36,11 +38,19 @@ class SubjectSelectFragment : Fragment(){
         }
 
         view.contents_subject_4.setOnClickListener {
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,ChapterSelection3ItemFragment())?.commit()
+            fragmentManager?.
+                beginTransaction()?.
+                replace(R.id.contents_panel_main,ChapterSelection3ItemFragment())?.
+                addToBackStack(null)?.
+                commit()
         }
 
         view.contents_subject_5.setOnClickListener {
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,ChapterSelection4ItemFragment())?.commit()
+            fragmentManager?.
+                beginTransaction()?.
+                replace(R.id.contents_panel_main,ChapterSelection4ItemFragment())?.
+                addToBackStack(null)?.
+                commit()
         }
 
         view.contents_subject_6.setOnClickListener {

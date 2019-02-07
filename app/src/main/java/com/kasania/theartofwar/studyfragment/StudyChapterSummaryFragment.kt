@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.kasania.theartofwar.R
 import kotlinx.android.synthetic.main.fragment_study_chapter_summary.view.*
-import kotlinx.android.synthetic.main.fragment_study_main.view.*
 
 class StudyChapterSummaryFragment : Fragment() {
 

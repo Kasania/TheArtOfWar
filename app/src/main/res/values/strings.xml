@@ -32,19 +32,19 @@
     <string name="chapter_prefix_name">제</string>
     <string name="chapter_postfix_name">편</string>
 
-    <string name="chapter_1_name">1</string>
-    <string name="chapter_2_name">2</string>
-    <string name="chapter_3_name">3</string>
-    <string name="chapter_4_name">4</string>
-    <string name="chapter_5_name">5</string>
-    <string name="chapter_6_name">6</string>
-    <string name="chapter_7_name">7</string>
-    <string name="chapter_8_name">8</string>
-    <string name="chapter_9_name">9</string>
-    <string name="chapter_10_name">10</string>
-    <string name="chapter_11_name">11</string>
-    <string name="chapter_12_name">12</string>
-    <string name="chapter_13_name">13</string>
+    <string name="chapter_1_name">시계</string>
+    <string name="chapter_2_name">작전</string>
+    <string name="chapter_3_name">모공</string>
+    <string name="chapter_4_name">군형</string>
+    <string name="chapter_5_name">병세</string>
+    <string name="chapter_6_name">허실</string>
+    <string name="chapter_7_name">군쟁</string>
+    <string name="chapter_8_name">구변</string>
+    <string name="chapter_9_name">행군</string>
+    <string name="chapter_10_name">지형</string>
+    <string name="chapter_11_name">구지</string>
+    <string name="chapter_12_name">화공</string>
+    <string name="chapter_13_name">용간</string>
 
     <string name="study_contents_tab_1">문장 해석</string>
     <string name="study_contents_tab_2">중요 어휘</string>
@@ -52,10 +52,7 @@
 
     <string name="study_contents_voice">음성 안내</string>
     <string name="study_contents_quick_select">빠른 이동</string>
-
-
-
-
+    <string name="search_hint">검색어를 입력하세요.</string>
 
 
 </resources>

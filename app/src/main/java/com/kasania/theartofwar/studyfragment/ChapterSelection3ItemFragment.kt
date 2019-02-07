@@ -14,16 +14,13 @@ class ChapterSelection3ItemFragment : Fragment() {
     {
 
         val view = inflater.inflate(R.layout.fragment_study_chapter_selection_3, container, false)
-        view.btn_backPage3.setOnClickListener { v->
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_main,SubjectSelectFragment())?.commit()
-        }
         view.btn_study_gochapter5.setOnClickListener {
             StudyMainFragment.changeStudyContents(fragmentManager,5)
         }
-        view.btn_study_gochapter6.setOnClickListener { v->
+        view.btn_study_gochapter6.setOnClickListener {
             StudyMainFragment.changeStudyContents(fragmentManager,6)
         }
-        view.btn_study_gochapter7.setOnClickListener { v->
+        view.btn_study_gochapter7.setOnClickListener {
             StudyMainFragment.changeStudyContents(fragmentManager,7)
         }
         return view

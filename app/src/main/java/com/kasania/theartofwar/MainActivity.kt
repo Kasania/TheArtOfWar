@@ -4,8 +4,8 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.kasania.theartofwar.mainfragment.HomeFragment
+import com.kasania.theartofwar.mainfragment.MainFragment
 import com.kasania.theartofwar.mainfragment.SearchFragment
-import kotlinx.android.synthetic.main.activity_main.*
 import com.kasania.theartofwar.studyfragment.SubjectSelectFragment
 import java.io.FileNotFoundException
 
@@ -13,7 +13,8 @@ import java.io.FileNotFoundException
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        var BookmarkData = ByteArray(totalPhraseNum + maxChapterNum) {0.toByte()}
+        private const val BookmarkDataSize = totalPhraseNum + maxChapterNum
+        var BookmarkData = ByteArray(BookmarkDataSize) {0.toByte()}
 
         fun toggleBookMark(chapter:Int = 1, phrase:Int = 0){
             if (isCheckedBookMark(chapter,phrase)){
@@ -30,12 +31,9 @@ class MainActivity : AppCompatActivity() {
             return false
         }
 
-        val homeFragment = HomeFragment()
-        val subjectSelectFragment = SubjectSelectFragment()
-        val searchFragment = SearchFragment()
-
+        var currentMainFragmentPage : Int = 0
     }
-    private var currentFragmentPage : Int = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,24 +43,8 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.contents_panel_main,homeFragment)
+            .replace(R.id.contents_root, MainFragment())
             .commit()
-
-        btn_main_bottom_home.setOnClickListener {
-            bottomButtonAction(0)
-            currentFragmentPage = 0
-        }
-        btn_main_bottom_study.setOnClickListener {
-            when (currentFragmentPage){
-                0->bottomButtonAction(1)
-                2->bottomButtonAction(2)
-            }
-            currentFragmentPage = 1
-        }
-        btn_main_bottom_search.setOnClickListener {
-            bottomButtonAction(3)
-            currentFragmentPage = 2
-        }
 
     }
 
@@ -86,18 +68,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun bottomButtonAction(action:Int){
-        val fm = supportFragmentManager.beginTransaction()
-        when (action){
-            0 -> fm.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right)
-                .replace(R.id.contents_panel_main,homeFragment)
-            1 -> fm.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left)
-                .replace(R.id.contents_panel_main, subjectSelectFragment)
-            2 -> fm.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right)
-                .replace(R.id.contents_panel_main, subjectSelectFragment)
-            3 -> fm.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left)
-                .replace(R.id.contents_panel_main,searchFragment)
-        }
-        fm.commit()
-    }
+
 }

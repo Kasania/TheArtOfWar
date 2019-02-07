@@ -1,8 +1,8 @@
 package com.kasania.theartofwar.studyfragment
 
-import android.os.Build
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
+import android.speech.tts.TextToSpeech.ERROR
 import android.support.v4.app.Fragment
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -12,7 +12,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.kasania.theartofwar.R
 import kotlinx.android.synthetic.main.fragment_study_phrase_interpret.view.*
-import android.speech.tts.TextToSpeech.ERROR
 import java.util.*
 
 
@@ -58,6 +57,8 @@ class StudyPhraseInterpretFragment : Fragment() {
             hanjaView.text = hanjaValue[i]
             hanjaView.textSize=24.0f
             hanjaView.gravity = Gravity.CENTER
+
+
 
 
             val soundView = TextView(context)

@@ -20,11 +20,12 @@ open class HomeFragment :Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-//        view.exp_percent_bar.max = 100
-//        view.tv_home_level_percent.text = "${view.exp_percent_bar.progress}%"
-
         view.btn_home_bookmark.setOnClickListener {
-            Toast.makeText(context,"${MainActivity.isCheckedBookMark(1,0)}",Toast.LENGTH_SHORT).show()
+            val ft = fragmentManager!!.beginTransaction()
+            ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top,R.anim.slide_in_top,R.anim.slide_out_bottom)
+            ft.replace(R.id.contents_root,FavoriteFragment())
+            ft.addToBackStack("Favorite")
+            ft.commit()
         }
 
         val sharedPreferences = activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE)

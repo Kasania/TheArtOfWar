@@ -2,11 +2,9 @@ package com.kasania.theartofwar.studyfragment
 
 import android.app.AlertDialog
 import android.app.Dialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.support.v4.app.DialogFragment
 import android.widget.NumberPicker
-import android.widget.Toast
 import com.kasania.theartofwar.R
 import com.kasania.theartofwar.displayPhraseName
 import com.kasania.theartofwar.maxPhraseNum

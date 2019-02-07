@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.kasania.theartofwar.R
-import kotlinx.android.synthetic.main.fragment_study_main.view.*
 import kotlinx.android.synthetic.main.fragment_study_phrase_main.view.*
 
 

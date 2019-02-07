@@ -14,13 +14,6 @@ class ChapterSelection2ItemFragment : Fragment() {
     {
 
         val view = inflater.inflate(R.layout.fragment_study_chapter_selection_2, container, false)
-        view.btn_backPage2.setOnClickListener {
-            fragmentManager!!
-                .beginTransaction()
-                .setCustomAnimations(R.anim.slide_in_top,R.anim.slide_out_bottom)
-                .replace(R.id.contents_panel_main,SubjectSelectFragment())
-                .commit()
-        }
         view.btn_study_gochapter2.setOnClickListener {
             StudyMainFragment.changeStudyContents(fragmentManager,2)
         }

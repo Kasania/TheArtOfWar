@@ -4,14 +4,14 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
-import android.widget.LinearLayout
+import android.widget.Toast
 import com.kasania.theartofwar.*
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_study_main.view.*
+
 
 class StudyMainFragment : Fragment(){
 
@@ -23,9 +23,11 @@ class StudyMainFragment : Fragment(){
             currentChapter = chapter
             currentPhrase = phrase
             val ft = fm!!.beginTransaction()
+
             when (action){
-                0-> ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top)
-                    .replace(R.id.contents_panel_main,StudyMainFragment().newInstance())
+                0-> ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top,R.anim.slide_in_top,R.anim.slide_out_bottom)
+                    .replace(R.id.contents_root,StudyMainFragment().newInstance())
+                    .addToBackStack("StudyMain")
                 1 -> ft.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right)
                 2 -> ft.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left)
                 3 -> ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top)
@@ -49,27 +51,30 @@ class StudyMainFragment : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {
-        if (activity?.contents_main_bottom_buttons?.visibility != LinearLayout.GONE){
-            activity?.contents_main_bottom_buttons?.startAnimation(AnimationUtils.loadAnimation(context,R.anim.slide_out_bottom))
-            activity?.contents_main_bottom_buttons?.visibility = LinearLayout.GONE
-        }
 
         val view = inflater.inflate(R.layout.fragment_study_main, container, false)
 
         setChapterTextView(view)
 
+        view.setOnKeyListener(View.OnKeyListener { _, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
+                fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+                return@OnKeyListener true
+            }
+            false
+        })
+
         view.tv_study_current_chapter.setOnClickListener {
             MainActivity.toggleBookMark(currentChapter, currentPhrase)
+            if(MainActivity.isCheckedBookMark(currentChapter, currentPhrase)){
+                Toast.makeText(context,"Checked!",Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(context,"UnChecked!",Toast.LENGTH_SHORT).show()
+            }
         }
 
         view.btn_study_back_to_chapter.setOnClickListener {
-            activity?.contents_main_bottom_buttons?.startAnimation(AnimationUtils.loadAnimation(context,R.anim.slide_in_bottom))
-            activity?.contents_main_bottom_buttons?.visibility = LinearLayout.VISIBLE
-            fragmentManager!!
-                .beginTransaction()
-                .setCustomAnimations(R.anim.slide_in_top,R.anim.slide_out_bottom)
-                .replace(R.id.contents_panel_main,MainActivity.subjectSelectFragment)
-                .commit()
+            fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
         }
 
         view.btn_study_quick_select.setOnClickListener {
