@@ -9,10 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import com.kasania.theartofwar.MainActivity
-import com.kasania.theartofwar.R
-import com.kasania.theartofwar.displayPhraseName
-import com.kasania.theartofwar.maxPhraseNum
+import com.kasania.theartofwar.*
 import com.kasania.theartofwar.studyfragment.StudyMainFragment
 import kotlinx.android.synthetic.main.fragment_favorite.view.*
 
@@ -25,6 +22,13 @@ class FavoriteFragment : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_favorite,container,false)
+
+        view.setOnTouchListener(object:onSwipeTouchListener(context!!){
+            override fun onSwipeBottom() {
+                super.onSwipeBottom()
+                fragmentManager!!.popBackStack()
+            }
+        })
 
         buttonArray = ArrayList(13)
 
@@ -80,7 +84,7 @@ class FavoriteFragment : Fragment(){
                 textView.setBackgroundColor(ContextCompat.getColor(context!!,R.color.SecondaryMain))
                 textView.textSize = 24.0f
                 textView.setOnClickListener{
-                    StudyMainFragment.changeStudyContents(fragmentManager,currentSelectChapter+1,i)
+                    StudyMainFragment.createStudyContents(fragmentManager,currentSelectChapter+1,i)
                 }
                 view.contents_favorite.addView(textView)
 

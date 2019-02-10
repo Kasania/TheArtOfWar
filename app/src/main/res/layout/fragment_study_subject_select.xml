@@ -4,442 +4,61 @@
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent"
-                                             android:background="@color/Background"
                                              android:id="@+id/contents_subject_selection">
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/guideline5"
-            app:layout_constraintGuide_percent="0.22"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/guideline15" app:layout_constraintGuide_percent="0.48"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/guideline16" app:layout_constraintGuide_percent="0.74"/>
-    <android.support.constraint.Guideline
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/guideline17" app:layout_constraintGuide_percent="0.5"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/guideline23"
-            app:layout_constraintGuide_percent="0.3"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/guideline71"
-            app:layout_constraintGuide_percent="0.365"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/guideline70"
-            app:layout_constraintGuide_percent="0.43"/>
-    <android.support.constraint.Guideline
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/guideline72"
-            app:layout_constraintGuide_percent="0.22"/>
-    <android.support.constraint.Guideline
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/guideline24"
-            app:layout_constraintGuide_percent="0.72"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/guideline25"
-            app:layout_constraintGuide_percent="0.55"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/guideline26"
-            app:layout_constraintGuide_percent="0.615"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/guideline27"
-            app:layout_constraintGuide_percent="0.68"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/guideline28"
-            app:layout_constraintGuide_percent="0.81"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/guideline29"
-            app:layout_constraintGuide_percent="0.875"/>
-    <android.support.constraint.Guideline
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/guideline30"
-            app:layout_constraintGuide_percent="0.94"/>
-    <android.support.constraint.ConstraintLayout
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/guideline5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/contents_subject_1" android:background="@drawable/btn_subject_select"
-            android:clickable="true"
-            android:layout_margin="6dp" app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="1.0">
-        <android.support.constraint.Guideline
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/guideline65"
-                app:layout_constraintGuide_percent="0.2"/>
-        <android.support.constraint.Guideline
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/guideline66"
-                app:layout_constraintGuide_percent="0.8"/>
-        <android.support.constraint.Guideline
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/guideline67"
-                app:layout_constraintGuide_percent="0.5"/>
-        <android.support.constraint.Guideline
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/guideline69"
-                app:layout_constraintGuide_percent="0.25"/>
-        <android.support.constraint.Guideline
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/guideline68"
-                app:layout_constraintGuide_percent="0.45"/>
-        <android.support.constraint.Guideline
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/guideline22"
-                app:layout_constraintGuide_percent="0.8"/>
-        <View
-                android:layout_width="20dp"
-                android:layout_height="20dp" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" android:background="@drawable/circle_button_left_top"
-                android:layout_margin="8dp"/>
-        <View
-                app:layout_constraintEnd_toStartOf="@+id/guideline68"
-                android:layout_marginEnd="8dp" app:layout_constraintBottom_toTopOf="@+id/guideline66"
-                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/guideline65"
-                app:layout_constraintStart_toStartOf="@+id/guideline69" android:layout_marginStart="8dp"
-                android:background="@drawable/img_subject_select_1" android:layout_width="0dp"
-                android:layout_height="0dp"/>
-        <TextView
-                android:text="@string/subject_1_name"
-                app:layout_constraintEnd_toStartOf="@+id/guideline22"
-                app:layout_constraintStart_toStartOf="@+id/guideline68"
-                app:layout_constraintBottom_toTopOf="@+id/guideline67"
-                app:layout_constraintTop_toTopOf="@+id/guideline65" android:gravity="center"
-                android:textColor="@color/OnPrimary"
-                app:autoSizeStepGranularity="4dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
-                app:autoSizeTextType="uniform" android:textStyle="bold" android:layout_width="0dp"
-                app:fontFamily="@font/kukdetopokki"
-                android:layout_height="0dp"/>
-        <TextView
-                android:text="@string/subject_1_chapter"
-                app:layout_constraintEnd_toStartOf="@+id/guideline22"
-                app:layout_constraintStart_toStartOf="@+id/guideline68"
-                app:layout_constraintBottom_toTopOf="@+id/guideline66"
-                app:layout_constraintTop_toTopOf="@+id/guideline67" android:gravity="center"
-                android:textColor="@color/OnPrimary"
-                app:autoSizeStepGranularity="4dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
-                app:autoSizeTextType="uniform" android:textStyle="bold" android:layout_width="0dp"
-                app:fontFamily="@font/kukdetopokki"
-                android:layout_height="0dp"/>
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="@+id/guideline5"
-            app:layout_constraintBottom_toTopOf="@+id/guideline15" app:layout_constraintEnd_toStartOf="@+id/guideline17"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/contents_subject_2" android:background="@drawable/btn_subject_select"
-            android:clickable="true"
-            android:layout_margin="6dp">
-        <View
-                android:layout_width="20dp" android:layout_height="20dp"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
-                android:background="@drawable/circle_button_left_top" android:layout_margin="8dp"/>
-    </android.support.constraint.ConstraintLayout>
-    <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintEnd_toStartOf="@+id/guideline72"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/guideline70"
-            app:layout_constraintTop_toTopOf="@+id/guideline23"
-            android:background="@drawable/img_subject_select_2" android:layout_marginStart="8dp"/>
-    <TextView
-            android:text="@string/subject_2_name"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="@+id/guideline72"
-            app:layout_constraintBottom_toTopOf="@+id/guideline71"
-            app:layout_constraintTop_toTopOf="@+id/guideline23"
-            android:gravity="center" android:textColor="@color/OnPrimary" android:textStyle="bold"
-            app:autoSizeStepGranularity="4dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
-            app:autoSizeTextType="uniform"
-            app:layout_constraintEnd_toStartOf="@+id/guideline17"
-            app:fontFamily="@font/kukdetopokki"
-            android:layout_marginEnd="8dp"/>
-    <TextView
-            android:text="@string/subject_2_chapter"
-            app:layout_constraintStart_toStartOf="@+id/guideline72"
-            app:layout_constraintBottom_toTopOf="@+id/guideline70"
-            app:layout_constraintTop_toTopOf="@+id/guideline71"
-            android:layout_height="0dp" android:layout_width="0dp" android:gravity="center"
-            android:textColor="@color/OnPrimary" android:textStyle="bold"
-            app:autoSizeStepGranularity="4dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
-            app:autoSizeTextType="uniform"
-            app:fontFamily="@font/kukdetopokki"
-            app:layout_constraintEnd_toStartOf="@+id/guideline17" android:layout_marginEnd="8dp"/>
-    <android.support.constraint.ConstraintLayout
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:id="@+id/contents_subject_3" app:layout_constraintStart_toStartOf="@+id/guideline17"
-            app:layout_constraintBottom_toTopOf="@+id/guideline15" app:layout_constraintTop_toTopOf="@+id/guideline5"
-            app:layout_constraintEnd_toEndOf="parent" android:background="@drawable/btn_subject_select"
-            android:clickable="true"
-            android:layout_margin="6dp">
-        <View
-                android:layout_width="20dp"
-                android:layout_height="20dp" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" android:background="@drawable/circle_button_left_top"
-                android:layout_margin="8dp"/>
-    </android.support.constraint.ConstraintLayout>
-    <View
-            app:layout_constraintEnd_toStartOf="@+id/guideline24"
-            app:layout_constraintStart_toStartOf="@+id/guideline17"
-            app:layout_constraintBottom_toTopOf="@+id/guideline70"
-            app:layout_constraintTop_toTopOf="@+id/guideline23"
-            android:background="@drawable/img_subject_select_3" android:layout_width="0dp"
-            android:layout_height="0dp" android:layout_marginStart="8dp" android:id="@+id/view3"/>
-    <TextView
-            android:text="@string/subject_3_name"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline24"
-            app:layout_constraintBottom_toTopOf="@+id/guideline71"
-            app:layout_constraintTop_toTopOf="@+id/guideline23"
-            app:autoSizeStepGranularity="2dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="12dp"
-            app:autoSizeTextType="uniform"
-            android:gravity="center" android:textStyle="bold" android:textColor="@color/OnPrimary"
-            app:fontFamily="@font/kukdetopokki"
-            android:layout_marginEnd="8dp"/>
-    <TextView
-            android:text="@string/subject_3_chapter"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline24"
-            app:layout_constraintBottom_toTopOf="@+id/guideline70"
-            app:layout_constraintTop_toTopOf="@+id/guideline71"
-            app:autoSizeStepGranularity="4dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
-            app:autoSizeTextType="uniform"
-            android:gravity="center" android:textStyle="bold" android:textColor="@color/OnPrimary"
-            app:fontFamily="@font/kukdetopokki"
-            android:layout_marginEnd="8dp" android:id="@+id/textView"/>
-    <android.support.constraint.ConstraintLayout
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="0dp" android:id="@+id/contents_subject_4"
-            app:layout_constraintBottom_toTopOf="@+id/guideline16" app:layout_constraintTop_toTopOf="@+id/guideline15"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline17" android:background="@drawable/btn_subject_select"
-            android:clickable="true" android:layout_margin="6dp">
-        <View
-                android:layout_width="20dp"
-                android:layout_height="20dp" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" android:background="@drawable/circle_button_left_top"
-                android:layout_margin="8dp"/>
-    </android.support.constraint.ConstraintLayout>
-    <View
-            app:layout_constraintEnd_toStartOf="@+id/guideline72"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/guideline27"
-            app:layout_constraintTop_toTopOf="@+id/guideline25"
-            android:background="@drawable/img_subject_select_4" android:layout_width="0dp"
-            android:layout_height="0dp" android:layout_marginStart="8dp" android:id="@+id/view"/>
-    <TextView
-            android:text="@string/subject_4_name"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="@+id/guideline72"
-            app:layout_constraintBottom_toTopOf="@+id/guideline26"
-            app:layout_constraintTop_toTopOf="@+id/guideline25"
-            app:autoSizeStepGranularity="4dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
-            app:autoSizeTextType="uniform"
-            android:gravity="center" android:textStyle="bold" android:textColor="@color/OnPrimary"
-            app:layout_constraintEnd_toStartOf="@+id/guideline17" android:layout_marginEnd="8dp"
-            app:fontFamily="@font/kukdetopokki"
-    />
-    <TextView
-            android:text="@string/subject_4_chapter"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="@+id/guideline72"
-            app:layout_constraintBottom_toTopOf="@+id/guideline27"
-            app:layout_constraintTop_toTopOf="@+id/guideline26" android:layout_marginEnd="8dp"
-            app:autoSizeStepGranularity="4dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="16dp"
-            app:autoSizeTextType="uniform"
-            android:gravity="center" android:textStyle="bold" android:textColor="@color/OnPrimary"
-            app:fontFamily="@font/kukdetopokki"
-            app:layout_constraintEnd_toStartOf="@+id/guideline17"/>
-    <android.support.constraint.ConstraintLayout
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="0dp" app:layout_constraintTop_toTopOf="@+id/guideline15"
-            app:layout_constraintBottom_toTopOf="@+id/guideline16" app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/contents_subject_5"
-            app:layout_constraintStart_toStartOf="@+id/guideline17" android:background="@drawable/btn_subject_select"
-            android:clickable="true" android:layout_margin="6dp">
-        <View
-                android:layout_width="20dp"
-                android:layout_height="20dp" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" android:background="@drawable/circle_button_left_top"
-                android:layout_margin="8dp"/>
-    </android.support.constraint.ConstraintLayout>
-    <View
-            app:layout_constraintEnd_toStartOf="@+id/guideline24"
-            app:layout_constraintStart_toStartOf="@+id/guideline17"
-            app:layout_constraintBottom_toTopOf="@+id/guideline27"
-            app:layout_constraintTop_toTopOf="@+id/guideline25"
-            android:background="@drawable/img_subject_select_5" android:layout_width="0dp"
-            android:layout_height="0dp" android:layout_marginStart="8dp" android:layout_marginEnd="4dp"/>
-    <TextView
-            android:text="@string/subject_5_name"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline24"
-            app:layout_constraintBottom_toTopOf="@+id/guideline26"
-            app:layout_constraintTop_toTopOf="@+id/guideline25" android:layout_marginEnd="8dp"
-            app:autoSizeStepGranularity="4dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
-            app:autoSizeTextType="uniform"
-            android:gravity="center" android:textStyle="bold" android:textColor="@color/OnPrimary"
-            app:fontFamily="@font/kukdetopokki"
-    />
-    <TextView
-            android:text="@string/subject_5_chapter"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline24"
-            app:layout_constraintTop_toTopOf="@+id/guideline26"
-            app:autoSizeStepGranularity="4dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="4dp"
-            app:autoSizeTextType="uniform"
-            android:gravity="center" android:textStyle="bold" android:textColor="@color/OnPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/guideline27"
-            app:fontFamily="@font/kukdetopokki"
-            android:layout_marginEnd="8dp"/>
-    <android.support.constraint.ConstraintLayout
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="0dp" app:layout_constraintTop_toTopOf="@+id/guideline16"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline17"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/contents_subject_6" android:background="@drawable/btn_subject_select"
-            android:clickable="true"
-            android:layout_margin="6dp">
-        <View
-                android:layout_width="20dp"
-                android:layout_height="20dp" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" android:background="@drawable/circle_button_left_top"
-                android:layout_margin="8dp"/>
-    </android.support.constraint.ConstraintLayout>
-    <View
-            android:background="@drawable/img_subject_select_6"
-            app:layout_constraintEnd_toStartOf="@+id/guideline72"
-            app:layout_constraintBottom_toTopOf="@+id/guideline30"
-            app:layout_constraintTop_toTopOf="@+id/guideline28" app:layout_constraintStart_toStartOf="parent"
-            android:layout_width="0dp" android:layout_height="0dp"
-            android:layout_marginStart="8dp" android:layout_marginEnd="2dp" android:id="@+id/view2"/>
-    <TextView
-            android:text="@string/subject_6_name"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="@+id/guideline72"
-            app:layout_constraintBottom_toTopOf="@+id/guideline29"
-            app:layout_constraintTop_toTopOf="@+id/guideline28"
-            app:autoSizeStepGranularity="4dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
-            app:autoSizeTextType="uniform"
-            android:gravity="center" android:textStyle="bold" android:textColor="@color/OnPrimary"
-            app:fontFamily="@font/kukdetopokki"
-            app:layout_constraintEnd_toStartOf="@+id/guideline17" android:layout_marginEnd="8dp"/>
-    <TextView
-            android:text="@string/subject_6_chapter"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="@+id/guideline72"
-            app:layout_constraintBottom_toTopOf="@+id/guideline30"
-            app:layout_constraintTop_toTopOf="@+id/guideline29"
-            app:autoSizeStepGranularity="4dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
-            app:autoSizeTextType="uniform"
-            android:gravity="center" android:textStyle="bold" android:textColor="@color/OnPrimary"
-            app:fontFamily="@font/kukdetopokki"
-            app:layout_constraintEnd_toStartOf="@+id/guideline17" android:layout_marginEnd="8dp"/>
-    <android.support.constraint.ConstraintLayout
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline16" app:layout_constraintStart_toStartOf="@+id/guideline17"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/contents_subject_7" android:background="@drawable/btn_subject_select"
-            android:clickable="true"
-            android:layout_margin="6dp">
-        <View
-                android:layout_width="20dp"
-                android:layout_height="20dp" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" android:background="@drawable/circle_button_left_top"
-                android:layout_margin="8dp"/>
-    </android.support.constraint.ConstraintLayout>
-    <View
-            app:layout_constraintEnd_toStartOf="@+id/guideline24"
-            app:layout_constraintBottom_toTopOf="@+id/guideline30"
-            app:layout_constraintStart_toStartOf="@+id/guideline17"
-            app:layout_constraintTop_toTopOf="@+id/guideline28"
-            android:background="@drawable/img_subject_select_7" android:layout_width="0dp"
-            android:layout_height="0dp" app:layout_constraintHorizontal_bias="0.509"
-            app:layout_constraintVertical_bias="0.987" android:layout_marginStart="8dp" android:layout_marginEnd="2dp"/>
-    <TextView
-            android:text="@string/subject_7_name"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline24"
-            app:layout_constraintBottom_toTopOf="@+id/guideline29"
-            app:layout_constraintTop_toTopOf="@+id/guideline28"
-            app:autoSizeStepGranularity="8dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="16dp"
-            app:autoSizeTextType="uniform"
-            android:gravity="center" android:textStyle="bold" android:textColor="@color/OnPrimary"
-            app:fontFamily="@font/kukdetopokki"
-            android:layout_marginEnd="8dp"/>
-    <TextView
-            android:text="@string/subject_7_chapter"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline24"
-            app:layout_constraintBottom_toTopOf="@+id/guideline30"
-            app:layout_constraintTop_toTopOf="@+id/guideline29"
-            app:autoSizeStepGranularity="4dp" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
-            app:autoSizeTextType="uniform"
-            android:gravity="center" android:textStyle="bold" android:textColor="@color/OnPrimary"
-            app:fontFamily="@font/kukdetopokki"
-            android:layout_marginEnd="8dp"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical" android:weightSum="13" android:layout_margin="8dp">
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/contents_subject_1"
+                    android:layout_height="160dp" app:srcCompat="@drawable/btn_subject_1"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal">
+            </ImageView>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/contents_subject_2"
+                    android:layout_height="160dp" app:srcCompat="@drawable/btn_subject_2"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal">
+            </ImageView>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/contents_subject_3"
+                    android:layout_height="160dp" app:srcCompat="@drawable/btn_subject_3"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal">
+            </ImageView>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/contents_subject_4"
+                    android:layout_height="160dp" app:srcCompat="@drawable/btn_subject_4"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal">
+            </ImageView>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/contents_subject_5"
+                    android:layout_height="160dp" app:srcCompat="@drawable/btn_subject_5"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal">
+            </ImageView>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/contents_subject_6"
+                    android:layout_height="160dp" app:srcCompat="@drawable/btn_subject_6"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal">
+            </ImageView>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/contents_subject_7"
+                    android:layout_height="160dp" app:srcCompat="@drawable/btn_subject_7"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal">
+            </ImageView>
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

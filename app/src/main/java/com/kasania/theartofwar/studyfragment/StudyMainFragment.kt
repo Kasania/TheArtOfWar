@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
+import android.support.v4.app.FragmentTransaction
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
@@ -19,25 +20,36 @@ class StudyMainFragment : Fragment(){
         var currentChapter: Int = 1
         var currentPhrase: Int = 0
 
-        fun changeStudyContents(fm:FragmentManager?, chapter:Int = 1, phrase:Int = 0, action:Int = 0){
+        private fun setContentsView(ft:FragmentTransaction){
+            when(currentPhrase){
+                0 -> ft.replace(R.id.contents_panel_study_main,StudyChapterSummaryFragment())
+                else -> ft.replace(R.id.contents_panel_study_main,StudyPhraseMainFragment())
+            }
+        }
+
+        fun createStudyContents(fm:FragmentManager?, chapter:Int = 1, phrase:Int = 0){
             currentChapter = chapter
             currentPhrase = phrase
             val ft = fm!!.beginTransaction()
+            if(enableAnimation){
+                ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top,R.anim.slide_in_top,R.anim.slide_out_bottom)
+            }
+            ft.replace(R.id.contents_root,StudyMainFragment().newInstance())
+                .addToBackStack("StudyMain")
+            ft.commit()
+        }
 
+        fun changeStudyContents(fm:FragmentManager?, chapter:Int = 1, phrase:Int = 0,action:Int = 1){
+            currentChapter = chapter
+            currentPhrase = phrase
+            val ft = fm!!.beginTransaction()
+            if(enableAnimation)
             when (action){
-                0-> ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top,R.anim.slide_in_top,R.anim.slide_out_bottom)
-                    .replace(R.id.contents_root,StudyMainFragment().newInstance())
-                    .addToBackStack("StudyMain")
                 1 -> ft.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right)
-                2 -> ft.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left)
-                3 -> ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top)
+                2 -> ft.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left)
+                3 -> ft.setCustomAnimations(R.anim.slide_in_bottom, R.anim.slide_out_top)
             }
-
-            if(phrase == 0) {
-                ft.replace(R.id.contents_panel_study_main,StudyChapterSummaryFragment())
-            }else{
-                ft.replace(R.id.contents_panel_study_main,StudyPhraseMainFragment())
-            }
+            setContentsView(ft)
 
             ft.commit()
         }
@@ -55,6 +67,8 @@ class StudyMainFragment : Fragment(){
         val view = inflater.inflate(R.layout.fragment_study_main, container, false)
 
         setChapterTextView(view)
+
+        changeStudyContents(fragmentManager, currentChapter, currentPhrase,0)
 
         view.setOnKeyListener(View.OnKeyListener { _, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
@@ -144,5 +158,7 @@ class StudyMainFragment : Fragment(){
         val currentChapterText = "${resources.getString(R.string.chapter_prefix_name)} $currentChapter ${resources.getString(R.string.chapter_postfix_name)} $displayPhrase"
         v.tv_study_current_chapter?.text = currentChapterText
     }
+
+
 
 }

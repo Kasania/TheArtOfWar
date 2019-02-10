@@ -3,6 +3,7 @@ package com.kasania.theartofwar
 import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
 import com.kasania.theartofwar.mainfragment.HomeFragment
 import com.kasania.theartofwar.mainfragment.MainFragment
 import com.kasania.theartofwar.mainfragment.SearchFragment
@@ -18,14 +19,15 @@ class MainActivity : AppCompatActivity() {
 
         fun toggleBookMark(chapter:Int = 1, phrase:Int = 0){
             if (isCheckedBookMark(chapter,phrase)){
-                BookmarkData[maxPhraseNum[chapter-1] + phrase] = 0.toByte()
+
+                BookmarkData[sumOfPhrase[chapter-1] + phrase] = 0.toByte()
             }else{
-                BookmarkData[maxPhraseNum[chapter-1] + phrase] = 1.toByte()
+                BookmarkData[sumOfPhrase[chapter-1] + phrase] = 1.toByte()
             }
         }
 
         fun isCheckedBookMark(chapter:Int = 1, phrase:Int = 0) : Boolean{
-            if(BookmarkData[maxPhraseNum[chapter-1] + phrase] == 1.toByte()){
+            if(BookmarkData[sumOfPhrase[chapter-1] + phrase] == 1.toByte()){
                 return true
             }
             return false

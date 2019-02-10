@@ -4,36 +4,36 @@
               android:layout_height="match_parent" android:orientation="vertical">
     <android.support.constraint.ConstraintLayout
             android:id="@+id/contents_panel_main"
-            android:layout_weight="0.1"
+            android:layout_weight="0.125"
             android:layout_width="match_parent" android:layout_height="match_parent" android:animationCache="true"
-            android:background="@color/Background">
+    >
     </android.support.constraint.ConstraintLayout>
     <android.support.constraint.ConstraintLayout
-            android:layout_weight="0.9"
+            android:layout_weight="0.875"
             android:layout_width="match_parent"
             android:layout_height="match_parent" android:id="@+id/contents_main_bottom_buttons"
-            android:animateLayoutChanges="true" android:background="@color/Background">
+            android:animateLayoutChanges="true">
 
         <android.support.constraint.Guideline
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/guideline18"
-                app:layout_constraintGuide_percent="0.2"/>
+                app:layout_constraintGuide_percent="0.11"/>
         <android.support.constraint.Guideline
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/guideline19"
-                app:layout_constraintGuide_percent="0.4"/>
+                app:layout_constraintGuide_percent="0.37"/>
         <android.support.constraint.Guideline
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/guideline20"
-                app:layout_constraintGuide_percent="0.6"/>
+                app:layout_constraintGuide_percent="0.63"/>
         <android.support.constraint.Guideline
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/guideline21"
-                app:layout_constraintGuide_percent="0.8"/>
+                app:layout_constraintGuide_percent="0.89"/>
         <Button
                 android:layout_width="0dp"
                 android:layout_height="0dp" android:id="@+id/btn_main_bottom_home"
@@ -41,20 +41,20 @@
                 app:layout_constraintStart_toStartOf="@+id/guideline18"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" android:background="@drawable/btn_main_home"
-                android:layout_margin="2dp"/>
+                android:layout_margin="1dp"/>
         <Button
                 android:id="@+id/btn_main_bottom_study"
                 app:layout_constraintEnd_toStartOf="@+id/guideline20"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline19" android:layout_width="0dp"
-                android:layout_height="0dp" android:background="@drawable/btn_main_study" android:layout_margin="2dp"/>
+                android:layout_height="0dp" android:background="@drawable/btn_main_study" android:layout_margin="1dp"/>
         <Button
                 android:id="@+id/btn_main_bottom_search"
                 app:layout_constraintEnd_toStartOf="@+id/guideline21"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline20"
                 app:layout_constraintTop_toTopOf="parent" android:layout_height="0dp" android:layout_width="0dp"
-                android:background="@drawable/btn_main_search" android:layout_margin="2dp"/>
+                android:background="@drawable/btn_main_search" android:layout_margin="1dp"/>
     </android.support.constraint.ConstraintLayout>
 </LinearLayout>

@@ -52,7 +52,7 @@ class QuickChapterSelectDialog:DialogFragment() {
             currentChapter = view.np_quick_chapter_chapter.value
             currentPhrase = view.np_quick_chapter_phrase.value
 
-            StudyMainFragment.changeStudyContents(fragmentManager,currentChapter, currentPhrase,4)
+            StudyMainFragment.createStudyContents(fragmentManager,currentChapter, currentPhrase)
 
         }
         return dialog.create()

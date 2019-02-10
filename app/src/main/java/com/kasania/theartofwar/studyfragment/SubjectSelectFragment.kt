@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.kasania.theartofwar.R
+import com.kasania.theartofwar.enableAnimation
 import kotlinx.android.synthetic.main.fragment_study_subject_select.view.*
 
 class SubjectSelectFragment : Fragment(){
@@ -21,44 +22,49 @@ class SubjectSelectFragment : Fragment(){
     private fun initClick(view: View) {
 
         view.contents_subject_1.setOnClickListener {
-            StudyMainFragment.changeStudyContents(fragmentManager,1)
+            StudyMainFragment.createStudyContents(fragmentManager,1)
         }
 
-
         view.contents_subject_2.setOnClickListener {
-            fragmentManager?.
-                beginTransaction()?.
-                replace(R.id.contents_panel_main,ChapterSelection2ItemFragment())?.
-                addToBackStack(null)?.
-                commit()
+            val ft = fragmentManager!!.beginTransaction()
+            if(enableAnimation){
+                ft.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
+            }
+            ft.replace(R.id.contents_panel_main,ChapterSelection2ItemFragment()).
+            addToBackStack("Subject2").
+            commit()
         }
 
         view.contents_subject_3.setOnClickListener {
-            StudyMainFragment.changeStudyContents(fragmentManager,4)
+            StudyMainFragment.createStudyContents(fragmentManager,4)
         }
 
         view.contents_subject_4.setOnClickListener {
-            fragmentManager?.
-                beginTransaction()?.
-                replace(R.id.contents_panel_main,ChapterSelection3ItemFragment())?.
-                addToBackStack(null)?.
+            val ft = fragmentManager!!.beginTransaction()
+            if(enableAnimation){
+                ft.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
+            }
+            ft.replace(R.id.contents_panel_main,ChapterSelection3ItemFragment()).
+                addToBackStack("Subject4").
                 commit()
         }
 
         view.contents_subject_5.setOnClickListener {
-            fragmentManager?.
-                beginTransaction()?.
-                replace(R.id.contents_panel_main,ChapterSelection4ItemFragment())?.
-                addToBackStack(null)?.
+            val ft = fragmentManager!!.beginTransaction()
+            if(enableAnimation){
+                ft.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
+            }
+            ft.replace(R.id.contents_panel_main,ChapterSelection4ItemFragment()).
+                addToBackStack("Subject5").
                 commit()
         }
 
         view.contents_subject_6.setOnClickListener {
-            StudyMainFragment.changeStudyContents(fragmentManager,12)
+            StudyMainFragment.createStudyContents(fragmentManager,12)
         }
 
         view.contents_subject_7.setOnClickListener {
-            StudyMainFragment.changeStudyContents(fragmentManager,13)
+            StudyMainFragment.createStudyContents(fragmentManager,13)
         }
 
     }

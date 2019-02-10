@@ -2,6 +2,7 @@ package com.kasania.theartofwar.studyfragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,14 +16,15 @@ class ChapterSelection3ItemFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_study_chapter_selection_3, container, false)
         view.btn_study_gochapter5.setOnClickListener {
-            StudyMainFragment.changeStudyContents(fragmentManager,5)
+            StudyMainFragment.createStudyContents(fragmentManager,5)
         }
         view.btn_study_gochapter6.setOnClickListener {
-            StudyMainFragment.changeStudyContents(fragmentManager,6)
+            StudyMainFragment.createStudyContents(fragmentManager,6)
         }
         view.btn_study_gochapter7.setOnClickListener {
-            StudyMainFragment.changeStudyContents(fragmentManager,7)
+            StudyMainFragment.createStudyContents(fragmentManager,7)
         }
         return view
     }
+
 }

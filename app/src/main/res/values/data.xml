@@ -88,8 +88,8 @@
     <string name="comment_1_12"></string>
 
     <string name="hanja_2_1"></string>
-    <string name="sound_2_1"></string>
-    <string name="interpret_2_1"></string>
+    <string name="sound_2_1">testdata1</string>
+    <string name="interpret_2_1">testdata2</string>
     <string name="voca_2_1"></string>
     <string name="comment_2_1"></string>
 
@@ -814,7 +814,7 @@
     <string name="comment_11_4"></string>
 
     <string name="hanja_11_5"></string>
-    <string name="sound_11_5"></string>
+    <string name="sound_11_5">testData4</string>
     <string name="interpret_11_5"></string>
     <string name="voca_11_5"></string>
     <string name="comment_11_5"></string>
@@ -942,7 +942,7 @@
     <string name="hanja_11_26"></string>
     <string name="sound_11_26"></string>
     <string name="interpret_11_26"></string>
-    <string name="voca_11_26"></string>
+    <string name="voca_11_26">testData4|testdata</string>
     <string name="comment_11_26"></string>
 
     <string name="hanja_12_1"></string>
@@ -1051,6 +1051,6 @@
     <string name="sound_13_12"></string>
     <string name="interpret_13_12"></string>
     <string name="voca_13_12"></string>
-    <string name="comment_13_12"></string>
+    <string name="comment_13_12">testData3</string>
 
 </resources>

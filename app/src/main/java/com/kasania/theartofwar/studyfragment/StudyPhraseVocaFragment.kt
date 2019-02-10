@@ -28,10 +28,12 @@ class StudyPhraseVocaFragment: Fragment() {
             val vocaInterpret = TextView(context)
 
             vocaChar.text = vocaValue[0]
-            vocaInterpret.text = vocaValue[1]
-
             vocaContainer.addView(vocaChar)
-            vocaContainer.addView(vocaInterpret)
+            if(vocaValue.lastIndex > 0){
+                vocaContainer.addView(vocaInterpret)
+                vocaInterpret.text = vocaValue[1]
+            }
+
 
             view.sv_phrase_voca.addView(vocaContainer)
 
