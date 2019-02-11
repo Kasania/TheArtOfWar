@@ -2,9 +2,11 @@ package com.kasania.theartofwar.studyfragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.kasania.theartofwar.R
 import kotlinx.android.synthetic.main.fragment_study_phrase_comment.view.*
@@ -20,6 +22,11 @@ class StudyPhraseCommentFragment :Fragment() {
         for (s in commentValue){
             val commentView = TextView(context)
             commentView.text = s
+            commentView.textSize = 20f
+            commentView.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
+            val commentViewLayout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+            commentViewLayout.setMargins(10,20,10,15)
+            commentView.layoutParams = commentViewLayout
             view.sv_phrase_comment.addView(commentView)
         }
 

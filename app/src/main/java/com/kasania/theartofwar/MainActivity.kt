@@ -70,5 +70,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+//    override fun onBackPressed() {
+//        val fragment =
+//            this.supportFragmentManager.findFragmentById(R.id.contents_root)
+//        (fragment as? IOnBackPressed)?.onBackPressed()?.not()?.let {
+//            super.onBackPressed()
+//        }
+//    }
 
 }

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentTransaction
+import android.util.Log
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +15,13 @@ import com.kasania.theartofwar.*
 import kotlinx.android.synthetic.main.fragment_study_main.view.*
 
 
-class StudyMainFragment : Fragment(){
+class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
+//    override fun onBackPressed(): Boolean {
+//        for(b in 0..fragmentManager!!.backStackEntryCount){
+//            fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+//        }
+//        return true
+//    }
 
     companion object {
         var currentChapter: Int = 1
@@ -50,7 +57,6 @@ class StudyMainFragment : Fragment(){
                 3 -> ft.setCustomAnimations(R.anim.slide_in_bottom, R.anim.slide_out_top)
             }
             setContentsView(ft)
-
             ft.commit()
         }
 
@@ -72,7 +78,8 @@ class StudyMainFragment : Fragment(){
 
         view.setOnKeyListener(View.OnKeyListener { _, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
-                fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+                Log.d("key","back")
+
                 return@OnKeyListener true
             }
             false
@@ -88,7 +95,9 @@ class StudyMainFragment : Fragment(){
         }
 
         view.btn_study_back_to_chapter.setOnClickListener {
-            fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+            for(b in 0..fragmentManager!!.backStackEntryCount){
+                fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+            }
         }
 
         view.btn_study_quick_select.setOnClickListener {

@@ -29,7 +29,10 @@ open class SearchFragment :Fragment(){
         view.edt_search.setOnEditorActionListener { v, actionId, _ ->
 
             when(actionId){
-                EditorInfo.IME_ACTION_SEARCH -> searchFromAll(v.text.toString(),view.contents_search_result)
+                EditorInfo.IME_ACTION_SEARCH -> {
+                    val searchCount = searchFromAll(v.text.toString(),view.contents_search_result)
+                    view.tv_search_count.text = "${v.text} 에 대한 검색결과 : $searchCount 건"
+                }
                     else -> Log.d("edt_search","$actionId")
             }
             (context!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager)

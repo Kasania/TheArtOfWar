@@ -21,7 +21,9 @@ open class HomeFragment :Fragment() {
 
         view.btn_home_favorite.setOnClickListener {
             val ft = fragmentManager!!.beginTransaction()
+            if(enableAnimation)
             ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top,R.anim.slide_in_top,R.anim.slide_out_bottom)
+
             ft.replace(R.id.contents_root,FavoriteFragment())
             ft.addToBackStack("Favorite")
             ft.commit()
@@ -39,7 +41,7 @@ open class HomeFragment :Fragment() {
 
         val today = Calendar.getInstance()
 
-        val todayChapter = (today.get(Calendar.YEAR)*(today.get(Calendar.MONTH)+1)*(today.get(Calendar.DATE)+1)) % maxChapterNum
+        val todayChapter = (today.get(Calendar.YEAR)*(today.get(Calendar.MONTH)+1)*(today.get(Calendar.DATE)+1)) % maxChapterNum + 1
         val todayPhrase = (today.get(Calendar.YEAR)*(today.get(Calendar.MONTH)+1)*(today.get(Calendar.DATE)+1)) % maxPhraseNum[todayChapter]
 
 

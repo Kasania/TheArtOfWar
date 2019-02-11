@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.kasania.theartofwar.*
 import com.kasania.theartofwar.studyfragment.StudyMainFragment
@@ -81,8 +82,11 @@ class FavoriteFragment : Fragment(){
                 textView.text = text
                 textView.gravity = Gravity.CENTER
                 textView.setTextColor(ContextCompat.getColor(context!!,R.color.OnPrimary))
-                textView.setBackgroundColor(ContextCompat.getColor(context!!,R.color.SecondaryMain))
+                textView.setBackgroundColor(ContextCompat.getColor(context!!,R.color.SurfaceDeepDark))
                 textView.textSize = 24.0f
+                val layout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
+                layout.setMargins(5,5,5,5)
+                textView.layoutParams = layout
                 textView.setOnClickListener{
                     StudyMainFragment.createStudyContents(fragmentManager,currentSelectChapter+1,i)
                 }

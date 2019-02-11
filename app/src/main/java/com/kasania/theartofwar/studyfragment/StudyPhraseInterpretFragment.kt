@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.speech.tts.TextToSpeech.ERROR
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -28,7 +29,7 @@ class StudyPhraseInterpretFragment : Fragment() {
 
         val hanjaValue = getText(hanjaId).split("/")
         val soundValue = getText(soundId).split("/")
-        val interpretValue = getText(interpretId).split("/")
+        val interpretValue = getText(interpretId)/*.split("/")*/
 
         tts = TextToSpeech(context, TextToSpeech.OnInitListener { status ->
             if (status != ERROR) {
@@ -40,24 +41,16 @@ class StudyPhraseInterpretFragment : Fragment() {
 
 
         for (i in 0.. hanjaValue.lastIndex){
-            val interpretSet = LinearLayout(context)
-            interpretSet.orientation = LinearLayout.HORIZONTAL
-            interpretSet.gravity = Gravity.LEFT
-
-            interpretSet.setOnClickListener{
-
-            }
-
             val hanjaSet = LinearLayout(context)
             hanjaSet.orientation = LinearLayout.VERTICAL
-            hanjaSet.layoutParams = LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.MATCH_PARENT,0.45f)
+//            hanjaSet.layoutParams = LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.MATCH_PARENT,0.45f)
             hanjaSet.gravity = Gravity.CENTER
 
             val hanjaView = TextView(context)
             hanjaView.text = hanjaValue[i]
             hanjaView.textSize=24.0f
             hanjaView.gravity = Gravity.CENTER
-
+            hanjaView.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
 
 
 
@@ -65,21 +58,28 @@ class StudyPhraseInterpretFragment : Fragment() {
             soundView.text = soundValue[i]
             soundView.textSize=24.0f
             soundView.gravity = Gravity.CENTER
+            soundView.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
 
-            val interpretView = TextView(context)
-            interpretView.text = interpretValue[i]
-            interpretView.textSize=24.0f
-            interpretView.gravity = Gravity.CENTER
-            interpretView.layoutParams = LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.MATCH_PARENT,0.55f)
-
-
+//
             hanjaSet.addView(hanjaView)
             hanjaSet.addView(soundView)
 
-            interpretSet.addView(hanjaSet)
-            interpretSet.addView(interpretView)
-            view.sv_phrase_interpret.addView(interpretSet)
+//            interpretSet.addView(hanjaSet)
+//            interpretSet.addView(interpretView)
+            view.sv_phrase_interpret.addView(hanjaSet)
         }
+
+        val interpretView = TextView(context)
+        interpretView.text = interpretValue
+        interpretView.textSize=24.0f
+        interpretView.gravity = Gravity.CENTER
+        interpretView.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
+//
+        val interpretLayout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
+        interpretLayout.setMargins(10,20,10,10)
+        interpretView.layoutParams = interpretLayout
+
+        view.sv_phrase_interpret.addView(interpretView)
 
 
         return view

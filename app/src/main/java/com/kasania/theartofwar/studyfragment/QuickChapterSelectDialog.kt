@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
 import android.support.v4.app.DialogFragment
+import android.support.v4.app.FragmentManager
 import android.widget.NumberPicker
 import com.kasania.theartofwar.R
 import com.kasania.theartofwar.displayPhraseName
@@ -28,12 +29,9 @@ class QuickChapterSelectDialog:DialogFragment() {
 
         val view = activity!!.layoutInflater.inflate(R.layout.dialog_study_quick_chepter_select,null)
 
-        var targetChapter = currentChapter
-        var targetPhrase = currentPhrase
-
         view.np_quick_chapter_chapter.minValue = 1
         view.np_quick_chapter_chapter.maxValue = 13
-        view.np_quick_chapter_chapter.value = targetChapter
+        view.np_quick_chapter_chapter.value = currentChapter
         view.np_quick_chapter_chapter.descendantFocusability = NumberPicker.FOCUS_BLOCK_DESCENDANTS
 
         view.np_quick_chapter_chapter.setOnValueChangedListener { picker, oldVal, newVal ->
@@ -41,8 +39,8 @@ class QuickChapterSelectDialog:DialogFragment() {
         }
 
         view.np_quick_chapter_phrase.minValue = 0
-        view.np_quick_chapter_phrase.maxValue = maxPhraseNum[targetChapter]
-        view.np_quick_chapter_phrase.value = targetPhrase
+        view.np_quick_chapter_phrase.maxValue = maxPhraseNum[currentChapter]
+        view.np_quick_chapter_phrase.value = currentPhrase
         view.np_quick_chapter_phrase.displayedValues = displayPhraseName
         view.np_quick_chapter_phrase.descendantFocusability = NumberPicker.FOCUS_BLOCK_DESCENDANTS
 
@@ -51,6 +49,7 @@ class QuickChapterSelectDialog:DialogFragment() {
         dialog.setPositiveButton("확인") { dialog, which ->
             currentChapter = view.np_quick_chapter_chapter.value
             currentPhrase = view.np_quick_chapter_phrase.value
+
 
             StudyMainFragment.createStudyContents(fragmentManager,currentChapter, currentPhrase)
 
