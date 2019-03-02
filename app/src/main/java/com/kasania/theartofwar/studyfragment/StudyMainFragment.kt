@@ -32,6 +32,7 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
                 0 -> ft.replace(R.id.contents_panel_study_main,StudyChapterSummaryFragment())
                 else -> ft.replace(R.id.contents_panel_study_main,StudyPhraseMainFragment())
             }
+            MainActivity.increaseAccessCount(currentChapter, currentPhrase)
         }
 
         fun createStudyContents(fm:FragmentManager?, chapter:Int = 1, phrase:Int = 0){
@@ -67,14 +68,18 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
         return fragment
     }
 
+    private var startTime = 0L
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {
 
         val view = inflater.inflate(R.layout.fragment_study_main, container, false)
 
+        startTime = System.currentTimeMillis()
         setChapterTextView(view)
 
         changeStudyContents(fragmentManager, currentChapter, currentPhrase,0)
+
 
         view.setOnKeyListener(View.OnKeyListener { _, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
@@ -88,9 +93,9 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
         view.tv_study_current_chapter.setOnClickListener {
             MainActivity.toggleBookMark(currentChapter, currentPhrase)
             if(MainActivity.isCheckedBookMark(currentChapter, currentPhrase)){
-                Toast.makeText(context,"Checked!",Toast.LENGTH_SHORT).show()
+                Toast.makeText(context,"즐겨찾기 설정",Toast.LENGTH_SHORT).show()
             }else{
-                Toast.makeText(context,"UnChecked!",Toast.LENGTH_SHORT).show()
+                Toast.makeText(context,"즐겨찾기 해제",Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -120,13 +125,18 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
     }
 
     override fun onStop() {
-        super.onStop()
+        val endTime = System.currentTimeMillis()
+        val accessTime = ((endTime - startTime))
+        val lastAccessTime =  activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).getLong(SharedPrefKeyTotalAccessTimeMil,0L)
+
         activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit()
-            .putInt(SharedPrefKeyLastChapter, currentChapter).putInt(
-            SharedPrefKeyLastPhrase, currentPhrase).apply()
-
+            .putInt(SharedPrefKeyLastChapter, currentChapter)
+            .putInt(SharedPrefKeyLastPhrase, currentPhrase)
+            .putLong(SharedPrefKeyTotalAccessTimeMil,accessTime+lastAccessTime)
+            .apply()
+        MainActivity.todayAccessTimeMil = MainActivity.todayAccessTimeMil + accessTime
+        super.onStop()
     }
-
 
     private fun updateStudyFragmentWithOffset(phraseOffset:Int){
 
@@ -167,7 +177,5 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
         val currentChapterText = "${resources.getString(R.string.chapter_prefix_name)} $currentChapter ${resources.getString(R.string.chapter_postfix_name)} $displayPhrase"
         v.tv_study_current_chapter?.text = currentChapterText
     }
-
-
 
 }

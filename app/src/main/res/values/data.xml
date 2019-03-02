@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chapterSummary1"></string>
-    <string name="chapterSummary2"></string>
-    <string name="chapterSummary3"></string>
-    <string name="chapterSummary4"></string>
-    <string name="chapterSummary5"></string>
-    <string name="chapterSummary6"></string>
-    <string name="chapterSummary7"></string>
-    <string name="chapterSummary8"></string>
-    <string name="chapterSummary9"></string>
-    <string name="chapterSummary10"></string>
-    <string name="chapterSummary11"></string>
-    <string name="chapterSummary12"></string>
-    <string name="chapterSummary13"></string>
+    <string name="chapterSummary1">1편 총괄</string>
+    <string name="chapterSummary2">2편 총괄</string>
+    <string name="chapterSummary3">3편 총괄</string>
+    <string name="chapterSummary4">4편 총괄</string>
+    <string name="chapterSummary5">5편 총괄</string>
+    <string name="chapterSummary6">6편 총괄</string>
+    <string name="chapterSummary7">7편 총괄</string>
+    <string name="chapterSummary8">8편 총괄</string>
+    <string name="chapterSummary9">9편 총괄</string>
+    <string name="chapterSummary10">10편 총괄</string>
+    <string name="chapterSummary11">11편 총괄</string>
+    <string name="chapterSummary12">12편 총괄</string>
+    <string name="chapterSummary13">13편 총괄</string>
 
-    <string name="hanja_1_1">孫子曰. 兵者, 國之大事, /死生之地, 存亡之道, 不可不察也.</string>
-    <string name="sound_1_1">손자왈. 병자, 국지대사, /사생지지, 존망지도, 불가불찰야.</string>
-    <string name="interpret_1_1">손자가 말했다. 전쟁은 국가의 중대사로서 국민의 생사가 나뉘는 곳이며 국가의 존망이 결정되는 길이니 (전쟁수행을 결정할 때는) 여러 면에서 신중하게 검토하고 세심하게 관찰해야 한다.</string>
-    <string name="voca_1_1">兵|군대, 병기, 병사, 군사, 전쟁, 전투력 등/地|-하는 바, ~하는 곳    </string>
+    <string name="hanja_1_1">孫子曰. 兵者, 國之大事, /死生之地, 存亡之道, /不可不察也.</string>
+    <string name="sound_1_1">손자왈. 병자, 국지대사, /사생지지, 존망지도, /불가불찰야.</string>
+    <string name="interpret_1_1">손자가 말했다. \n전쟁은 국가의 중대사로서 국민의 생사가 나뉘는 곳이며 국가의 존망이 결정되는 길이니 (전쟁수행을 결정할 때는) 여러 면에서 신중하게 검토하고 세심하게 관찰해야 한다.</string>
+    <string name="voca_1_1">子|사람의 성에 붙이는 \'선생\'/兵|군대, 병기, 병사, 군사, 전쟁, 전투력 등/地|-하는 바, ~처지/察|살필 찰/不可不|~하지 않을 수 없다</string>
     <string name="comment_1_1">전쟁이 끊이지 않던 옛날 중국에 살았던 손자는 ‘전쟁은 백성의 생사와 국가의 멸망이 달려 있는 중요한 일이므로 신중하게 결정하여야 하고, 반드시 결정에 앞서 생각하고 또 생각해야 한다.’ 라고 주장하였다./ 전쟁을 시작하였을 때 얻는 것과 잃는 것을 철저히 계산하여야 하며, 이길 가능성이 있으면 전쟁을 하고, 이길 가능성이 없으면 전쟁에 뛰어 들지 말라는 숨은 뜻을 가지고 있는 것이다./ 전쟁을 결정한다는 것이 어떤 의미인지 잘 몰랐던 지도자들이 저지른 1, 2차 세계대전은 전쟁을 수행하고자 할 때 왜 신중해야하는지 알려주는 적절한 사례이다./ 손자는 이런 전쟁 대신 전쟁 없이 적을 무릎 꿇게 하는 방법을 찾으라고 주장하였다. </string>
 
     <string name="hanja_1_2">故經之以五事, 校之以計, /而索其情. 一曰道, 二曰天, /三曰地, 四曰將, 五曰法.</string>
@@ -87,10 +87,10 @@
     <string name="voca_1_12"></string>
     <string name="comment_1_12"></string>
 
-    <string name="hanja_2_1"></string>
-    <string name="sound_2_1">testdata1</string>
-    <string name="interpret_2_1">testdata2</string>
-    <string name="voca_2_1"></string>
+    <string name="hanja_2_1">必索敵人之間來間我者 因而利之 導而舍之 /故反間, 可得而用也. /因是而知之, 故鄕間, 內間, 可得而使也.</string>
+    <string name="sound_2_1">필색적인지간래간아자 인이리지 도이사지 /고반간, 가득이용야. /인시이지지, 고향간, 내간, 가득이사야.</string>
+    <string name="interpret_2_1">한편, 아군 진영에 적의 간첩이 활동하고 있으면 반드시 이를 찾아내 이익과 편의를 제공하여 회유, 반간으로 이용할 수 있다. 반간을 통해 적의 상황을 알 수 있기 때문에 향간과 내간도 획득하여 부릴 수 있다.</string>
+    <string name="voca_2_1">因|인할 인/導|이끌 도/是|바르게할 시/得|얻을 득</string>
     <string name="comment_2_1"></string>
 
     <string name="hanja_2_2"></string>

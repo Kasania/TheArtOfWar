@@ -10,7 +10,6 @@ import com.kasania.theartofwar.MainActivity
 import com.kasania.theartofwar.MainActivity.Companion.currentMainFragmentPage
 import com.kasania.theartofwar.R
 import com.kasania.theartofwar.enableAnimation
-import com.kasania.theartofwar.studyfragment.SubjectSelectFragment
 import kotlinx.android.synthetic.main.fragment_main.view.*
 
 class MainFragment : Fragment() {

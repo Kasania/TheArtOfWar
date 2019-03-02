@@ -52,31 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/guideline2"
             app:layout_constraintGuide_percent="0.95"/>
-    <Button
-            android:layout_width="0dp"
-            android:layout_height="0dp" android:id="@+id/btn_home_setting"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline10"
-            app:layout_constraintEnd_toStartOf="@+id/guideline11"
-            android:padding="5dp"
-            android:gravity="center|center_horizontal"
-            android:layout_marginEnd="16dp" android:layout_marginTop="12dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/btn_home_setting" android:layout_marginStart="32dp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline2"/>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="0dp" android:id="@+id/btn_home_continue"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline10"
-            app:layout_constraintStart_toStartOf="@+id/guideline11"
-            android:padding="5dp"
-            android:layout_marginStart="16dp" android:layout_marginTop="12dp" android:layout_marginBottom="8dp"
-            android:background="@drawable/btn_home_continue" android:layout_marginEnd="32dp"
-            android:clickable="true" app:layout_constraintBottom_toTopOf="@+id/guideline2"/>
-    <LinearLayout
-            android:orientation="vertical"
+    <ImageButton
             android:layout_width="0dp"
             android:layout_height="0dp" android:id="@+id/btn_home_todayphrase"
             app:layout_constraintStart_toStartOf="parent"
@@ -87,8 +63,9 @@
             android:layout_marginTop="12dp"
             app:layout_constraintTop_toTopOf="@+id/guideline8" app:layout_constraintVertical_bias="1.0"
             android:layout_marginBottom="12dp" app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/btn_home_todayphrase" android:clickable="true"/>
-    <Button
+            app:srcCompat="@drawable/btn_home_todayphrase"
+            android:scaleType="fitXY" android:background="@android:color/transparent" android:adjustViewBounds="true"/>
+    <ImageButton
             android:layout_width="0dp"
             android:layout_height="0dp" android:id="@+id/btn_home_favorite"
             app:layout_constraintStart_toStartOf="parent"
@@ -99,8 +76,9 @@
             android:padding="5dp"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toStartOf="@+id/guideline11"
-            android:background="@drawable/btn_home_favorite"/>
-    <Button
+            app:srcCompat="@drawable/btn_home_favorite"
+            android:scaleType="fitXY" android:background="@android:color/transparent" android:adjustViewBounds="true"/>
+    <ImageButton
             android:layout_width="0dp"
             android:layout_height="0dp" android:id="@+id/btn_home_profile"
             app:layout_constraintStart_toStartOf="@+id/guideline11"
@@ -110,20 +88,32 @@
             android:layout_marginEnd="32dp"
             android:padding="5dp"
             app:layout_constraintHorizontal_bias="0.5"
-            android:background="@drawable/btn_home_profile" app:layout_constraintEnd_toEndOf="parent"/>
-    <TextView
+            app:srcCompat="@drawable/btn_home_profile" app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="fitXY" android:background="@android:color/transparent" android:adjustViewBounds="true"/>
+    <ImageButton
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:id="@+id/tv_btn_home_continue"
-            app:layout_constraintTop_toTopOf="@+id/btn_home_continue"
-            app:layout_constraintEnd_toEndOf="@+id/btn_home_continue"
-            app:layout_constraintStart_toStartOf="@+id/btn_home_continue"
-            android:textStyle="bold"
-            android:textColor="@color/OnPrimary" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
-            app:fontFamily="@font/kukdetopokki"
-            app:autoSizeStepGranularity="4dp" app:autoSizeTextType="uniform" android:gravity="center_horizontal|top"
-            app:layout_constraintBottom_toTopOf="@+id/guideline" android:layout_marginEnd="12dp"
-            android:layout_marginStart="12dp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+            android:layout_height="0dp" android:id="@+id/btn_home_setting"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline10"
+            app:layout_constraintEnd_toStartOf="@+id/guideline11"
+            android:padding="5dp"
+            android:gravity="center|center_horizontal"
+            android:layout_marginEnd="16dp" android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            app:srcCompat="@drawable/btn_home_setting" android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            android:scaleType="fitXY" android:background="@android:color/transparent" android:adjustViewBounds="true"/>
+    <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp" android:id="@+id/btn_home_continue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline10"
+            app:layout_constraintStart_toStartOf="@+id/guideline11"
+            android:padding="5dp"
+            android:layout_marginStart="16dp" android:layout_marginTop="12dp" android:layout_marginBottom="8dp"
+            app:srcCompat="@drawable/btn_home_continue" android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            android:scaleType="fitXY" android:background="@android:color/transparent" android:adjustViewBounds="true"/>
     <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -161,4 +151,17 @@
             app:autoSizeStepGranularity="4dp" app:autoSizeTextType="uniform"
             android:gravity="center" android:textColor="@color/OnPrimary" android:layout_marginBottom="12dp"
             app:layout_constraintBottom_toBottomOf="@+id/btn_home_todayphrase"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/tv_btn_home_continue"
+            app:layout_constraintTop_toTopOf="@+id/btn_home_continue"
+            app:layout_constraintEnd_toEndOf="@+id/btn_home_continue"
+            app:layout_constraintStart_toStartOf="@+id/btn_home_continue"
+            android:textStyle="bold"
+            android:textColor="@color/OnPrimary" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
+            app:fontFamily="@font/kukdetopokki"
+            app:autoSizeStepGranularity="4dp" app:autoSizeTextType="uniform" android:gravity="center_horizontal|top"
+            app:layout_constraintBottom_toTopOf="@+id/guideline" android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
 </android.support.constraint.ConstraintLayout>

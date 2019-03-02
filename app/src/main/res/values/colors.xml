@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="Black">#000</color>
+    <color name="Black">#000000</color>
     <color name="Background">#EEEEEE</color>
     <color name="Background_transparent_light">#4DFFFFFF</color>
+    <color name="Background_transparent_light_T">#99FFFFFF</color>
     <color name="Background_transparent_dark">#4D888888</color>
-    <color name ="Surface">#A7C0CD</color>
-    <color name="SurfaceDark">#78909C</color>
     <color name="SurfaceDeepDark">#AA3C3F41</color>
 
     <color name="PrimaryMain">#4DB6AC</color>
-    <color name="PrimaryLight">#82E9DE</color>
-    <color name="PrimaryDark">#00867D</color>
     <color name="OnPrimary">#FAFAFA</color>
 
-    <color name="SecondaryMain">#311B92</color>
     <color name="SecondaryLight">#6746C3</color>
-    <color name="SecondaryDark">#000063</color>
 
     <color name="GradientColor1">#8C338D</color>
     <color name="GradientColor2">#01877D</color>

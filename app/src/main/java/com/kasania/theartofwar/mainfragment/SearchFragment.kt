@@ -128,7 +128,8 @@ open class SearchFragment :Fragment(){
         val chapterView = TextView(context)
         val typeView = TextView(context)
         val typeText = when(type) {
-            SEARCH_RESULT_SOUND, SEARCH_RESULT_INTERPRET -> "문장 해석"
+            SEARCH_RESULT_SOUND -> "한자 소리"
+            SEARCH_RESULT_INTERPRET -> "문장 해석"
             SEARCH_RESULT_VOCA -> "중요 어휘"
             SEARCH_RESULT_COMMENT -> "구절 해설"
             else -> "ERROR : Can't find search type"

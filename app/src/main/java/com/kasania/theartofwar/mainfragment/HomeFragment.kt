@@ -3,6 +3,7 @@ package com.kasania.theartofwar.mainfragment
 import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,12 +24,28 @@ open class HomeFragment :Fragment() {
             val ft = fragmentManager!!.beginTransaction()
             if(enableAnimation)
             ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top,R.anim.slide_in_top,R.anim.slide_out_bottom)
-
             ft.replace(R.id.contents_root,FavoriteFragment())
             ft.addToBackStack("Favorite")
             ft.commit()
         }
 
+        view.btn_home_profile.setOnClickListener {
+            val ft = fragmentManager!!.beginTransaction()
+            if(enableAnimation)
+                ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top,R.anim.slide_in_top,R.anim.slide_out_bottom)
+            ft.replace(R.id.contents_root,ProfileFragment())
+            ft.addToBackStack("Profile")
+            ft.commit()
+        }
+
+        view.btn_home_setting.setOnClickListener {
+            val ft = fragmentManager!!.beginTransaction()
+            if(enableAnimation)
+                ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top,R.anim.slide_in_top,R.anim.slide_out_bottom)
+            ft.replace(R.id.contents_root,SettingFragment())
+            ft.addToBackStack("Setting")
+            ft.commit()
+        }
 
         val sharedPreferences = activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE)
         val lastChapter = sharedPreferences.getInt(SharedPrefKeyLastChapter,1)
@@ -53,6 +70,8 @@ open class HomeFragment :Fragment() {
         }
 
 
+
         return view
     }
+
 }

@@ -34,7 +34,7 @@ class QuickChapterSelectDialog:DialogFragment() {
         view.np_quick_chapter_chapter.value = currentChapter
         view.np_quick_chapter_chapter.descendantFocusability = NumberPicker.FOCUS_BLOCK_DESCENDANTS
 
-        view.np_quick_chapter_chapter.setOnValueChangedListener { picker, oldVal, newVal ->
+        view.np_quick_chapter_chapter.setOnValueChangedListener { _, _, newVal ->
             view.np_quick_chapter_phrase.maxValue = maxPhraseNum[newVal]
         }
 

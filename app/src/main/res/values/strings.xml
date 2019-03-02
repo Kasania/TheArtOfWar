@@ -1,50 +1,8 @@
 <resources>
     <string name="app_name">손자병법</string>
-    <string name="title_home">홈</string>
-    <string name="title_study">학습</string>
-    <string name="title_search">검색</string>
-    <string name="title_profile">내 정보</string>
-
-    <string name="btn_home_continue">이어서 학습하기</string>
-    <string name="btn_home_quote">오늘의 구절</string>
-    <string name="btn_home_favorite">즐겨찾기</string>
-    <string name="btn_home_setting"> 설 정 </string>
-    <string name="tv_home_level">LV</string>
-    <string name="tv_home_default_level_value">000</string>
-    <string name="tv_home_default_level_percent">00%</string>
-
-    <string name="subject_1_name">총론</string>
-    <string name="subject_2_name">전쟁준비</string>
-    <string name="subject_3_name">전투준비태세</string>
-    <string name="subject_4_name">병력운용</string>
-    <string name="subject_5_name">작전실시</string>
-    <string name="subject_6_name">전후처리</string>
-    <string name="subject_7_name">정보전</string>
-
-    <string name="subject_1_chapter">- 1 편 -</string>
-    <string name="subject_2_chapter">- 2, 3 편 -</string>
-    <string name="subject_3_chapter">- 4 편 -</string>
-    <string name="subject_4_chapter">- 5, 6, 7 편 -</string>
-    <string name="subject_5_chapter">- 8, 9, 10, 11 편 -</string>
-    <string name="subject_6_chapter">- 12 편 -</string>
-    <string name="subject_7_chapter">- 13 편 -</string>
 
     <string name="chapter_prefix_name">제</string>
     <string name="chapter_postfix_name">편</string>
-
-    <string name="chapter_1_name">시계</string>
-    <string name="chapter_2_name">작전</string>
-    <string name="chapter_3_name">모공</string>
-    <string name="chapter_4_name">군형</string>
-    <string name="chapter_5_name">병세</string>
-    <string name="chapter_6_name">허실</string>
-    <string name="chapter_7_name">군쟁</string>
-    <string name="chapter_8_name">구변</string>
-    <string name="chapter_9_name">행군</string>
-    <string name="chapter_10_name">지형</string>
-    <string name="chapter_11_name">구지</string>
-    <string name="chapter_12_name">화공</string>
-    <string name="chapter_13_name">용간</string>
 
     <string name="study_contents_tab_1">문장 해석</string>
     <string name="study_contents_tab_2">중요 어휘</string>
@@ -53,6 +11,8 @@
     <string name="study_contents_voice">음성 안내</string>
     <string name="study_contents_quick_select">빠른 이동</string>
     <string name="search_hint">검색어를 입력하세요.</string>
+    <string name="datevaluepostfix">일</string>
+    <string name="minutevaluepostfix">분</string>
 
 
 </resources>

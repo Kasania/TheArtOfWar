@@ -26,53 +26,58 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/guideline17"
             app:layout_constraintGuide_percent="0.7875"/>
-    <RelativeLayout
+    <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="@+id/guideline14"
-            app:layout_constraintTop_toTopOf="parent" android:background="@drawable/img_topbar_subject_5">
+            app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/img_topbar_subject_5"
+            android:scaleType="fitXY" android:background="@android:color/transparent">
 
-    </RelativeLayout>
-    <RelativeLayout
+    </ImageView>
+    <ImageButton
             android:layout_width="0dp"
             android:layout_height="0dp" android:id="@+id/btn_study_gochapter8"
             android:layout_marginTop="4dp"
             app:layout_constraintTop_toTopOf="@+id/guideline14" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="24dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
-            android:background="@drawable/btn_chapter_8"
-            app:layout_constraintBottom_toBottomOf="@+id/guideline15" android:layout_marginBottom="2dp">
+            app:srcCompat="@drawable/btn_chapter_8"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline15" android:layout_marginBottom="2dp"
+            android:scaleType="fitXY" android:background="@android:color/transparent">
 
-    </RelativeLayout>
-    <RelativeLayout
+    </ImageButton>
+    <ImageButton
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/btn_study_gochapter9"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
             android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/btn_chapter_9" app:layout_constraintBottom_toBottomOf="@+id/guideline16"
+            app:srcCompat="@drawable/btn_chapter_9" app:layout_constraintBottom_toBottomOf="@+id/guideline16"
             app:layout_constraintTop_toTopOf="@+id/guideline15" android:layout_marginTop="4dp"
-            android:layout_marginBottom="2dp">
+            android:layout_marginBottom="2dp"
+            android:scaleType="fitXY" android:background="@android:color/transparent">
 
-    </RelativeLayout>
-    <RelativeLayout
+    </ImageButton>
+    <ImageButton
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/btn_study_gochapter10"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/btn_chapter_10" app:layout_constraintBottom_toBottomOf="@+id/guideline17"
+            app:srcCompat="@drawable/btn_chapter_10" app:layout_constraintBottom_toBottomOf="@+id/guideline17"
             app:layout_constraintTop_toTopOf="@+id/guideline16" android:layout_marginStart="24dp"
-            android:layout_marginTop="4dp" android:layout_marginBottom="2dp">
+            android:layout_marginTop="4dp" android:layout_marginBottom="2dp"
+            android:scaleType="fitXY" android:background="@android:color/transparent">
 
-    </RelativeLayout>
-    <RelativeLayout
+    </ImageButton>
+    <ImageButton
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/btn_study_gochapter11"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:background="@drawable/btn_chapter_11" app:layout_constraintTop_toTopOf="@+id/guideline17"
-            android:layout_marginTop="4dp" android:layout_marginBottom="2dp">
+            app:srcCompat="@drawable/btn_chapter_11" app:layout_constraintTop_toTopOf="@+id/guideline17"
+            android:layout_marginTop="4dp" android:layout_marginBottom="2dp"
+            android:scaleType="fitXY" android:background="@android:color/transparent">
 
-    </RelativeLayout>
+    </ImageButton>
 </android.support.constraint.ConstraintLayout>
