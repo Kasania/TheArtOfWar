@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
     private fun checkPresent() {
         val today = Calendar.getInstance()
         val date = today.get(Calendar.DAY_OF_YEAR)
+
         val sharedPref = getSharedPreferences(SharedPrefName,Context.MODE_PRIVATE)
         val totalDate = sharedPref.getInt(SharedPrefKeyTotalAccessDate,0)
         val lastDate = sharedPref.getInt(SharedPrefKeyLastAccessDate,1)
@@ -75,16 +76,17 @@ class MainActivity : AppCompatActivity() {
                 .putInt(SharedPrefKeyLastAccessDate,date)
                 .apply()
 
-            if(date == lastDate+1){
+            if(date == lastDate+1 || (date == 1 && lastDate > 364)){
                 sharedPref.edit().putInt(SharedPrefKeyCurrentContinueAccessDate,currentLongestDate+1).apply()
-                if(currentLongestDate+1 > sharedPref.getInt(SharedPrefKeyLongestAccessDate,0)){
+                if(currentLongestDate+1 > sharedPref.getInt(SharedPrefKeyLongestAccessDate,1)){
                     sharedPref.edit()
                         .putInt(SharedPrefKeyLongestAccessDate,currentLongestDate+1)
                         .apply()
                 }
-                else{
-                    sharedPref.edit().putInt(SharedPrefKeyCurrentContinueAccessDate,1).apply()
-                }
+
+            }
+            else{
+                sharedPref.edit().putInt(SharedPrefKeyCurrentContinueAccessDate,1).apply()
             }
 
         }
@@ -136,7 +138,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadPhraseAccessCount(){
-        //dosent work you think
+        //dosen't work what i think
         try {
             val input = openFileInput(PhraseAccessCountDataFileName)
             val inputData = ByteArray(DataSize)

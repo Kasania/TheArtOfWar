@@ -49,8 +49,6 @@ class QuickChapterSelectDialog:DialogFragment() {
         dialog.setPositiveButton("확인") { dialog, which ->
             currentChapter = view.np_quick_chapter_chapter.value
             currentPhrase = view.np_quick_chapter_phrase.value
-
-
             StudyMainFragment.createStudyContents(fragmentManager,currentChapter, currentPhrase)
 
         }

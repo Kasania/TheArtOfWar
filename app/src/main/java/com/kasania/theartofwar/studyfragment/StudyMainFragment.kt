@@ -1,10 +1,14 @@
 package com.kasania.theartofwar.studyfragment
 
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentTransaction
+import android.text.Html
+import android.text.Spannable
+import android.text.Spanned
 import android.util.Log
 import android.view.KeyEvent
 import android.view.LayoutInflater
@@ -59,6 +63,14 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
             }
             setContentsView(ft)
             ft.commit()
+        }
+
+        fun convertColoredText(s:String):Spanned{
+            return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                Html.fromHtml(s,Html.FROM_HTML_MODE_COMPACT)
+            } else {
+                Html.fromHtml(s)
+            }
         }
 
     }
@@ -135,6 +147,7 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
             .putLong(SharedPrefKeyTotalAccessTimeMil,accessTime+lastAccessTime)
             .apply()
         MainActivity.todayAccessTimeMil = MainActivity.todayAccessTimeMil + accessTime
+
         super.onStop()
     }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chapterSummary1">1편 총괄</string>
+    <string name="chapterSummary1">&lt;font color=\'#EE0000\'&gt;1편 총괄&lt;/font&gt;</string>
     <string name="chapterSummary2">2편 총괄</string>
     <string name="chapterSummary3">3편 총괄</string>
     <string name="chapterSummary4">4편 총괄</string>
@@ -15,15 +15,15 @@
     <string name="chapterSummary12">12편 총괄</string>
     <string name="chapterSummary13">13편 총괄</string>
 
-    <string name="hanja_1_1">孫子曰. 兵者, 國之大事, /死生之地, 存亡之道, /不可不察也.</string>
-    <string name="sound_1_1">손자왈. 병자, 국지대사, /사생지지, 존망지도, /불가불찰야.</string>
-    <string name="interpret_1_1">손자가 말했다. \n전쟁은 국가의 중대사로서 국민의 생사가 나뉘는 곳이며 국가의 존망이 결정되는 길이니 (전쟁수행을 결정할 때는) 여러 면에서 신중하게 검토하고 세심하게 관찰해야 한다.</string>
-    <string name="voca_1_1">子|사람의 성에 붙이는 \'선생\'/兵|군대, 병기, 병사, 군사, 전쟁, 전투력 등/地|-하는 바, ~처지/察|살필 찰/不可不|~하지 않을 수 없다</string>
-    <string name="comment_1_1">전쟁이 끊이지 않던 옛날 중국에 살았던 손자는 ‘전쟁은 백성의 생사와 국가의 멸망이 달려 있는 중요한 일이므로 신중하게 결정하여야 하고, 반드시 결정에 앞서 생각하고 또 생각해야 한다.’ 라고 주장하였다./ 전쟁을 시작하였을 때 얻는 것과 잃는 것을 철저히 계산하여야 하며, 이길 가능성이 있으면 전쟁을 하고, 이길 가능성이 없으면 전쟁에 뛰어 들지 말라는 숨은 뜻을 가지고 있는 것이다./ 전쟁을 결정한다는 것이 어떤 의미인지 잘 몰랐던 지도자들이 저지른 1, 2차 세계대전은 전쟁을 수행하고자 할 때 왜 신중해야하는지 알려주는 적절한 사례이다./ 손자는 이런 전쟁 대신 전쟁 없이 적을 무릎 꿇게 하는 방법을 찾으라고 주장하였다. </string>
+    <string name="hanja_1_1">&lt;font color=\'#0000ff\'&gt;孫子曰. 兵者, 國之大事,&lt;/font&gt;//&lt;font color=\'#00cc00\'&gt;死生之地, 存亡之道,&lt;/font&gt;//&lt;font color=\'#cc6600\'&gt;不可不察也.&lt;/font&gt;</string>
+    <string name="sound_1_1">손자왈. 병자, 국지대사, //사생지지, 존망지도, //불가불찰야.</string>
+    <string name="interpret_1_1">&lt;font color=\'#0000ff\'&gt;손자가 말했다. 전쟁은 국가의 중대사로서 &lt;/font&gt;&lt;font color=\'#00cc00\'&gt;국민의 삶과 죽음이 나뉘는 곳이며 국가의 존망이 결정되는 길이니 (전쟁수행을 결정할 때는) &lt;/font&gt;&lt;font color=\'#cc6600\'&gt;여러 면에서 신중하게 검토하고 세심하게 관찰해야 한다(깊이 살피지 않으면 안 된다). &lt;/font&gt;</string>
+    <string name="voca_1_1">子|사람의 성에 붙이는 \'선생\'//兵|군대, 병기, 병사, 군사, 전쟁, 전투력 등//地|-하는 바, ~처지//察|살필 찰//不可不|~하지 않을 수 없다</string>
+    <string name="comment_1_1">전쟁이 끊이지 않던 옛날 중국에 살았던 손자는 ‘전쟁은 백성의 생사와 국가의 멸망이 달려 있는 중요한 일이므로 신중하게 결정하여야 하고, 반드시 결정에 앞서 생각하고 또 생각해야 한다.’ 라고 주장하였다.// 전쟁을 시작하였을 때 얻는 것과 잃는 것을 철저히 계산하여야 하며, 이길 가능성이 있으면 전쟁을 하고, 이길 가능성이 없으면 전쟁에 뛰어 들지 말라는 숨은 뜻을 가지고 있는 것이다./ 전쟁을 결정한다는 것이 어떤 의미인지 잘 몰랐던 지도자들이 저지른 1, 2차 세계대전은 전쟁을 수행하고자 할 때 왜 신중해야하는지 알려주는 적절한 사례이다./ 손자는 이런 전쟁 대신 전쟁 없이 적을 무릎 꿇게 하는 방법을 찾으라고 주장하였다. </string>
 
-    <string name="hanja_1_2">故經之以五事, 校之以計, /而索其情. 一曰道, 二曰天, /三曰地, 四曰將, 五曰法.</string>
-    <string name="sound_1_2">고경지이오사, 교지이계, /이색기정. 일왈도, 이왈천, /삼왈지, 사왈장, 오왈법.</string>
-    <string name="interpret_1_2">그러므로 아래 다섯 가지 요건을 국방의 핵심 요소로 삼고 계책을 비교·분석해 각각의 정세를 정확하게 파악해야 한다. 첫째는 도의(道義), 둘째는 천시(天時), 셋째는 지리(地利), 넷째는 장령(將領), 다섯째는 법규(法規)이다.</string>
+    <string name="hanja_1_2">&lt;font color=\'#0000ff\'&gt;故 經之以五事,&lt;/font&gt;//&lt;font color=\'#009900\'&gt;校之以計, 而索其情,&lt;/font&gt;//&lt;font color=\'#663300\'&gt;一曰道, 二曰天, 三曰地,&lt;/font&gt;//&lt;font color=\'#cc00cc\'&gt;四曰將, 五曰法.&lt;/font&gt;</string>
+    <string name="sound_1_2">고경지이오사, //교지이계, 이색기정. //일왈도, 이왈천, 삼왈지, //사왈장, 오왈법.</string>
+    <string name="interpret_1_2">&lt;font color=\'#0000ff\'&gt;그러므로 다섯 가지 요건(5事)을 국방의 기본요소로 삼고 &lt;/font&gt;&lt;font color=\'#009900\'&gt;계책(7計)으로 비교·분석해 그 각각의 정세를 정확하게 파악해야 한다. &lt;/font&gt;&lt;font color=\'#663300\'&gt;첫째는 도의(道義), 둘째는 천시(天時), 셋째는 지리(地利), &lt;/font&gt;&lt;font color=\'#cc00cc\'&gt;넷째는 장령(將領), 다섯째는 법규(法規)이다.&lt;/font&gt;</string>
     <string name="voca_1_2">經|헤아린다. 잰다./情|실정, 정황, 상황</string>
     <string name="comment_1_2">전쟁을 대비하고 실행하기 위해 도(道), 천(天), 지(地), 장(將), 법(法)  이라는 다섯 가지 요소와 상황을 면밀하게 검토하고 비교해야 한다./ 여기에서 말하는 오사(五事)는 오늘날 국가가 전쟁을 수행함에 있어 갖춰야 할 필요충분조건이라고 이야기 할 수 있다./ 손자가 살던 옛날 중국에서의 전쟁은 나라 전체가 전쟁에 All-In 하는 형태로 이루어졌다./ 전쟁을 준비 하는 단계라면 먼저 우리의 힘이 어느 정도인지 정확하게 알아야 하는데 오사(五事)를 기준으로 하여 그 힘을 파악해야 한다./ 우리의 힘을 알아야 이를 기반으로 지전쟁을 할지, 말지 결정할 수 있고, 전쟁을 하게 된다면 유리한 상황을 만들 수 있다.</string>
 

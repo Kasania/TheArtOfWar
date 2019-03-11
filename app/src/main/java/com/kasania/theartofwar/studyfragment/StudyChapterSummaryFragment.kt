@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,11 +26,11 @@ class StudyChapterSummaryFragment : Fragment() {
 
         val id = resources.getIdentifier("@string/chapterSummary${StudyMainFragment.currentChapter}","String",context?.packageName)
 
-        val summaryValue = getText(id).split("/")
+        val summaryValue = getText(id).split("//")
 
         for (s in summaryValue){
             val textView = TextView(context)
-            textView.text = s
+            textView.text = StudyMainFragment.convertColoredText(s)
             textView.textSize = 20f
             textView.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
             val commentViewLayout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)

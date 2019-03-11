@@ -26,11 +26,11 @@ class SubjectSelectFragment : Fragment(){
 
     private fun initClick(view: View) {
 
-        view.contents_subject_1.setOnClickListener {
+        view.btn_subject_1.setOnClickListener {
             StudyMainFragment.createStudyContents(fragmentManager, 1)
         }
 
-        view.contents_subject_2.setOnClickListener {
+        view.btn_subject_2.setOnClickListener {
             val ft = fragmentManager!!.beginTransaction()
             if(enableAnimation){
                 ft.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
@@ -40,11 +40,11 @@ class SubjectSelectFragment : Fragment(){
             commit()
         }
 
-        view.contents_subject_3.setOnClickListener {
+        view.btn_subject_3.setOnClickListener {
             StudyMainFragment.createStudyContents(fragmentManager, 4)
         }
 
-        view.contents_subject_4.setOnClickListener {
+        view.btn_subject_4.setOnClickListener {
             val ft = fragmentManager!!.beginTransaction()
             if(enableAnimation){
                 ft.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
@@ -54,7 +54,7 @@ class SubjectSelectFragment : Fragment(){
                 commit()
         }
 
-        view.contents_subject_5.setOnClickListener {
+        view.btn_subject_5.setOnClickListener {
             val ft = fragmentManager!!.beginTransaction()
             if(enableAnimation){
                 ft.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
@@ -64,11 +64,11 @@ class SubjectSelectFragment : Fragment(){
                 commit()
         }
 
-        view.contents_subject_6.setOnClickListener {
+        view.btn_subject_6.setOnClickListener {
             StudyMainFragment.createStudyContents(fragmentManager, 12)
         }
 
-        view.contents_subject_7.setOnClickListener {
+        view.btn_subject_7.setOnClickListener {
             StudyMainFragment.createStudyContents(fragmentManager, 13)
         }
 

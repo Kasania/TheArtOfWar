@@ -19,14 +19,15 @@
             android:layout_marginTop="8dp">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:orientation="vertical">
+
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:layout_margin="8dp">
                 <TextView
-                        android:text="총 사용일수"
+                        android:text="현재 연속 출석일수"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/tv_totalaccessdate_title"
+                        android:layout_height="wrap_content" android:id="@+id/tv_currentlongestdate_title"
                         android:background="@drawable/tv_statistics_top" android:gravity="center"
                         android:textSize="36sp" android:textStyle="bold"/>
                 <LinearLayout
@@ -35,18 +36,19 @@
                         android:layout_height="match_parent" android:background="@drawable/tv_statistics_bottom">
                     <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/tv_totalaccessdate_time"
+                            android:layout_height="wrap_content" android:id="@+id/tv_currentlongestdate_time"
                             android:layout_weight="1"
                             android:textStyle="bold" android:textSize="72sp" android:gravity="bottom|end"
                             android:text="1"/>
                     <TextView
-                            android:text="@string/datevaluepostfix"
+                            android:text="@string/date_value_postfix"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/tv_totalaccessdate_postfix"
+                            android:layout_height="wrap_content" android:id="@+id/tv_currentlongestdate_postfix"
                             android:layout_weight="1"
                             android:gravity="bottom|start" android:textStyle="bold" android:textSize="30sp"/>
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -68,9 +70,37 @@
                             android:textStyle="bold" android:textSize="72sp" android:gravity="bottom|end"
                             android:text="1"/>
                     <TextView
-                            android:text="@string/datevaluepostfix"
+                            android:text="@string/date_value_postfix"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:id="@+id/tv_longestcontinuedate_postfix"
+                            android:layout_weight="1"
+                            android:gravity="bottom|start" android:textStyle="bold" android:textSize="30sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_margin="8dp">
+                <TextView
+                        android:text="총 출석일수"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/tv_totalaccessdate_title"
+                        android:background="@drawable/tv_statistics_top" android:gravity="center"
+                        android:textSize="36sp" android:textStyle="bold"/>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:background="@drawable/tv_statistics_bottom">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/tv_totalaccessdate_time"
+                            android:layout_weight="1"
+                            android:textStyle="bold" android:textSize="72sp" android:gravity="bottom|end"
+                            android:text="1"/>
+                    <TextView
+                            android:text="@string/date_value_postfix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/tv_totalaccessdate_postfix"
                             android:layout_weight="1"
                             android:gravity="bottom|start" android:textStyle="bold" android:textSize="30sp"/>
                 </LinearLayout>
@@ -97,7 +127,7 @@
                             android:textStyle="bold" android:textSize="72sp" android:gravity="bottom|end"
                             android:text="0.0"/>
                     <TextView
-                            android:text="@string/minutevaluepostfix"
+                            android:text="@string/minute_value_postfix"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:id="@+id/tv_totalusagetime_postfix"
                             android:layout_weight="1"
@@ -125,7 +155,7 @@
                             android:textStyle="bold" android:textSize="72sp" android:gravity="bottom|end"
                             android:text="0.0"/>
                     <TextView
-                            android:text="@string/minutevaluepostfix"
+                            android:text="@string/minute_value_postfix"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:id="@+id/tv_longestdailytime_postfix"
                             android:layout_weight="1"
@@ -154,13 +184,19 @@
                             android:textStyle="bold" android:textSize="72sp" android:gravity="bottom|end"
                             android:text="0.0"/>
                     <TextView
-                            android:text="@string/minutevaluepostfix"
+                            android:text="@string/minute_value_postfix"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:id="@+id/tv_meandailytime_postfix"
                             android:layout_weight="1"
                             android:gravity="bottom|start" android:textStyle="bold" android:textSize="30sp"/>
                 </LinearLayout>
             </LinearLayout>
+            <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="사용 통계 초기화" android:background="@drawable/btn_statistics_reset"
+                    android:textSize="36sp" android:textStyle="bold"
+                    android:textColor="@android:color/holo_red_dark" android:layout_marginTop="24dp"
+                    android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_marginBottom="8dp"
+                    android:id="@+id/btn_statistics_reset"/>
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

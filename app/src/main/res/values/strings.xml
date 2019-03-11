@@ -11,8 +11,12 @@
     <string name="study_contents_voice">음성 안내</string>
     <string name="study_contents_quick_select">빠른 이동</string>
     <string name="search_hint">검색어를 입력하세요.</string>
-    <string name="datevaluepostfix">일</string>
-    <string name="minutevaluepostfix">분</string>
+    <string name="date_value_postfix">일</string>
+    <string name="minute_value_postfix">분</string>
+
+    <string name="confirm_reset_statistics">통계 기록을 삭제하시겠습니까?</string>
+    <string name="say_yes">예</string>
+    <string name="say_no">아니오</string>
 
 
 </resources>

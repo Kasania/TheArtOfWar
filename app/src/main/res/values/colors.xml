@@ -4,6 +4,7 @@
     <color name="Background">#EEEEEE</color>
     <color name="Background_transparent_light">#4DFFFFFF</color>
     <color name="Background_transparent_light_T">#99FFFFFF</color>
+
     <color name="Background_transparent_dark">#4D888888</color>
     <color name="SurfaceDeepDark">#AA3C3F41</color>
 
