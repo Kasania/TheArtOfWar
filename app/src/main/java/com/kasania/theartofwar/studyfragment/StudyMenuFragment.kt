@@ -20,7 +20,7 @@ class StudyMenuFragment: Fragment() {
         val view = inflater.inflate(R.layout.fragment_study_menu, container, false)
         tts = TTS()
         tts.initialize(context!!)
-
+        setChapterTextView(view)
         view.tv_study_current_chapter.setOnClickListener {
             QuickChapterSelectDialog().newInstance().show(fragmentManager,"Quick Select")
             setChapterTextView(view)
