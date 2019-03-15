@@ -16,6 +16,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.kasania.theartofwar.*
 import kotlinx.android.synthetic.main.fragment_study_main.view.*
+import kotlinx.android.synthetic.main.fragment_study_menu.view.*
 
 
 class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
@@ -31,6 +32,8 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
         var currentPhrase: Int = 0
 
         private fun setContentsView(ft:FragmentTransaction){
+
+            ft.replace(R.id.contents_mainmenu,StudyMenuFragment())
             when(currentPhrase){
                 0 -> ft.replace(R.id.contents_panel_study_main,StudyChapterSummaryFragment())
                 else -> ft.replace(R.id.contents_panel_study_main,StudyPhraseMainFragment())
@@ -107,21 +110,7 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
         }*/
         // 뒤로가기버튼
 
-        view.tv_study_current_chapter.setOnClickListener {
-            QuickChapterSelectDialog().newInstance().show(fragmentManager,"Quick Select")
-            setChapterTextView(view)
-        }
 
-        view.btn_study_phrase_prev.setOnClickListener {
-            updateStudyFragmentWithOffset(-1)
-            setChapterTextView(view)
-        }
-
-
-        view.btn_study_phrase_next.setOnClickListener {
-            updateStudyFragmentWithOffset(+1)
-            setChapterTextView(view)
-        }
 
         return view
     }
