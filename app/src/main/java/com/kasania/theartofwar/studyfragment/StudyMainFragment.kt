@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentTransaction
 import android.text.Html
-import android.text.Spannable
 import android.text.Spanned
 import android.util.Log
 import android.view.KeyEvent
@@ -86,7 +85,6 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
     {
 
         val view = inflater.inflate(R.layout.fragment_study_main, container, false)
-
         startTime = System.currentTimeMillis()
         setChapterTextView(view)
 
@@ -102,22 +100,14 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
             false
         })
 
-        view.tv_study_current_chapter.setOnClickListener {
-            MainActivity.toggleBookMark(currentChapter, currentPhrase)
-            if(MainActivity.isCheckedBookMark(currentChapter, currentPhrase)){
-                Toast.makeText(context,"즐겨찾기 설정",Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(context,"즐겨찾기 해제",Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        view.btn_study_back_to_chapter.setOnClickListener {
+                /*view.btn_study_back_to_chapter.setOnClickListener {
             for(b in 0..fragmentManager!!.backStackEntryCount){
                 fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
             }
-        }
+        }*/
+        // 뒤로가기버튼
 
-        view.btn_study_quick_select.setOnClickListener {
+        view.tv_study_current_chapter.setOnClickListener {
             QuickChapterSelectDialog().newInstance().show(fragmentManager,"Quick Select")
             setChapterTextView(view)
         }

@@ -6,18 +6,28 @@
                                              android:layout_height="match_parent"
                                              android:background="@color/Background">
 
+    <ImageView
+            android:layout_width="48dp"
+            android:layout_height="39dp" app:srcCompat="@drawable/btn_fav_select"
+            android:id="@+id/btn_fav_select"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01" android:adjustViewBounds="true"
+            android:gravity="center"
+    />
     <android.support.constraint.Guideline
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline51" app:layout_constraintGuide_percent="0.09"/>
     <android.support.design.widget.TabLayout
-            android:layout_width="0dp"
+            android:layout_width="347dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline51"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:id="@+id/tabbar_study_contents" app:tabGravity="fill"
-            app:tabMaxWidth="0dp">
+            app:tabMaxWidth="0dp" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0">
 
         <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
@@ -36,7 +46,6 @@
             app:layout_constraintTop_toTopOf="@+id/guideline51"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/contents_panel_study_phrase" android:background="@color/Background">
-
-    </android.support.constraint.ConstraintLayout>
+            android:id="@+id/contents_panel_study_phrase" android:background="@color/Background"
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="1.0"/>
 </android.support.constraint.ConstraintLayout>

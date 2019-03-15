@@ -21,7 +21,7 @@ class StudyPhraseCommentFragment :Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_study_phrase_comment, container, false)
-
+        view.sv_phrase_comment.setBackgroundResource(R.drawable.outline)
         val commentId = resources.getIdentifier("@string/comment_${StudyMainFragment.currentChapter}_${StudyMainFragment.currentPhrase}","String",context?.packageName)
         val commentValue = getText(commentId).split("//")
 
