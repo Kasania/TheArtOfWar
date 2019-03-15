@@ -83,7 +83,7 @@ class StudyPhraseInterpretFragment : Fragment() {
             tts.speech(ttsSound)
         }
 
-        view.sv_phrase_interpret.addView(hanjaLayout)
+        view.sv_phrase_interpret1.addView(hanjaLayout)
 
     }
 
@@ -130,7 +130,7 @@ class StudyPhraseInterpretFragment : Fragment() {
             vocaLayout.setBackgroundResource(R.drawable.outline)
             //vocaLayout.setBackgroundColor(Color.parseColor("#ffc1e8"))
             //vocaLayout.background = ContextCompat.getDrawable(context!!,R.drawable.img_line_contants)
-            view.sv_phrase_interpret.addView(vocaLayout)
+            view.sv_phrase_interpret2.addView(vocaLayout)
         }
 
     }
@@ -162,7 +162,7 @@ class StudyPhraseInterpretFragment : Fragment() {
             interpretLayout.setMargins(0,0,0,0)
             interpretView.layoutParams = interpretLayout
 
-            view.sv_phrase_interpret.addView(interpretView)
+            view.sv_phrase_interpret3.addView(interpretView)
         }
     }
 
