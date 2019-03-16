@@ -47,15 +47,12 @@ class StudyPhraseInterpretFragment : Fragment() {
         var ttsSound = ""
         val hanjaLayout = LinearLayout(context)
         hanjaLayout.orientation = LinearLayout.VERTICAL
-        //hanjaLayout.setBackgroundColor(Color.parseColor("#e8c9dd"))
-        //hanjaLayout.outlineProvider(Color.parseColor("#e8c9dd"))
-        hanjaLayout.setBackgroundResource(R.drawable.outline)
             for (i in 0.. hanjaValue.lastIndex){
             val hanjaSet = LinearLayout(context)
             hanjaSet.orientation = LinearLayout.VERTICAL
             hanjaSet.gravity = Gravity.CENTER
             val hanjaSetLayout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-            hanjaSetLayout.setMargins(20,20,20,20)
+            hanjaSetLayout.setMargins(10,20,10,10)
             hanjaSet.layoutParams = hanjaSetLayout
 
             val hanjaView = TextView(context)
@@ -82,7 +79,7 @@ class StudyPhraseInterpretFragment : Fragment() {
         hanjaLayout.setOnClickListener {
             tts.speech(ttsSound)
         }
-
+        view.scrollView3.setBackgroundResource(R.drawable.outline)
         view.sv_phrase_interpret1.addView(hanjaLayout)
 
     }
@@ -116,20 +113,20 @@ class StudyPhraseInterpretFragment : Fragment() {
                     vocaInterpret.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
                     vocaInterpret.gravity = Gravity.CENTER_VERTICAL
                     val layout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
-                    layout.setMargins(20,20,20,20)
+                    layout.setMargins(10,20,10,10)
                     vocaInterpret.layoutParams = layout
                 }
 
                 val layout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
-                layout.setMargins(20,20,20,20)
+                layout.setMargins(10,20,10,10)
                 vocaContainer.layoutParams = layout
                 vocaLayout.addView(vocaContainer)
 
             }
 
-            vocaLayout.setBackgroundResource(R.drawable.outline)
             //vocaLayout.setBackgroundColor(Color.parseColor("#ffc1e8"))
             //vocaLayout.background = ContextCompat.getDrawable(context!!,R.drawable.img_line_contants)
+            view.scrollView.setBackgroundResource(R.drawable.outline)
             view.sv_phrase_interpret2.addView(vocaLayout)
         }
 
@@ -146,7 +143,6 @@ class StudyPhraseInterpretFragment : Fragment() {
             interpretView.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
             //interpretView.background = ContextCompat.getDrawable(context!!,R.drawable.img_line_contants)
             //interpretView.setBackgroundColor(Color.parseColor("#ffe5f5"))
-            interpretView.setBackgroundResource(com.kasania.theartofwar.R.drawable.outline)
 
             interpretView.setOnClickListener {
                 tts.speech(interpretView.text.toString())
@@ -159,9 +155,9 @@ class StudyPhraseInterpretFragment : Fragment() {
 
 
             val interpretLayout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
-            interpretLayout.setMargins(0,0,0,0)
+            interpretLayout.setMargins(10,20,10,10)
             interpretView.layoutParams = interpretLayout
-
+            view.scrollView2.setBackgroundResource(R.drawable.outline)
             view.sv_phrase_interpret3.addView(interpretView)
         }
     }
