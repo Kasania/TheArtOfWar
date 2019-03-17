@@ -8,11 +8,6 @@
                                              android:id="@+id/contents_panel">
 
     <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/contents_mainmenu">
-
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/contents_panel_study_main"
@@ -20,5 +15,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
     >
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/contents_mainmenu">
+
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

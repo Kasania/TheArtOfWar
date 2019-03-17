@@ -20,6 +20,8 @@ import android.opengl.ETC1.getHeight
 import android.opengl.ETC1.getWidth
 import android.graphics.Outline
 import android.view.ViewOutlineProvider
+import kotlinx.android.synthetic.main.fragment_study_menu.*
+import kotlinx.android.synthetic.main.fragment_study_menu.view.*
 import kotlinx.android.synthetic.main.fragment_study_phrase_main.view.*
 
 
@@ -34,6 +36,8 @@ class StudyPhraseInterpretFragment : Fragment() {
         createVocaSet(view)
 
         createInterpretSet(view)
+
+
         return view
     }
 
@@ -52,7 +56,7 @@ class StudyPhraseInterpretFragment : Fragment() {
             hanjaSet.orientation = LinearLayout.VERTICAL
             hanjaSet.gravity = Gravity.CENTER
             val hanjaSetLayout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-            hanjaSetLayout.setMargins(10,20,10,10)
+            hanjaSetLayout.setMargins(10,20,10,30)
             hanjaSet.layoutParams = hanjaSetLayout
 
             val hanjaView = TextView(context)
@@ -91,7 +95,6 @@ class StudyPhraseInterpretFragment : Fragment() {
         if (vocaLines[0] != ""){
             val vocaLayout = LinearLayout(context)
             vocaLayout.orientation = LinearLayout.VERTICAL
-
             for (s in vocaLines){
 
                 val vocaValue = s.split("|")
@@ -101,7 +104,7 @@ class StudyPhraseInterpretFragment : Fragment() {
                 val vocaInterpret = TextView(context)
 
                 vocaChar.text = "• ${StudyMainFragment.convertColoredText(vocaValue[0])} : "
-                vocaChar.textSize = 24f
+                vocaChar.textSize = 18f
                 vocaChar.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
 
                 vocaContainer.addView(vocaChar)
@@ -113,12 +116,12 @@ class StudyPhraseInterpretFragment : Fragment() {
                     vocaInterpret.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
                     vocaInterpret.gravity = Gravity.CENTER_VERTICAL
                     val layout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
-                    layout.setMargins(10,20,10,10)
+                    layout.setMargins(20,20,10,30)
                     vocaInterpret.layoutParams = layout
                 }
 
                 val layout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
-                layout.setMargins(10,20,10,10)
+                layout.setMargins(20,20,10,30)
                 vocaContainer.layoutParams = layout
                 vocaLayout.addView(vocaContainer)
 
@@ -155,7 +158,7 @@ class StudyPhraseInterpretFragment : Fragment() {
 
 
             val interpretLayout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
-            interpretLayout.setMargins(10,20,10,10)
+            interpretLayout.setMargins(30,20,30,30)
             interpretView.layoutParams = interpretLayout
             view.scrollView2.setBackgroundResource(R.drawable.outline)
             view.sv_phrase_interpret3.addView(interpretView)

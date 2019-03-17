@@ -39,7 +39,7 @@
             android:layout_height="0dp"
             android:id="@+id/scrollView2" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline35" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline27" app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintVertical_bias="0.0">
         <LinearLayout
                 android:orientation="vertical"
@@ -51,11 +51,16 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/guideline34" app:layout_constraintGuide_percent="0.33"/>
+            android:id="@+id/guideline34" app:layout_constraintGuide_percent="0.3"/>
     <android.support.constraint.Guideline
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/guideline35" app:layout_constraintGuide_percent="0.66"/>
+            android:id="@+id/guideline35" app:layout_constraintGuide_percent="0.6"/>
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline27" app:layout_constraintGuide_percent="0.9"/>
 
 </android.support.constraint.ConstraintLayout>
