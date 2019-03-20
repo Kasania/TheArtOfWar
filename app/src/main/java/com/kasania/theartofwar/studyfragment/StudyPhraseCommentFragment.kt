@@ -21,17 +21,19 @@ class StudyPhraseCommentFragment :Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_study_phrase_comment, container, false)
+        addTTS()
         view.sv_phrase_comment.setBackgroundResource(R.drawable.outline)
         val commentId = resources.getIdentifier("@string/comment_${StudyMainFragment.currentChapter}_${StudyMainFragment.currentPhrase}","String",context?.packageName)
         val commentValue = getText(commentId).split("//")
 
         for (s in commentValue){
             val commentView = TextView(context)
+            commentView.setLineSpacing(20f,1f)
             commentView.text = StudyMainFragment.convertColoredText(s)
             commentView.textSize = 22f
             commentView.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
             val commentViewLayout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-            commentViewLayout.setMargins(10,20,10,15)
+            commentViewLayout.setMargins(30,20,30,30)
             commentView.layoutParams = commentViewLayout
             commentView.setOnClickListener {
                 tts.speech(commentView.text.toString())
@@ -42,8 +44,9 @@ class StudyPhraseCommentFragment :Fragment() {
         return view
     }
 
-    fun addTTS(tts:TTS) : Fragment{
-        this.tts = tts
+    fun addTTS() : Fragment{
+        this.tts = TTS()
+        tts.initialize(context!!)
         return this
     }
 

@@ -12,7 +12,8 @@
             android:layout_height="match_parent" android:id="@+id/contents_panel_study_phrase"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="0.0"
+            >
         <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -23,7 +24,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/guideline37"
                 app:layout_constraintStart_toStartOf="@id/guideline30"
                 app:layout_constraintEnd_toEndOf="@id/guideline31"
-                app:backgroundTint="@android:color/holo_orange_light" android:src="@android:drawable/ic_input_add"
+                app:backgroundTint="@android:color/holo_green_light" android:src="@drawable/plus"
         />
         <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
@@ -35,7 +36,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline28"
                 app:layout_constraintBottom_toBottomOf="@+id/guideline37"
                 app:layout_constraintStart_toStartOf="@id/guideline32"
-                android:src="@drawable/btn_study_phrase_next" app:backgroundTint="@android:color/holo_orange_light"/>
+                android:src="@drawable/btn_study_phrase_next" app:backgroundTint="@android:color/holo_green_light"/>
         <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,17 +46,17 @@
                 app:layout_constraintBottom_toBottomOf="@+id/guideline37"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@id/guideline39"
-                android:src="@drawable/btn_study_phrase_prev" app:backgroundTint="@android:color/holo_orange_light"/>
+                android:src="@drawable/btn_study_phrase_prev" app:backgroundTint="@android:color/holo_green_light"/>
         <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true" app:srcCompat="@color/Background"
                 android:id="@+id/fa_fav"
-                android:visibility="invisible" android:src="@drawable/btn_fav_select"
+                android:visibility="invisible" android:src="@drawable/bmark_final_white"
                 app:layout_constraintTop_toTopOf="@+id/guideline41"
                 app:layout_constraintBottom_toBottomOf="@+id/guideline40"
                 app:layout_constraintEnd_toEndOf="@id/guideline39"
-                app:backgroundTint="@android:color/holo_orange_light"/>
+                app:backgroundTint="@android:color/holo_green_light"/>
         <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,28 +66,30 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline41"
                 app:layout_constraintBottom_toBottomOf="@+id/guideline40"
                 app:layout_constraintStart_toStartOf="@id/guideline32"
-                app:backgroundTint="@android:color/holo_orange_light" android:src="@android:drawable/ic_menu_compass"/>
+                app:backgroundTint="@android:color/holo_green_light" android:src="@android:drawable/ic_menu_compass"/>
         <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true" app:srcCompat="@color/Background"
                 android:id="@+id/fa_interpret"
                 android:visibility="invisible"
-                app:layout_constraintTop_toTopOf="@+id/guideline44"
-                app:layout_constraintBottom_toBottomOf="@+id/guideline42"
-                app:layout_constraintEnd_toEndOf="@id/guideline39" app:backgroundTint="@android:color/holo_orange_light"
-                android:src="@drawable/review_btn_white"/>
+                app:layout_constraintTop_toTopOf="@+id/guideline41"
+                app:layout_constraintBottom_toBottomOf="@+id/guideline40"
+                app:layout_constraintStart_toStartOf="@id/guideline30"
+                app:layout_constraintEnd_toEndOf="@id/guideline31" app:backgroundTint="@android:color/holo_green_light"
+                android:src="@drawable/review"/>
         <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true" app:srcCompat="@color/Background"
                 android:id="@+id/fa_comment"
                 android:visibility="invisible"
-                app:layout_constraintTop_toTopOf="@+id/guideline44"
-                app:layout_constraintBottom_toBottomOf="@+id/guideline42"
-                app:layout_constraintStart_toStartOf="@id/guideline32"
-                app:backgroundTint="@android:color/holo_orange_light"
-                android:src="@drawable/review_btn_black"/>
+                app:layout_constraintTop_toTopOf="@+id/guideline41"
+                app:layout_constraintBottom_toBottomOf="@+id/guideline40"
+                app:layout_constraintStart_toStartOf="@id/guideline30"
+                app:layout_constraintEnd_toEndOf="@id/guideline31"
+                app:backgroundTint="@android:color/holo_green_light"
+                android:src="@drawable/review"/>
         <TextView
                 android:text="TextView"
                 android:layout_width="wrap_content"

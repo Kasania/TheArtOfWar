@@ -22,7 +22,6 @@ import android.graphics.Outline
 import android.view.ViewOutlineProvider
 import kotlinx.android.synthetic.main.fragment_study_menu.*
 import kotlinx.android.synthetic.main.fragment_study_menu.view.*
-import kotlinx.android.synthetic.main.fragment_study_phrase_main.view.*
 
 
 class StudyPhraseInterpretFragment : Fragment() {
@@ -31,11 +30,14 @@ class StudyPhraseInterpretFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_study_phrase_interpret, container, false)
+        addTTS()
         createHanjaSet(view)
 
         createVocaSet(view)
 
         createInterpretSet(view)
+
+
 
 
         return view
@@ -140,12 +142,11 @@ class StudyPhraseInterpretFragment : Fragment() {
         val interpretValue = getText(interpretId)/*.split("/")*/
         if(interpretValue != ""){
             val interpretView = TextView(context)
+            interpretView.setLineSpacing(20f,1f)
             interpretView.text = StudyMainFragment.convertColoredText(interpretValue.toString())
             interpretView.textSize=22.0f
             interpretView.gravity = Gravity.CENTER
             interpretView.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
-            //interpretView.background = ContextCompat.getDrawable(context!!,R.drawable.img_line_contants)
-            //interpretView.setBackgroundColor(Color.parseColor("#ffe5f5"))
 
             interpretView.setOnClickListener {
                 tts.speech(interpretView.text.toString())
@@ -165,8 +166,9 @@ class StudyPhraseInterpretFragment : Fragment() {
         }
     }
 
-    fun addTTS(tts:TTS) : Fragment{
-        this.tts = tts
+    fun addTTS() : Fragment{
+        this.tts = TTS()
+        tts.initialize(context!!)
         return this
     }
 

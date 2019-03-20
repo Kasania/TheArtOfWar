@@ -16,6 +16,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.kasania.theartofwar.*
 import kotlinx.android.synthetic.main.fragment_study_main.view.*
+import kotlinx.android.synthetic.main.fragment_study_menu.*
 import kotlinx.android.synthetic.main.fragment_study_menu.view.*
 
 
@@ -33,10 +34,9 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
 
         private fun setContentsView(ft:FragmentTransaction){
 
-            ft.replace(R.id.contents_mainmenu,StudyMenuFragment())
             when(currentPhrase){
-                0 -> ft.replace(R.id.contents_panel_study_main,StudyChapterSummaryFragment())
-                else -> ft.replace(R.id.contents_panel_study_main,StudyPhraseMainFragment())
+                0 -> ft.replace(R.id.contents_panel_study_phrase,StudyChapterSummaryFragment())
+                else -> ft.replace(R.id.contents_panel_study_phrase,StudyPhraseInterpretFragment())
             }
             MainActivity.increaseAccessCount(currentChapter, currentPhrase)
         }
@@ -50,6 +50,7 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
             }
             ft.replace(R.id.contents_root,StudyMainFragment().newInstance())
                 .addToBackStack("StudyMain")
+            ft.replace(R.id.contents_mainmenu,StudyMenuFragment())
             ft.commit()
         }
 
@@ -90,7 +91,6 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
         val view = inflater.inflate(R.layout.fragment_study_main, container, false)
         startTime = System.currentTimeMillis()
         setChapterTextView(view)
-
         changeStudyContents(fragmentManager, currentChapter, currentPhrase,0)
 
 
@@ -130,36 +130,7 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
         super.onStop()
     }
 
-    private fun updateStudyFragmentWithOffset(phraseOffset:Int){
 
-        var phrase = currentPhrase + phraseOffset
-        var chapter = currentChapter
-
-        if(phrase< 0){
-            //negative
-            chapter--
-            if (chapter < minChapterNum){
-                chapter = maxChapterNum
-            }
-            phrase = maxPhraseNum[chapter] + (phrase + 1)
-
-        }else if(phrase > maxPhraseNum[currentChapter]){
-            //positive
-            chapter++
-            if (chapter > maxChapterNum){
-                chapter = minChapterNum
-            }
-            phrase -= (maxPhraseNum[currentChapter] + 1)
-        }
-        //to negative 1 / positive 2
-        val animationDir = when(phraseOffset){
-            -1 -> 1
-            1 -> 2
-            else -> 1
-        }
-
-        changeStudyContents(fragmentManager,chapter,phrase,animationDir)
-    }
 
     private fun setChapterTextView(v:View){
         val displayPhrase = when (currentPhrase){

@@ -15,10 +15,10 @@ import kotlinx.android.synthetic.main.fragment_study_menu.*
 import kotlinx.android.synthetic.main.fragment_study_menu.view.*
 import kotlinx.android.synthetic.main.fragment_study_phrase_interpret.*
 import kotlinx.android.synthetic.main.fragment_study_phrase_interpret.view.*
-import kotlinx.android.synthetic.main.fragment_study_phrase_main.view.*
 import android.graphics.Color.parseColor
 import android.R.attr.button
 import android.view.View.OnTouchListener
+import android.view.View.VISIBLE
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 
@@ -29,13 +29,21 @@ class StudyMenuFragment: Fragment() {
     private var isFabOpen = false
     lateinit var fab_animation_open : Animation
     lateinit var fab_animation_close : Animation
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         val view = inflater.inflate(R.layout.fragment_study_menu, container, false)
         fab_animation_open = AnimationUtils.loadAnimation(context!!,R.anim.fab_open)
         fab_animation_close = AnimationUtils.loadAnimation(context!!,R.anim.fab_close)
         tts = TTS()
         tts.initialize(context!!)
         setChapterTextView(view)
+
+        if(MainActivity.isCheckedBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase))
+            view.fa_fav.setImageResource(R.drawable.bmark_final_dark)
+        else
+            view.fa_fav.setImageResource(R.drawable.bmark_final_white)
+
 
         view.fa_main.setOnClickListener {
             fab_ani()
@@ -55,21 +63,27 @@ class StudyMenuFragment: Fragment() {
             updateStudyFragmentWithOffset(+1)
             setChapterTextView(view)
         }
-
         view.fa_interpret.setOnClickListener {
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseInterpretFragment().addTTS(tts))?.commit()
+            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseInterpretFragment())?.commit()
+
+            view.fa_comment.isClickable = true
+            view.fa_interpret.isClickable = false
         }
 
         view.fa_comment.setOnClickListener {
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseCommentFragment().addTTS(tts))?.commit()
+            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseCommentFragment())?.commit()
+            view.fa_comment.isClickable = false
+            view.fa_interpret.isClickable = true
         }
 
         view.fa_fav.setOnClickListener {
             MainActivity.toggleBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase)
             if(MainActivity.isCheckedBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase)){
                 Toast.makeText(context,"즐겨찾기 설정", Toast.LENGTH_SHORT).show()
+                view.fa_fav.setImageResource(R.drawable.bmark_final_dark)
             }else{
                 Toast.makeText(context,"즐겨찾기 해제", Toast.LENGTH_SHORT).show()
+                view.fa_fav.setImageResource(R.drawable.bmark_final_white)
             }
         }
 
@@ -78,7 +92,6 @@ class StudyMenuFragment: Fragment() {
     }
 
     private fun updateStudyFragmentWithOffset(phraseOffset:Int){
-
         var phrase = StudyMainFragment.currentPhrase + phraseOffset
         var chapter = StudyMainFragment.currentChapter
 
@@ -105,7 +118,17 @@ class StudyMenuFragment: Fragment() {
             else -> 1
         }
 
+
         StudyMainFragment.changeStudyContents(fragmentManager, chapter, phrase, animationDir)
+
+        fa_comment.isClickable = true
+        fa_interpret.isClickable = false
+
+        if(MainActivity.isCheckedBookMark(chapter, phrase))
+            fa_fav.setImageResource(R.drawable.bmark_final_dark)
+        else
+            fa_fav.setImageResource(R.drawable.bmark_final_white)
+
     }
 
     private fun setChapterTextView(v:View){
@@ -120,6 +143,13 @@ class StudyMenuFragment: Fragment() {
     private fun fab_ani() {
         if(isFabOpen)
         {
+            fa_next.isClickable = false
+            fa_fav.isClickable = false
+            fa_prev.isClickable = false
+            fa_qmove.isClickable = false
+            fa_interpret.isClickable = false
+            fa_comment.isClickable = false
+
             fa_next.startAnimation(fab_animation_close)
             fa_fav.startAnimation(fab_animation_close)
             fa_prev.startAnimation(fab_animation_close)
@@ -130,6 +160,13 @@ class StudyMenuFragment: Fragment() {
         }
         else
         {
+            fa_next.isClickable = true
+            fa_fav.isClickable = true
+            fa_prev.isClickable = true
+            fa_qmove.isClickable = true
+            fa_interpret.isClickable = true
+            fa_comment.isClickable = true
+
             fa_next.startAnimation(fab_animation_open)
             fa_fav.startAnimation(fab_animation_open)
             fa_prev.startAnimation(fab_animation_open)
