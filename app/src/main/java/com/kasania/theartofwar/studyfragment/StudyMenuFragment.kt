@@ -38,12 +38,13 @@ class StudyMenuFragment: Fragment() {
         tts = TTS()
         tts.initialize(context!!)
         setChapterTextView(view)
-
-        if(MainActivity.isCheckedBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase))
-            view.fa_fav.setImageResource(R.drawable.bmark_final_dark)
-        else
-            view.fa_fav.setImageResource(R.drawable.bmark_final_white)
-
+        if(StudyMainFragment.currentPhrase == 0) view.fa_fav.setImageResource(R.drawable.bmark_final_white)
+        else {
+            if (MainActivity.isCheckedBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase))
+                view.fa_fav.setImageResource(R.drawable.bmark_final_dark)
+            else
+                view.fa_fav.setImageResource(R.drawable.bmark_final_white)
+        }
 
         view.fa_main.setOnClickListener {
             fab_ani()
@@ -64,27 +65,42 @@ class StudyMenuFragment: Fragment() {
             setChapterTextView(view)
         }
         view.fa_interpret.setOnClickListener {
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseInterpretFragment())?.commit()
+            if(StudyMainFragment.currentPhrase == 0){
+                view.setBackgroundResource(R.drawable.summary__1)
+            }
+            else fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseInterpretFragment())?.commit()
 
             view.fa_comment.isClickable = true
             view.fa_interpret.isClickable = false
         }
 
         view.fa_comment.setOnClickListener {
-            fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseCommentFragment())?.commit()
+            if(StudyMainFragment.currentPhrase == 0){
+                view.setBackgroundResource(R.drawable.summary_1)
+            }
+            else fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseCommentFragment())?.commit()
             view.fa_comment.isClickable = false
             view.fa_interpret.isClickable = true
         }
 
         view.fa_fav.setOnClickListener {
-            MainActivity.toggleBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase)
-            if(MainActivity.isCheckedBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase)){
-                Toast.makeText(context,"즐겨찾기 설정", Toast.LENGTH_SHORT).show()
-                view.fa_fav.setImageResource(R.drawable.bmark_final_dark)
-            }else{
-                Toast.makeText(context,"즐겨찾기 해제", Toast.LENGTH_SHORT).show()
-                view.fa_fav.setImageResource(R.drawable.bmark_final_white)
+
+            if(StudyMainFragment.currentPhrase == 0){
+                Toast.makeText(context, "총괄은 설정이 불가능 합니다.", Toast.LENGTH_SHORT).show()
             }
+            else {
+                MainActivity.toggleBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase)
+
+                    if (MainActivity.isCheckedBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase)) {
+                        Toast.makeText(context, "즐겨찾기 설정", Toast.LENGTH_SHORT).show()
+                        view.fa_fav.setImageResource(R.drawable.bmark_final_dark)
+                    } else {
+                        Toast.makeText(context, "즐겨찾기 해제", Toast.LENGTH_SHORT).show()
+                        view.fa_fav.setImageResource(R.drawable.bmark_final_white)
+                    }
+                }
+
+
         }
 
         return view
@@ -124,11 +140,13 @@ class StudyMenuFragment: Fragment() {
         fa_comment.isClickable = true
         fa_interpret.isClickable = false
 
-        if(MainActivity.isCheckedBookMark(chapter, phrase))
-            fa_fav.setImageResource(R.drawable.bmark_final_dark)
-        else
-            fa_fav.setImageResource(R.drawable.bmark_final_white)
-
+        if(StudyMainFragment.currentPhrase == 0) fa_fav.setImageResource(R.drawable.bmark_final_white)
+        else {
+            if (MainActivity.isCheckedBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase))
+                fa_fav.setImageResource(R.drawable.bmark_final_dark)
+            else
+                fa_fav.setImageResource(R.drawable.bmark_final_white)
+        }
     }
 
     private fun setChapterTextView(v:View){
@@ -149,7 +167,7 @@ class StudyMenuFragment: Fragment() {
             fa_qmove.isClickable = false
             fa_interpret.isClickable = false
             fa_comment.isClickable = false
-
+            fa_main.setImageResource(R.drawable.plus)
             fa_next.startAnimation(fab_animation_close)
             fa_fav.startAnimation(fab_animation_close)
             fa_prev.startAnimation(fab_animation_close)
@@ -166,7 +184,7 @@ class StudyMenuFragment: Fragment() {
             fa_qmove.isClickable = true
             fa_interpret.isClickable = true
             fa_comment.isClickable = true
-
+            fa_main.setImageResource(R.drawable.x)
             fa_next.startAnimation(fab_animation_open)
             fa_fav.startAnimation(fab_animation_open)
             fa_prev.startAnimation(fab_animation_open)

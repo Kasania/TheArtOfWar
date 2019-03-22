@@ -14,6 +14,8 @@ import android.widget.TextView
 import android.widget.Toast
 import com.kasania.theartofwar.R
 import kotlinx.android.synthetic.main.fragment_study_chapter_summary.view.*
+import kotlinx.android.synthetic.main.fragment_study_menu.*
+import kotlinx.android.synthetic.main.fragment_study_menu.view.*
 import java.util.*
 
 class StudyChapterSummaryFragment : Fragment() {
@@ -22,7 +24,13 @@ class StudyChapterSummaryFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_study_chapter_summary, container, false)
 
+
+        when(StudyMainFragment.currentChapter){
+            1 -> view.setBackgroundResource(R.drawable.summary__1)
+        }
+
 //        initTTS()
+
 
         val id = resources.getIdentifier("@string/chapterSummary${StudyMainFragment.currentChapter}","String",context?.packageName)
 
@@ -40,7 +48,7 @@ class StudyChapterSummaryFragment : Fragment() {
             textView.setOnClickListener {
 //                speech(s)
             }
-            view.sv_chapter_summary.addView(textView)
+            //view.sv_chapter_summary.addView(textView)
         }
         return view
     }

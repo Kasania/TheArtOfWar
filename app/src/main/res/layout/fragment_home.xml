@@ -125,7 +125,7 @@
             app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="8dp"
             app:fontFamily="@font/kukdetopokki"
             app:autoSizeStepGranularity="4dp" app:autoSizeTextType="uniform"
-            android:gravity="center" android:textColor="@color/OnPrimary"
+            android:gravity="center" android:textColor="@color/Black"
             app:layout_constraintBottom_toTopOf="@+id/guideline9"/>
     <TextView
             android:layout_width="0dp"
@@ -138,7 +138,7 @@
             app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="8dp"
             app:fontFamily="@font/kukdetopokki"
             app:autoSizeStepGranularity="4dp" app:autoSizeTextType="uniform"
-            android:gravity="center" android:textColor="@color/OnPrimary"/>
+            android:gravity="center" android:textColor="@color/Black"/>
     <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -149,19 +149,20 @@
             app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="8dp"
             app:fontFamily="@font/kukdetopokki"
             app:autoSizeStepGranularity="4dp" app:autoSizeTextType="uniform"
-            android:gravity="center" android:textColor="@color/OnPrimary" android:layout_marginBottom="12dp"
+            android:gravity="center" android:textColor="@color/Black" android:layout_marginBottom="12dp"
             app:layout_constraintBottom_toBottomOf="@+id/btn_home_todayphrase"/>
     <TextView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="49dp"
+            android:layout_height="52dp"
             android:id="@+id/tv_btn_home_continue"
             app:layout_constraintTop_toTopOf="@+id/btn_home_continue"
             app:layout_constraintEnd_toEndOf="@+id/btn_home_continue"
             app:layout_constraintStart_toStartOf="@+id/btn_home_continue"
             android:textStyle="bold"
-            android:textColor="@color/OnPrimary" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
+            android:textColor="@color/Black" app:autoSizeMaxTextSize="200dp" app:autoSizeMinTextSize="20dp"
             app:fontFamily="@font/kukdetopokki"
             app:autoSizeStepGranularity="4dp" app:autoSizeTextType="uniform" android:gravity="center_horizontal|top"
             app:layout_constraintBottom_toTopOf="@+id/guideline" android:layout_marginEnd="12dp"
-            android:layout_marginStart="12dp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+            android:layout_marginStart="12dp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"
+            app:layout_constraintHorizontal_bias="0.77" app:layout_constraintVertical_bias="0.132"/>
 </android.support.constraint.ConstraintLayout>

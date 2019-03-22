@@ -92,11 +92,11 @@ class StudyPhraseInterpretFragment : Fragment() {
 
     private fun createVocaSet(view:View){
         val id = resources.getIdentifier("@string/voca_${StudyMainFragment.currentChapter}_${StudyMainFragment.currentPhrase}","String",context?.packageName)
-
         val vocaLines = getText(id).split("//")
         if (vocaLines[0] != ""){
             val vocaLayout = LinearLayout(context)
             vocaLayout.orientation = LinearLayout.VERTICAL
+
             for (s in vocaLines){
 
                 val vocaValue = s.split("|")
@@ -118,7 +118,7 @@ class StudyPhraseInterpretFragment : Fragment() {
                     vocaInterpret.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
                     vocaInterpret.gravity = Gravity.CENTER_VERTICAL
                     val layout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
-                    layout.setMargins(20,20,10,30)
+                    layout.setMargins(20,0,10,0)
                     vocaInterpret.layoutParams = layout
                 }
 

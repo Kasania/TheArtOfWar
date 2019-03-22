@@ -13,6 +13,7 @@ import android.widget.TextView
 import com.kasania.theartofwar.*
 import com.kasania.theartofwar.studyfragment.StudyMainFragment
 import kotlinx.android.synthetic.main.fragment_favorite.view.*
+import kotlinx.android.synthetic.main.fragment_study_phrase_interpret.view.*
 
 class FavoriteFragment : Fragment(){
 
@@ -75,15 +76,16 @@ class FavoriteFragment : Fragment(){
 
         view.contents_favorite.removeAllViews()
 
-        for (i in 0..(maxPhraseNum[currentSelectChapter+1]-1)){
+        for (i in 1..(maxPhraseNum[currentSelectChapter+1])){
             if(MainActivity.isCheckedBookMark(currentSelectChapter+1,i)){
                 val textView = TextView(context)
                 val text = "${currentSelectChapter+1} 편 ${displayPhraseName[i]}"
                 textView.text = text
                 textView.gravity = Gravity.CENTER
-                textView.setTextColor(ContextCompat.getColor(context!!,R.color.OnPrimary))
-                textView.setBackgroundColor(ContextCompat.getColor(context!!,R.color.SurfaceDeepDark))
-                textView.textSize = 24.0f
+                textView.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
+                //textView.setBackgroundColor(ContextCompat.getColor(context!!,R.color.OnPrimary))
+                textView.setBackgroundResource(R.drawable.outline)
+                textView.textSize = 22.0f
                 val layout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
                 layout.setMargins(5,5,5,5)
                 textView.layoutParams = layout
