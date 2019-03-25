@@ -20,13 +20,47 @@ import kotlinx.android.synthetic.main.fragment_study_menu.*
 import kotlinx.android.synthetic.main.fragment_study_menu.view.*
 
 
-class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
+class StudyMainFragment : Fragment(), MainActivity.OnBackPressedListener/*, IOnBackPressed*/{
 //    override fun onBackPressed(): Boolean {
 //        for(b in 0..fragmentManager!!.backStackEntryCount){
 //            fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
 //        }
 //        return true
 //    }
+
+    override fun onBack() {
+        Log.e("Other", "onBack()")
+        // 리스너를 설정하기 위해 Activity 를 받아옵니다.
+        val activity = activity as MainActivity?
+        // 한번 뒤로가기 버튼을 눌렀다면 Listener 를 null 로 해제해줍니다.
+        //activity!!.setOnBackPressedListener()
+        activity?.setOnBackPressedListener(null)
+        // MainFragment 로 교체
+        //fragmentManager!!.beginTransaction().replace(R.id.contents_root, MainFragment()).commit()
+        //activity?.onBackPressed();
+        //if(fragmentManager!!.backStackEntryCount > 1){
+        val ide = fragmentManager!!.getBackStackEntryAt(0).name
+        fragmentManager!!.popBackStack(ide, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        Log.i("TAG", "Found fragment: $ide")
+
+
+        //}
+        //else {
+            //for (b in 0..fragmentManager!!.backStackEntryCount) {
+        //        fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        //        Log.e("Other", "1개")
+            //}
+        //}
+
+    }
+
+    // Fragment 호출 시 반드시 호출되는 오버라이드 메소드입니다.
+    override//                     혹시 Context 로 안되시는분은 Activity 로 바꿔보시기 바랍니다.
+    fun onAttach(context: Context?) {
+        super.onAttach(context)
+        Log.e("Other", "onAttach()")
+        (context as MainActivity).setOnBackPressedListener(this)
+    }
 
     companion object {
         var currentChapter: Int = 1
@@ -48,6 +82,7 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
             if(enableAnimation){
                 ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top,R.anim.slide_in_top,R.anim.slide_out_bottom)
             }
+
             ft.replace(R.id.contents_root,StudyMainFragment().newInstance())
                 .addToBackStack("StudyMain")
             ft.replace(R.id.contents_mainmenu,StudyMenuFragment())
