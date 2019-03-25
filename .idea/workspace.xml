@@ -110,19 +110,71 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="3986374">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="kt" value="846" />
+          <entry key="txt" value="69" />
+          <entry key="xml" value="37" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Kotlin" value="846" />
+          <entry key="PLAIN_TEXT" value="69" />
+          <entry key="XML" value="37" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="kt" value="3" />
+          <entry key="xml" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Kotlin" value="3" />
+          <entry key="XML" value="5" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMenuFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1254">
-              <caret line="87" column="45" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
-              <folding>
-                <element signature="e#47#1005#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-114">
+              <caret line="69" column="68" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="68" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="931">
+              <caret line="49" column="56" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="56" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_study_main.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -137,59 +189,29 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_study_menu.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="85" column="46" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="46" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_study_chapter_summary.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+            <state relative-caret-position="264">
+              <caret line="166" column="4" selection-start-line="166" selection-start-column="4" selection-end-line="166" selection-end-column="4" />
             </state>
           </provider>
           <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/mainfragment/FavoriteFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_study_chapter_summary.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="82" selection-start-line="3" selection-start-column="82" selection-end-line="3" selection-end-column="82" />
             </state>
           </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseCommentFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/mainfragment/SubjectSelectFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="38" column="36" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="36" />
-              <folding>
-                <element signature="e#46#666#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyChapterSummaryFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="28" column="66" lean-forward="true" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -197,8 +219,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMainFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+            <state relative-caret-position="569">
+              <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/MainActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
@@ -216,7 +247,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>32</find>
       <find>3</find>
       <find>tv_study</find>
       <find>btn</find>
@@ -246,10 +276,11 @@
       <find>background</find>
       <find>back</find>
       <find>if(StudyMainFragment.currentPhrase == 0) view.fa_fav.setImageResource(R.drawable.bmark_final_white)</find>
+      <find>summary_review</find>
     </findStrings>
   </component>
   <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="C:\Users\leejw\Documents\sonja.jks" />
+    <option name="KEY_STORE_PATH" value="C:\Users\cntjr\Documents\app\app.jks" />
     <option name="KEY_ALIAS" value="key0" />
     <option name="REMEMBER_PASSWORDS" value="true" />
     <option name="BUILD_TARGET_KEY" value="apk" />
@@ -260,7 +291,7 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Users\leejw\.gradle\wrapper\dists\gradle-4.10.1-all\455itskqi2qtf0v2sja68alqd\gradle-4.10.1" />
+        <entry key="$PROJECT_DIR$" value="C:\Users\cntjr\.gradle\wrapper\dists\gradle-4.10.1-all\455itskqi2qtf0v2sja68alqd\gradle-4.10.1" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -2637,7 +2668,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_study_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_study_phrase_comment.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_study_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_favorite.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseInterpretFragment.kt" />
@@ -2651,9 +2681,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/mainfragment/SubjectSelectFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/mainfragment/FavoriteFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMainFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_study_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_study_chapter_summary.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMenuFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyChapterSummaryFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMenuFragment.kt" />
       </list>
     </option>
   </component>
@@ -2668,18 +2699,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="TheArtOfWar" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="TheArtOfWar" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
             </path>
             <path>
               <item name="TheArtOfWar" type="1abcf292:AndroidViewProjectNode" />
@@ -2706,24 +2732,41 @@
               <item name="theartofwar" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="studyfragment" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TheArtOfWar" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="TheArtOfWar" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="anim" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="TheArtOfWar" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" />
-    <property name="ExportApk.ApkPath" value="C:\Users\leejw\Documents" />
+    <property name="ExportApk.ApkPath" value="C:\Users\cntjr\Documents\app" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV1" value="true" />
     <property name="ExportApk.SignV2" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="maxPhrase&#9;null&#9;null&#10;chapterSummary&#9;null&#9;null&#10;color&#9;FILE&#9;file://C:/Users/leejw/AppData/Local/Android/Sdk/platforms/android-28/data/res/xml/color_extraction.xml&#10;bmark_btn&#9;FILE&#9;file://C:/Users/leejw/Documents/GitHub/TheArtOfWar/app/src/main/res/drawable/bmark_btn_dark.png&#10;fab_ani&#9;null&#9;null&#10;visible&#9;ACTION&#9;null&#10;book&#9;null&#9;null&#10;updatestudy&#9;null&#9;null&#10;updatestud&#9;null&#9;null&#10;phrase&#9;FILE&#9;file://C:/Users/leejw/Documents/GitHub/TheArtOfWar/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseCommentFragment.kt&#10;bookmark&#9;null&#9;null&#10;ischecked&#9;null&#9;null&#10;ischeck&#9;null&#9;null&#10;isbook&#9;null&#9;null&#10;anim&#9;null&#9;null&#10;slide_in&#9;PSI&#9;JAVA://android.R.anim#slide_in_left&#10;action_down&#9;PSI&#9;JAVA://android.view.KeyEvent#ACTION_DOWN&#10;theme&#9;ACTION&#9;ActivateThemePreviewToolWindow" />
+    <property name="SearchEverywhereHistoryKey" value="summary_review&#9;null&#9;null&#10;maxPhrase&#9;null&#9;null&#10;chapterSummary&#9;null&#9;null&#10;color&#9;FILE&#9;file://C:/Users/leejw/AppData/Local/Android/Sdk/platforms/android-28/data/res/xml/color_extraction.xml&#10;bmark_btn&#9;FILE&#9;file://C:/Users/leejw/Documents/GitHub/TheArtOfWar/app/src/main/res/drawable/bmark_btn_dark.png&#10;fab_ani&#9;null&#9;null&#10;visible&#9;ACTION&#9;null&#10;book&#9;null&#9;null&#10;updatestudy&#9;null&#9;null&#10;updatestud&#9;null&#9;null&#10;phrase&#9;FILE&#9;file://C:/Users/leejw/Documents/GitHub/TheArtOfWar/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseCommentFragment.kt&#10;bookmark&#9;null&#9;null&#10;ischecked&#9;null&#9;null&#10;ischeck&#9;null&#9;null&#10;isbook&#9;null&#9;null&#10;anim&#9;null&#9;null&#10;slide_in&#9;PSI&#9;JAVA://android.R.anim#slide_in_left&#10;action_down&#9;PSI&#9;JAVA://android.view.KeyEvent#ACTION_DOWN&#10;theme&#9;ACTION&#9;ActivateThemePreviewToolWindow" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="device.picker.selection" value="Pixel_API_28" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="device.picker.selection" value="Pixel_XL_API_Q" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../app" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
   </component>
   <component name="RecentsManager">
@@ -2833,31 +2876,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1477" height="797" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49909583" visible="true" weight="0.22692037" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49909583" visible="true" weight="0.22654584" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" sideWeight="0.50090414" side_tool="true" weight="0.32980973" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.26656628" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49964765" weight="0.32932332" />
-      <window_info anchor="bottom" id="TODO" order="2" weight="0.3298193" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.2660152" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49964765" weight="0.3257329" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49548194" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.3298193" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5003524" side_tool="true" weight="0.3298193" />
-      <window_info anchor="bottom" id="Version Control" order="6" weight="0.3298193" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.17319277" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" weight="0.41114458" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32899022" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.17372422" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.41042346" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3298193" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.32980973" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.08104299" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.081023455" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
   </component>
@@ -2907,14 +2951,6 @@
           <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="49" column="56" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="56" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -3009,14 +3045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_study_main.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_favorite.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="627">
@@ -3043,20 +3071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3648">
-          <caret line="199" column="28" selection-start-line="199" selection-start-column="28" selection-end-line="199" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/mainfragment/SettingFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -3088,49 +3102,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseInterpretFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMenuFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="87" column="45" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
-          <folding>
-            <element signature="e#47#1005#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fab_open.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fab_close.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_study_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="85" column="46" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_study_chapter_summary.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/mainfragment/FavoriteFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <state relative-caret-position="342">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="e#46#606#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3138,6 +3116,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/mainfragment/SettingFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -3151,17 +3136,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseInterpretFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1235">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fab_open.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/fab_close.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="49" column="56" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="56" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_study_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_study_menu.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="166" column="4" selection-start-line="166" selection-start-column="4" selection-end-line="166" selection-end-column="4" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_study_chapter_summary.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="82" selection-start-line="3" selection-start-column="82" selection-end-line="3" selection-end-column="82" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMainFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+        <state relative-caret-position="569">
+          <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyChapterSummaryFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="28" column="66" lean-forward="true" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMenuFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="69" column="68" selection-start-line="69" selection-start-column="68" selection-end-line="69" selection-end-column="68" />
         </state>
       </provider>
     </entry>

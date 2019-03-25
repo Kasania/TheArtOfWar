@@ -15,6 +15,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.kasania.theartofwar.*
+import kotlinx.android.synthetic.main.fragment_study_chapter_summary.view.*
 import kotlinx.android.synthetic.main.fragment_study_main.view.*
 import kotlinx.android.synthetic.main.fragment_study_menu.*
 import kotlinx.android.synthetic.main.fragment_study_menu.view.*
@@ -90,17 +91,17 @@ class StudyMainFragment : Fragment(), MainActivity.OnBackPressedListener/*, IOnB
         }
 
         fun changeStudyContents(fm:FragmentManager?, chapter:Int = 1, phrase:Int = 0,action:Int = 1){
-            currentChapter = chapter
-            currentPhrase = phrase
-            val ft = fm!!.beginTransaction()
-            if(enableAnimation)
-            when (action){
-                1 -> ft.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right)
-                2 -> ft.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left)
-                3 -> ft.setCustomAnimations(R.anim.slide_in_bottom, R.anim.slide_out_top)
-            }
-            setContentsView(ft)
-            ft.commit()
+                currentChapter = chapter
+                currentPhrase = phrase
+                val ft = fm!!.beginTransaction()
+                if(enableAnimation)
+                    when (action){
+                        1 -> ft.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right)
+                        2 -> ft.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left)
+                        3 -> ft.setCustomAnimations(R.anim.slide_in_bottom, R.anim.slide_out_top)
+                    }
+                setContentsView(ft)
+                ft.commit()
         }
 
         fun convertColoredText(s:String):Spanned{
@@ -110,6 +111,7 @@ class StudyMainFragment : Fragment(), MainActivity.OnBackPressedListener/*, IOnB
                 Html.fromHtml(s)
             }
         }
+
 
     }
     private fun newInstance():StudyMainFragment{

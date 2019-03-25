@@ -1,24 +1,15 @@
 package com.kasania.theartofwar.studyfragment
 
 import android.os.Bundle
-import android.os.Message
-import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.kasania.theartofwar.*
-import kotlinx.android.synthetic.main.fragment_study_main.view.*
 import kotlinx.android.synthetic.main.fragment_study_menu.*
 import kotlinx.android.synthetic.main.fragment_study_menu.view.*
-import kotlinx.android.synthetic.main.fragment_study_phrase_interpret.*
-import kotlinx.android.synthetic.main.fragment_study_phrase_interpret.view.*
-import android.graphics.Color.parseColor
-import android.R.attr.button
-import android.view.View.OnTouchListener
-import android.view.View.VISIBLE
+import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.fragment_study_chapter_summary.*
@@ -46,6 +37,12 @@ class StudyMenuFragment: Fragment() {
             else
                 view.fa_fav.setImageResource(R.drawable.bmark_final_white)
         }
+        if(StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
+            when (StudyMainFragment.currentChapter) {
+                1 -> view.setBackgroundResource(R.drawable.summary_1_background)
+                2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
+            }
+        }
 
         view.fa_main.setOnClickListener {
             fab_ani()
@@ -58,16 +55,31 @@ class StudyMenuFragment: Fragment() {
         view.fa_prev.setOnClickListener {
             updateStudyFragmentWithOffset(-1)
             setChapterTextView(view)
+            if(StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
+                when (StudyMainFragment.currentChapter) {
+                    1 -> view.setBackgroundResource(R.drawable.summary_1_background)
+                    2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
+                }
+            }
         }
 
 
         view.fa_next.setOnClickListener {
             updateStudyFragmentWithOffset(+1)
             setChapterTextView(view)
+            if(StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
+                when (StudyMainFragment.currentChapter) {
+                    1 -> view.setBackgroundResource(R.drawable.summary_1_background)
+                    2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
+                }
+            }
         }
         view.fa_interpret.setOnClickListener {
             if(StudyMainFragment.currentPhrase == 0){
-                summary_review.startAnimation(fab_animation_close)
+                //summary_review.startAnimation(fab_animation_close)
+                    view.summary_review.setVisibility(if (summary_review.getVisibility() == View.VISIBLE) View.GONE else View.VISIBLE) // 총괄 해석 투명도 설정
+
+
             }
             //    when(StudyMainFragment.currentChapter) {
             //        1 -> view.setBackgroundResource(R.drawable.summary__1)
@@ -78,11 +90,22 @@ class StudyMenuFragment: Fragment() {
 
             view.fa_comment.isClickable = true
             view.fa_interpret.isClickable = false
+            val ides = StudyMainFragment.currentPhrase
+            Log.i("TAG", "interpret Found fragment: $ides")
         }
 
         view.fa_comment.setOnClickListener {
             if(StudyMainFragment.currentPhrase == 0){
-                summary_review.startAnimation(fab_animation_open)
+                view.summary_review.setVisibility(if (summary_review.getVisibility() == View.VISIBLE) View.GONE else View.VISIBLE) // 총괄 해석 투명도 설정
+
+                when (StudyMainFragment.currentChapter) { // 총괄 해석 배경 설정하는 곳
+                    1 -> view.summary_review.setBackgroundResource(R.drawable.summary_1_comment)
+                    2 -> view.summary_review.setBackgroundResource(R.drawable.summary_1_background)
+                }
+
+
+
+
             }
             //    when(StudyMainFragment.currentChapter) {
             //        1 -> view.setBackgroundResource(R.drawable.summary_1)
@@ -92,6 +115,8 @@ class StudyMenuFragment: Fragment() {
             else fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseCommentFragment())?.commit()
             view.fa_comment.isClickable = false
             view.fa_interpret.isClickable = true
+            val ides = StudyMainFragment.currentPhrase
+            Log.i("TAG", "comment Found fragment: $ides")
         }
 
         view.fa_fav.setOnClickListener {
@@ -168,6 +193,8 @@ class StudyMenuFragment: Fragment() {
         val currentChapterText = "${resources.getString(R.string.chapter_prefix_name)} ${StudyMainFragment.currentChapter} ${resources.getString(R.string.chapter_postfix_name)} $displayPhrase"
         v.tv_study_current_chapter?.text = currentChapterText
     }
+
+
 
     private fun fab_ani() {
         if(isFabOpen)

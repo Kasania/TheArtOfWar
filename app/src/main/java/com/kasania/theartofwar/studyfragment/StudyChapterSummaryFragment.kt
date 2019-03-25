@@ -25,14 +25,12 @@ class StudyChapterSummaryFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_study_chapter_summary, container, false)
 
 
-        when(StudyMainFragment.currentChapter){
-            1 -> view.setBackgroundResource(R.drawable.summary__1)
-        }
+
 
 //        initTTS()
 
 
-        val id = resources.getIdentifier("@string/chapterSummary${StudyMainFragment.currentChapter}","String",context?.packageName)
+        /*val id = resources.getIdentifier("@string/chapterSummary${StudyMainFragment.currentChapter}","String",context?.packageName)
 
         val summaryValue = getText(id).split("//")
 
@@ -49,7 +47,7 @@ class StudyChapterSummaryFragment : Fragment() {
 //                speech(s)
             }
             //view.sv_chapter_summary.addView(textView)
-        }
+        }*/
         return view
     }
 
