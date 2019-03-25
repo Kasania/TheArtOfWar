@@ -21,6 +21,7 @@ import android.view.View.OnTouchListener
 import android.view.View.VISIBLE
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import kotlinx.android.synthetic.main.fragment_study_chapter_summary.*
 
 
 class StudyMenuFragment: Fragment() {
@@ -66,8 +67,13 @@ class StudyMenuFragment: Fragment() {
         }
         view.fa_interpret.setOnClickListener {
             if(StudyMainFragment.currentPhrase == 0){
-                view.setBackgroundResource(R.drawable.summary__1)
+                summary_review.startAnimation(fab_animation_close)
             }
+            //    when(StudyMainFragment.currentChapter) {
+            //        1 -> view.setBackgroundResource(R.drawable.summary__1)
+            //    }
+            //}
+            //else
             else fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseInterpretFragment())?.commit()
 
             view.fa_comment.isClickable = true
@@ -76,8 +82,13 @@ class StudyMenuFragment: Fragment() {
 
         view.fa_comment.setOnClickListener {
             if(StudyMainFragment.currentPhrase == 0){
-                view.setBackgroundResource(R.drawable.summary_1)
+                summary_review.startAnimation(fab_animation_open)
             }
+            //    when(StudyMainFragment.currentChapter) {
+            //        1 -> view.setBackgroundResource(R.drawable.summary_1)
+            //    }
+            //}
+            //else
             else fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseCommentFragment())?.commit()
             view.fa_comment.isClickable = false
             view.fa_interpret.isClickable = true
