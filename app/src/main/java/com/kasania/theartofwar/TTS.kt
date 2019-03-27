@@ -45,13 +45,15 @@ class TTS{
         }
     }
 
-//    fun stop(){
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-//            tts.speak("", TextToSpeech.QUEUE_FLUSH, null, null)
-//        // API 20
-//        else
-//            tts.speak("", TextToSpeech.QUEUE_FLUSH, null)
-//    }
+    fun stop(){
+       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            tts.speak("", TextToSpeech.QUEUE_FLUSH, null, null)
+        // API 20
+        else
+            tts.speak("", TextToSpeech.QUEUE_FLUSH, null)
+    }
+
+
 
     fun destroy(){
 
@@ -60,3 +62,4 @@ class TTS{
     }
 
 }
+

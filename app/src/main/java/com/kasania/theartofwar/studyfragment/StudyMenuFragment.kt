@@ -13,31 +13,34 @@ import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.fragment_study_chapter_summary.*
+import android.system.Os.shutdown
+
+
 
 
 class StudyMenuFragment: Fragment() {
 
-    lateinit var tts : TTS
+    lateinit var tts: TTS
     private var isFabOpen = false
-    lateinit var fab_animation_open : Animation
-    lateinit var fab_animation_close : Animation
+    lateinit var fab_animation_open: Animation
+    lateinit var fab_animation_close: Animation
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_study_menu, container, false)
-        fab_animation_open = AnimationUtils.loadAnimation(context!!,R.anim.fab_open)
-        fab_animation_close = AnimationUtils.loadAnimation(context!!,R.anim.fab_close)
+        fab_animation_open = AnimationUtils.loadAnimation(context!!, R.anim.fab_open)
+        fab_animation_close = AnimationUtils.loadAnimation(context!!, R.anim.fab_close)
         tts = TTS()
         tts.initialize(context!!)
         setChapterTextView(view)
-        if(StudyMainFragment.currentPhrase == 0) view.fa_fav.setImageResource(R.drawable.bmark_final_white)
+        if (StudyMainFragment.currentPhrase == 0) view.fa_fav.setImageResource(R.drawable.bmark_final_white)
         else {
             if (MainActivity.isCheckedBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase))
                 view.fa_fav.setImageResource(R.drawable.bmark_final_dark)
             else
                 view.fa_fav.setImageResource(R.drawable.bmark_final_white)
         }
-        if(StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
+        if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
             when (StudyMainFragment.currentChapter) {
                 1 -> view.setBackgroundResource(R.drawable.summary_1_background)
                 2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
@@ -48,14 +51,20 @@ class StudyMenuFragment: Fragment() {
             fab_ani()
         }
         view.fa_qmove.setOnClickListener {
-            QuickChapterSelectDialog().newInstance().show(fragmentManager,"Quick Select")
+            QuickChapterSelectDialog().newInstance().show(fragmentManager, "Quick Select")
             setChapterTextView(view)
+            if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
+                when (StudyMainFragment.currentChapter) {
+                    1 -> view.setBackgroundResource(R.drawable.summary_1_background)
+                    2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
+                }
+            }
         }
 
         view.fa_prev.setOnClickListener {
             updateStudyFragmentWithOffset(-1)
             setChapterTextView(view)
-            if(StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
+            if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
                 when (StudyMainFragment.currentChapter) {
                     1 -> view.setBackgroundResource(R.drawable.summary_1_background)
                     2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
@@ -67,17 +76,18 @@ class StudyMenuFragment: Fragment() {
         view.fa_next.setOnClickListener {
             updateStudyFragmentWithOffset(+1)
             setChapterTextView(view)
-            if(StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
+            if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
                 when (StudyMainFragment.currentChapter) {
                     1 -> view.setBackgroundResource(R.drawable.summary_1_background)
                     2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
                 }
             }
+
         }
         view.fa_interpret.setOnClickListener {
-            if(StudyMainFragment.currentPhrase == 0){
+            if (StudyMainFragment.currentPhrase == 0) {
                 //summary_review.startAnimation(fab_animation_close)
-                    view.summary_review.setVisibility(if (summary_review.getVisibility() == View.VISIBLE) View.GONE else View.VISIBLE) // 총괄 해석 투명도 설정
+                view.summary_review.setVisibility(if (summary_review.getVisibility() == View.VISIBLE) View.GONE else View.VISIBLE) // 총괄 해석 투명도 설정
 
 
             }
@@ -86,7 +96,10 @@ class StudyMenuFragment: Fragment() {
             //    }
             //}
             //else
-            else fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseInterpretFragment())?.commit()
+            else fragmentManager?.beginTransaction()?.replace(
+                R.id.contents_panel_study_phrase,
+                StudyPhraseInterpretFragment()
+            )?.commit()
 
             view.fa_comment.isClickable = true
             view.fa_interpret.isClickable = false
@@ -95,7 +108,7 @@ class StudyMenuFragment: Fragment() {
         }
 
         view.fa_comment.setOnClickListener {
-            if(StudyMainFragment.currentPhrase == 0){
+            if (StudyMainFragment.currentPhrase == 0) {
                 view.summary_review.setVisibility(if (summary_review.getVisibility() == View.VISIBLE) View.GONE else View.VISIBLE) // 총괄 해석 투명도 설정
 
                 when (StudyMainFragment.currentChapter) { // 총괄 해석 배경 설정하는 곳
@@ -104,15 +117,16 @@ class StudyMenuFragment: Fragment() {
                 }
 
 
-
-
             }
             //    when(StudyMainFragment.currentChapter) {
             //        1 -> view.setBackgroundResource(R.drawable.summary_1)
             //    }
             //}
             //else
-            else fragmentManager?.beginTransaction()?.replace(R.id.contents_panel_study_phrase,StudyPhraseCommentFragment())?.commit()
+            else fragmentManager?.beginTransaction()?.replace(
+                R.id.contents_panel_study_phrase,
+                StudyPhraseCommentFragment()
+            )?.commit()
             view.fa_comment.isClickable = false
             view.fa_interpret.isClickable = true
             val ides = StudyMainFragment.currentPhrase
@@ -121,20 +135,19 @@ class StudyMenuFragment: Fragment() {
 
         view.fa_fav.setOnClickListener {
 
-            if(StudyMainFragment.currentPhrase == 0){
+            if (StudyMainFragment.currentPhrase == 0) {
                 Toast.makeText(context, "총괄은 설정이 불가능 합니다.", Toast.LENGTH_SHORT).show()
-            }
-            else {
+            } else {
                 MainActivity.toggleBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase)
 
-                    if (MainActivity.isCheckedBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase)) {
-                        Toast.makeText(context, "즐겨찾기 설정", Toast.LENGTH_SHORT).show()
-                        view.fa_fav.setImageResource(R.drawable.bmark_final_dark)
-                    } else {
-                        Toast.makeText(context, "즐겨찾기 해제", Toast.LENGTH_SHORT).show()
-                        view.fa_fav.setImageResource(R.drawable.bmark_final_white)
-                    }
+                if (MainActivity.isCheckedBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase)) {
+                    Toast.makeText(context, "즐겨찾기 설정", Toast.LENGTH_SHORT).show()
+                    view.fa_fav.setImageResource(R.drawable.bmark_final_dark)
+                } else {
+                    Toast.makeText(context, "즐겨찾기 해제", Toast.LENGTH_SHORT).show()
+                    view.fa_fav.setImageResource(R.drawable.bmark_final_white)
                 }
+            }
 
 
         }
@@ -143,28 +156,28 @@ class StudyMenuFragment: Fragment() {
 
     }
 
-    private fun updateStudyFragmentWithOffset(phraseOffset:Int){
+    private fun updateStudyFragmentWithOffset(phraseOffset: Int) {
         var phrase = StudyMainFragment.currentPhrase + phraseOffset
         var chapter = StudyMainFragment.currentChapter
 
-        if(phrase< 0){
+        if (phrase < 0) {
             //negative
             chapter--
-            if (chapter < minChapterNum){
+            if (chapter < minChapterNum) {
                 chapter = maxChapterNum
             }
             phrase = maxPhraseNum[chapter] + (phrase + 1)
 
-        }else if(phrase > maxPhraseNum[StudyMainFragment.currentChapter]){
+        } else if (phrase > maxPhraseNum[StudyMainFragment.currentChapter]) {
             //positive
             chapter++
-            if (chapter > maxChapterNum){
+            if (chapter > maxChapterNum) {
                 chapter = minChapterNum
             }
             phrase -= (maxPhraseNum[StudyMainFragment.currentChapter] + 1)
         }
         //to negative 1 / positive 2
-        val animationDir = when(phraseOffset){
+        val animationDir = when (phraseOffset) {
             -1 -> 1
             1 -> 2
             else -> 1
@@ -176,7 +189,7 @@ class StudyMenuFragment: Fragment() {
         fa_comment.isClickable = true
         fa_interpret.isClickable = false
 
-        if(StudyMainFragment.currentPhrase == 0) fa_fav.setImageResource(R.drawable.bmark_final_white)
+        if (StudyMainFragment.currentPhrase == 0) fa_fav.setImageResource(R.drawable.bmark_final_white)
         else {
             if (MainActivity.isCheckedBookMark(StudyMainFragment.currentChapter, StudyMainFragment.currentPhrase))
                 fa_fav.setImageResource(R.drawable.bmark_final_dark)
@@ -185,20 +198,21 @@ class StudyMenuFragment: Fragment() {
         }
     }
 
-    private fun setChapterTextView(v:View){
-        val displayPhrase = when (StudyMainFragment.currentPhrase){
-            0-> "총괄"
+    private fun setChapterTextView(v: View) {
+        val displayPhrase = when (StudyMainFragment.currentPhrase) {
+            0 -> "총괄"
             else -> "${StudyMainFragment.currentPhrase} 절"
         }
-        val currentChapterText = "${resources.getString(R.string.chapter_prefix_name)} ${StudyMainFragment.currentChapter} ${resources.getString(R.string.chapter_postfix_name)} $displayPhrase"
+        val currentChapterText =
+            "${resources.getString(R.string.chapter_prefix_name)} ${StudyMainFragment.currentChapter} ${resources.getString(
+                R.string.chapter_postfix_name
+            )} $displayPhrase"
         v.tv_study_current_chapter?.text = currentChapterText
     }
 
 
-
     private fun fab_ani() {
-        if(isFabOpen)
-        {
+        if (isFabOpen) {
             fa_next.isClickable = false
             fa_fav.isClickable = false
             fa_prev.isClickable = false
@@ -213,9 +227,7 @@ class StudyMenuFragment: Fragment() {
             fa_interpret.startAnimation(fab_animation_close)
             fa_comment.startAnimation(fab_animation_close)
             isFabOpen = false
-        }
-        else
-        {
+        } else {
             fa_next.isClickable = true
             fa_fav.isClickable = true
             fa_prev.isClickable = true
@@ -232,8 +244,9 @@ class StudyMenuFragment: Fragment() {
             isFabOpen = true
         }
     }
-
 }
+
+
 
 
 
