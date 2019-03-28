@@ -31,19 +31,11 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
         //activity!!.setOnBackPressedListener()
         activity?.setOnBackPressedListener(null)
         // MainFragment 로 교체
-        tts_id.destroy()
+        if(StudyMainFragment.currentPhrase != 0)
+            tts_id.destroy()
         val ide = fragmentManager!!.getBackStackEntryAt(0).name
         fragmentManager!!.popBackStack(ide, FragmentManager.POP_BACK_STACK_INCLUSIVE)
         Log.i("TAG", "Found fragment: $ide")
-
-
-        //}
-        //else {
-        //for (b in 0..fragmentManager!!.backStackEntryCount) {
-        //        fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
-        //        Log.e("Other", "1개")
-        //}
-        //}
 
     }
 

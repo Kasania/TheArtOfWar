@@ -32,12 +32,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/TTS.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/TTS.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMainFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMainFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMenuFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMenuFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseCommentFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseCommentFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseInterpretFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseInterpretFragment.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +56,7 @@
     <session id="96380963">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="31" />
+          <entry key="project.closed" value="33" />
           <entry key="project.open.time.10" value="7" />
           <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="5" />
@@ -70,9 +65,9 @@
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.8" value="3" />
+          <entry key="project.open.time.8" value="4" />
           <entry key="project.open.time.9" value="12" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.opened" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -80,7 +75,7 @@
           <entry key="apk" value="1" />
           <entry key="class" value="5" />
           <entry key="java" value="6" />
-          <entry key="kt" value="145" />
+          <entry key="kt" value="148" />
           <entry key="otf" value="3" />
           <entry key="png" value="24" />
           <entry key="xml" value="222" />
@@ -93,14 +88,14 @@
           <entry key="Font" value="3" />
           <entry key="Image" value="24" />
           <entry key="JAVA" value="6" />
-          <entry key="Kotlin" value="145" />
+          <entry key="Kotlin" value="148" />
           <entry key="XML" value="222" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="4" />
-          <entry key="kt" value="8667" />
+          <entry key="kt" value="8669" />
           <entry key="txt" value="490" />
           <entry key="xml" value="1851" />
         </counts>
@@ -108,7 +103,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="4" />
-          <entry key="Kotlin" value="8667" />
+          <entry key="Kotlin" value="8669" />
           <entry key="PLAIN_TEXT" value="490" />
           <entry key="XML" value="1851" />
         </counts>
@@ -155,17 +150,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMenuFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/Constants.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="380">
+              <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -173,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/TTS.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="458">
+              <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -183,19 +169,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseInterpretFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="e#46#1050#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/IOnBackPressed.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+              <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -203,8 +177,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseCommentFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="304">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -230,8 +204,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMainFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-114">
-              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+            <state relative-caret-position="1596">
+              <caret line="111" column="83" selection-start-line="111" selection-start-column="83" selection-end-line="111" selection-end-column="83" />
               <folding>
                 <element signature="e#47#784#0" expanded="true" />
               </folding>
@@ -240,9 +214,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/QuickChapterSelectDialog.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyChapterSummaryFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="3344">
               <caret line="184" selection-start-line="184" selection-end-line="184" />
               <folding>
                 <element signature="e#33#354#0" expanded="true" />
@@ -297,7 +289,7 @@
     </findStrings>
   </component>
   <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="C:\Users\cntjr\Documents\app\app.jks" />
+    <option name="KEY_STORE_PATH" value="C:\Users\leejw\Documents\release\app.jks" />
     <option name="KEY_ALIAS" value="key0" />
     <option name="REMEMBER_PASSWORDS" value="true" />
     <option name="BUILD_TARGET_KEY" value="apk" />
@@ -2706,7 +2698,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="462" />
     <option name="y" value="161" />
     <option name="width" value="2023" />
@@ -2717,6 +2709,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2727,11 +2722,6 @@
             <path>
               <item name="TheArtOfWar" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
-            </path>
-            <path>
-              <item name="TheArtOfWar" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
@@ -2739,6 +2729,13 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="theartofwar" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheArtOfWar" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="theartofwar" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="mainfragment" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheArtOfWar" type="1abcf292:AndroidViewProjectNode" />
@@ -2747,18 +2744,10 @@
               <item name="theartofwar" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="studyfragment" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TheArtOfWar" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2770,7 +2759,7 @@
     <property name="SearchEverywhereHistoryKey" value="tts&#9;null&#9;null&#10;stop&#9;PSI&#9;JAVA://com.sun.org.apache.xml.internal.dtm.ref.IncrementalSAXSource_Filter.StopException&#10;summary_review&#9;null&#9;null&#10;maxPhrase&#9;null&#9;null&#10;chapterSummary&#9;null&#9;null&#10;color&#9;FILE&#9;file://C:/Users/leejw/AppData/Local/Android/Sdk/platforms/android-28/data/res/xml/color_extraction.xml&#10;bmark_btn&#9;FILE&#9;file://C:/Users/leejw/Documents/GitHub/TheArtOfWar/app/src/main/res/drawable/bmark_btn_dark.png&#10;fab_ani&#9;null&#9;null&#10;visible&#9;ACTION&#9;null&#10;book&#9;null&#9;null&#10;updatestudy&#9;null&#9;null&#10;updatestud&#9;null&#9;null&#10;phrase&#9;FILE&#9;file://C:/Users/leejw/Documents/GitHub/TheArtOfWar/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseCommentFragment.kt&#10;bookmark&#9;null&#9;null&#10;ischecked&#9;null&#9;null&#10;ischeck&#9;null&#9;null&#10;isbook&#9;null&#9;null&#10;anim&#9;null&#9;null&#10;slide_in&#9;PSI&#9;JAVA://android.R.anim#slide_in_left&#10;action_down&#9;PSI&#9;JAVA://android.view.KeyEvent#ACTION_DOWN&#10;theme&#9;ACTION&#9;ActivateThemePreviewToolWindow" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="Nexus_5X_API_Q" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../release" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../release/app.jks" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
   </component>
   <component name="RecentsManager">
@@ -2884,21 +2873,21 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49909583" visible="true" weight="0.22762509" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49909583" visible="true" weight="0.22762509" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" sideWeight="0.50090414" side_tool="true" weight="0.32980973" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Run" order="0" visible="true" weight="0.26506025" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.26506025" />
       <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49964765" weight="0.32481202" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49548194" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5003524" side_tool="true" weight="0.3298193" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32899022" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.17319277" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.20331325" />
       <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.41042346" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3298193" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.32980973" />
@@ -3115,20 +3104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyChapterSummaryFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/QuickChapterSelectDialog.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/mainfragment/SubjectSelectFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -3141,6 +3116,13 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="931">
           <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/Constants.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -3165,23 +3147,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/Constants.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/TTS.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
+        <state relative-caret-position="3344">
           <caret line="184" selection-start-line="184" selection-end-line="184" />
           <folding>
             <element signature="e#33#354#0" expanded="true" />
@@ -3189,37 +3157,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseInterpretFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/TTS.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMainFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        <state relative-caret-position="1596">
+          <caret line="111" column="83" selection-start-line="111" selection-start-column="83" selection-end-line="111" selection-end-column="83" />
           <folding>
             <element signature="e#47#784#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseCommentFragment.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/QuickChapterSelectDialog.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        <state relative-caret-position="196">
+          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseInterpretFragment.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyChapterSummaryFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#46#1050#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="267">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyPhraseCommentFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kasania/theartofwar/studyfragment/StudyMenuFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+        <state relative-caret-position="380">
+          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
         </state>
       </provider>
     </entry>
