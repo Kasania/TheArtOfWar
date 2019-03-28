@@ -1,4 +1,5 @@
 package com.kasania.theartofwar.studyfragment
+import android.content.Context
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.os.Build
@@ -19,18 +20,24 @@ import java.util.regex.Pattern
 import android.opengl.ETC1.getHeight
 import android.opengl.ETC1.getWidth
 import android.graphics.Outline
+import android.support.v4.app.FragmentManager
+import android.util.Log
 import android.view.ViewOutlineProvider
+import com.kasania.theartofwar.MainActivity
+import com.kasania.theartofwar.studyfragment.StudyMainFragment.Companion.tts_id
 import kotlinx.android.synthetic.main.fragment_study_menu.*
 import kotlinx.android.synthetic.main.fragment_study_menu.view.*
 
 
-class StudyPhraseInterpretFragment : Fragment() {
+class StudyPhraseInterpretFragment : Fragment(){
 
     private lateinit var tts : TTS
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_study_phrase_interpret, container, false)
         addTTS()
+        tts_id = tts
+        Log.i("TAG", "Found tts: $tts_id")
         createHanjaSet(view)
 
         createVocaSet(view)
@@ -39,7 +46,7 @@ class StudyPhraseInterpretFragment : Fragment() {
 
 
 
-
+        //tts.destroy()
         return view
     }
 
@@ -166,7 +173,7 @@ class StudyPhraseInterpretFragment : Fragment() {
         }
     }
 
-    fun addTTS() : Fragment{
+    private fun addTTS() : Fragment{
         this.tts = TTS()
         tts.initialize(context!!)
         return this

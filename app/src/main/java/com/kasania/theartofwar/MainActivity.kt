@@ -8,6 +8,7 @@ import android.util.Log
 import com.kasania.theartofwar.mainfragment.MainFragment
 import java.io.FileNotFoundException
 import java.util.*
+import com.kasania.theartofwar.TTS
 
 class MainActivity : AppCompatActivity() {
 

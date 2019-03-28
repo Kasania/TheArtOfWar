@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,6 +23,8 @@ class StudyPhraseCommentFragment :Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_study_phrase_comment, container, false)
         addTTS()
+        StudyMainFragment.tts_id = tts
+        Log.i("TAG", "Found tts in comment: ${StudyMainFragment.tts_id}")
         view.sv_phrase_comment.setBackgroundResource(R.drawable.outline)
         val commentId = resources.getIdentifier("@string/comment_${StudyMainFragment.currentChapter}_${StudyMainFragment.currentPhrase}","String",context?.packageName)
         val commentValue = getText(commentId).split("//")

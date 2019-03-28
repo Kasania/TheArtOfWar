@@ -1,7 +1,9 @@
 package com.kasania.theartofwar.studyfragment
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,24 +16,52 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.fragment_study_chapter_summary.*
 import android.system.Os.shutdown
+import com.kasania.theartofwar.studyfragment.StudyMainFragment.Companion.tts_id
+import kotlinx.android.synthetic.main.fragment_study_phrase_interpret.*
+import kotlinx.android.synthetic.main.fragment_study_phrase_interpret.view.*
 
 
+class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
+
+    override fun onBack() {
+        Log.e("Other", "onBack()")
+        // 리스너를 설정하기 위해 Activity 를 받아옵니다.
+        val activity = activity as MainActivity?
+        // 한번 뒤로가기 버튼을 눌렀다면 Listener 를 null 로 해제해줍니다.
+        //activity!!.setOnBackPressedListener()
+        activity?.setOnBackPressedListener(null)
+        // MainFragment 로 교체
+        tts_id.destroy()
+        val ide = fragmentManager!!.getBackStackEntryAt(0).name
+        fragmentManager!!.popBackStack(ide, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        Log.i("TAG", "Found fragment: $ide")
 
 
-class StudyMenuFragment: Fragment() {
+        //}
+        //else {
+        //for (b in 0..fragmentManager!!.backStackEntryCount) {
+        //        fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        //        Log.e("Other", "1개")
+        //}
+        //}
 
-    lateinit var tts: TTS
+    }
+
+    // Fragment 호출 시 반드시 호출되는 오버라이드 메소드입니다.
+    override//                     혹시 Context 로 안되시는분은 Activity 로 바꿔보시기 바랍니다.
+    fun onAttach(context: Context?) {
+        super.onAttach(context)
+        Log.e("Other", "onAttach()")
+        (context as MainActivity).setOnBackPressedListener(this)
+    }
+
     private var isFabOpen = false
     lateinit var fab_animation_open: Animation
     lateinit var fab_animation_close: Animation
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
         val view = inflater.inflate(R.layout.fragment_study_menu, container, false)
         fab_animation_open = AnimationUtils.loadAnimation(context!!, R.anim.fab_open)
         fab_animation_close = AnimationUtils.loadAnimation(context!!, R.anim.fab_close)
-        tts = TTS()
-        tts.initialize(context!!)
         setChapterTextView(view)
         if (StudyMainFragment.currentPhrase == 0) view.fa_fav.setImageResource(R.drawable.bmark_final_white)
         else {
@@ -47,6 +77,7 @@ class StudyMenuFragment: Fragment() {
             }
         }
 
+
         view.fa_main.setOnClickListener {
             fab_ani()
         }
@@ -59,6 +90,8 @@ class StudyMenuFragment: Fragment() {
                     2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
                 }
             }
+            tts_id.destroy()
+            tts_id.initialize(context!!)
         }
 
         view.fa_prev.setOnClickListener {
@@ -70,6 +103,9 @@ class StudyMenuFragment: Fragment() {
                     2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
                 }
             }
+            Log.i("TAG", "Found tts in studymenu : ${StudyMainFragment.tts_id}")
+            tts_id.destroy()
+            tts_id.initialize(context!!)
         }
 
 
@@ -82,20 +118,16 @@ class StudyMenuFragment: Fragment() {
                     2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
                 }
             }
+            Log.i("TAG", "Found tts in studymenu : ${StudyMainFragment.tts_id}")
+            tts_id.destroy()
+            tts_id.initialize(context!!)
 
         }
         view.fa_interpret.setOnClickListener {
             if (StudyMainFragment.currentPhrase == 0) {
                 //summary_review.startAnimation(fab_animation_close)
                 view.summary_review.setVisibility(if (summary_review.getVisibility() == View.VISIBLE) View.GONE else View.VISIBLE) // 총괄 해석 투명도 설정
-
-
             }
-            //    when(StudyMainFragment.currentChapter) {
-            //        1 -> view.setBackgroundResource(R.drawable.summary__1)
-            //    }
-            //}
-            //else
             else fragmentManager?.beginTransaction()?.replace(
                 R.id.contents_panel_study_phrase,
                 StudyPhraseInterpretFragment()
@@ -105,6 +137,8 @@ class StudyMenuFragment: Fragment() {
             view.fa_interpret.isClickable = false
             val ides = StudyMainFragment.currentPhrase
             Log.i("TAG", "interpret Found fragment: $ides")
+            tts_id.destroy()
+            tts_id.initialize(context!!)
         }
 
         view.fa_comment.setOnClickListener {
@@ -131,6 +165,8 @@ class StudyMenuFragment: Fragment() {
             view.fa_interpret.isClickable = true
             val ides = StudyMainFragment.currentPhrase
             Log.i("TAG", "comment Found fragment: $ides")
+            tts_id.destroy()
+            tts_id.initialize(context!!)
         }
 
         view.fa_fav.setOnClickListener {
@@ -148,8 +184,6 @@ class StudyMenuFragment: Fragment() {
                     view.fa_fav.setImageResource(R.drawable.bmark_final_white)
                 }
             }
-
-
         }
 
         return view

@@ -3,8 +3,11 @@ package com.kasania.theartofwar
 import android.content.Context
 import android.os.Build
 import android.speech.tts.TextToSpeech
+import android.support.v4.content.ContextCompat
 import android.widget.Toast
 import java.util.*
+
+
 
 class TTS{
 
@@ -29,6 +32,7 @@ class TTS{
                 }
             }
         })
+
     }
 
     fun speech(text:String){
@@ -62,4 +66,3 @@ class TTS{
     }
 
 }
-
