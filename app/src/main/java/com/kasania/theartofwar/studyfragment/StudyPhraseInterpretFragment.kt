@@ -36,7 +36,7 @@ class StudyPhraseInterpretFragment : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_study_phrase_interpret, container, false)
         addTTS()
-        tts_id = tts
+        StudyMainFragment.tts_id = tts
         Log.i("TAG", "Found tts: $tts_id")
         createHanjaSet(view)
 
@@ -101,10 +101,15 @@ class StudyPhraseInterpretFragment : Fragment(){
         val id = resources.getIdentifier("@string/voca_${StudyMainFragment.currentChapter}_${StudyMainFragment.currentPhrase}","String",context?.packageName)
         val vocaLines = getText(id).split("//")
         if (vocaLines[0] != ""){
-            val vocaLayout = LinearLayout(context)
-            vocaLayout.orientation = LinearLayout.VERTICAL
+            val vocaLayout_left = LinearLayout(context)
+            vocaLayout_left.orientation = LinearLayout.VERTICAL
 
-            for (s in vocaLines){
+            val vocaLayout_right = LinearLayout(context)
+            vocaLayout_right.orientation = LinearLayout.VERTICAL
+
+            var LRboolean = true
+
+            for (s in vocaLines) {
 
                 val vocaValue = s.split("|")
                 val vocaContainer = LinearLayout(context)
@@ -114,32 +119,50 @@ class StudyPhraseInterpretFragment : Fragment(){
 
                 vocaChar.text = "• ${StudyMainFragment.convertColoredText(vocaValue[0])} : "
                 vocaChar.textSize = 18f
-                vocaChar.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
+                vocaChar.setTextColor(ContextCompat.getColor(context!!, R.color.Black))
 
                 vocaContainer.addView(vocaChar)
 
-                if(vocaValue.lastIndex > 0){
+                if (vocaValue.lastIndex > 0) {
                     vocaContainer.addView(vocaInterpret)
                     vocaInterpret.text = vocaValue[1]
                     vocaInterpret.textSize = 18f
-                    vocaInterpret.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
+                    vocaInterpret.setTextColor(ContextCompat.getColor(context!!, R.color.Black))
                     vocaInterpret.gravity = Gravity.CENTER_VERTICAL
-                    val layout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
-                    layout.setMargins(20,0,10,0)
+                    val layout = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    )
+                    layout.setMargins(20, 0, 10, 0)
                     vocaInterpret.layoutParams = layout
                 }
 
-                val layout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
-                layout.setMargins(20,20,10,30)
+                val layout = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+                )
+                layout.setMargins(20, 20, 10, 30)
                 vocaContainer.layoutParams = layout
-                vocaLayout.addView(vocaContainer)
+
+                if (LRboolean) {
+                    vocaLayout_left.addView(vocaContainer)
+                    LRboolean = false
+                }
+                else {
+                    vocaLayout_right.addView(vocaContainer)
+                    LRboolean = true
+                }
+
+
+
 
             }
 
             //vocaLayout.setBackgroundColor(Color.parseColor("#ffc1e8"))
             //vocaLayout.background = ContextCompat.getDrawable(context!!,R.drawable.img_line_contants)
             view.scrollview_con.setBackgroundResource(R.drawable.outline)
-            view.sv_phrase_interpret2.addView(vocaLayout)
+            view.sv_phrase_interpret_left.addView(vocaLayout_left)
+            view.sv_phrase_interpret_right.addView(vocaLayout_right)
         }
 
     }

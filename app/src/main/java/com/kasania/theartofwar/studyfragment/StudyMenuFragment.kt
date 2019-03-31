@@ -31,8 +31,7 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
         //activity!!.setOnBackPressedListener()
         activity?.setOnBackPressedListener(null)
         // MainFragment 로 교체
-        if(StudyMainFragment.currentPhrase != 0)
-            tts_id.destroy()
+        StudyMainFragment.tts_id.destroy()
         val ide = fragmentManager!!.getBackStackEntryAt(0).name
         fragmentManager!!.popBackStack(ide, FragmentManager.POP_BACK_STACK_INCLUSIVE)
         Log.i("TAG", "Found fragment: $ide")
@@ -82,8 +81,8 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
                     2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
                 }
             }
-            tts_id.destroy()
-            tts_id.initialize(context!!)
+            StudyMainFragment.tts_id.destroy()
+            StudyMainFragment.tts_id.initialize(context!!)
         }
 
         view.fa_prev.setOnClickListener {
@@ -96,8 +95,8 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
                 }
             }
             Log.i("TAG", "Found tts in studymenu : ${StudyMainFragment.tts_id}")
-            tts_id.destroy()
-            tts_id.initialize(context!!)
+            StudyMainFragment.tts_id.destroy()
+            StudyMainFragment.tts_id.initialize(context!!)
         }
 
 
@@ -111,8 +110,8 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
                 }
             }
             Log.i("TAG", "Found tts in studymenu : ${StudyMainFragment.tts_id}")
-            tts_id.destroy()
-            tts_id.initialize(context!!)
+            StudyMainFragment.tts_id.destroy()
+            StudyMainFragment.tts_id.initialize(context!!)
 
         }
         view.fa_interpret.setOnClickListener {
@@ -129,8 +128,9 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
             view.fa_interpret.isClickable = false
             val ides = StudyMainFragment.currentPhrase
             Log.i("TAG", "interpret Found fragment: $ides")
-            tts_id.destroy()
-            tts_id.initialize(context!!)
+            StudyMainFragment.tts_id.destroy()
+            StudyMainFragment.tts_id.initialize(context!!)
+
         }
 
         view.fa_comment.setOnClickListener {
@@ -157,8 +157,9 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
             view.fa_interpret.isClickable = true
             val ides = StudyMainFragment.currentPhrase
             Log.i("TAG", "comment Found fragment: $ides")
-            tts_id.destroy()
-            tts_id.initialize(context!!)
+            StudyMainFragment.tts_id.destroy()
+            StudyMainFragment.tts_id.initialize(context!!)
+
         }
 
         view.fa_fav.setOnClickListener {
