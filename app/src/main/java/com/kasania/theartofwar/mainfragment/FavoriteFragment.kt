@@ -35,7 +35,7 @@ class FavoriteFragment : Fragment(), MainActivity.OnBackPressedListener {
         //fragmentManager!!.beginTransaction().replace(R.id.contents_root, MainFragment()).commit()
         //activity?.onBackPressed();
         //for (b in 0..fragmentManager!!.backStackEntryCount) {
-            fragmentManager!!.popBackStack("Favorite", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        fragmentManager!!.popBackStack("Favorite", FragmentManager.POP_BACK_STACK_INCLUSIVE)
         //}
     }
 

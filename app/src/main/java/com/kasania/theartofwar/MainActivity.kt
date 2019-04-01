@@ -6,9 +6,9 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.kasania.theartofwar.mainfragment.MainFragment
+import kotlinx.android.synthetic.main.activity_main.*
 import java.io.FileNotFoundException
 import java.util.*
-import com.kasania.theartofwar.TTS
 
 class MainActivity : AppCompatActivity() {
 
@@ -57,16 +57,27 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.contents_root, MainFragment())
             .commit()
 
+
     }
 
     private fun checkPresent() {
         val today = Calendar.getInstance()
         val date = today.get(Calendar.DAY_OF_YEAR)
-
         val sharedPref = getSharedPreferences(SharedPrefName,Context.MODE_PRIVATE)
         val totalDate = sharedPref.getInt(SharedPrefKeyTotalAccessDate,0)
         val lastDate = sharedPref.getInt(SharedPrefKeyLastAccessDate,1)
         val currentLongestDate = sharedPref.getInt(SharedPrefKeyCurrentContinueAccessDate,0)
+        val BackGroundImg = sharedPref.getInt(BackGroundImg, 0)
+
+        if(BackGroundImg == 0){
+            contents_root.setBackgroundResource(R.drawable.background_main)
+        }
+        else {
+            if(BackGroundImg == 1)
+                contents_root.setBackgroundResource(R.drawable.summary_1_background)
+            else
+                contents_root.setBackgroundResource(R.drawable.summary_1_comment)
+        }
 
         if(date == lastDate){
             Log.d("LastDate","Today")
@@ -164,6 +175,8 @@ class MainActivity : AppCompatActivity() {
 //            super.onBackPressed()
 //        }
 //    }
+
+
 private var pressedTime: Long = 0
 
     // 리스너 생성
@@ -203,6 +216,7 @@ private var pressedTime: Long = 0
                     ).show()
                     pressedTime = 0
                 } else {
+                    onStop()
                     super.onBackPressed()
                     Log.e("!!!", "onBackPressed : finish, killProcess")
                     finish()

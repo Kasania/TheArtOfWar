@@ -18,6 +18,8 @@ const val SharedPrefKeyCurrentContinueAccessDate ="CurrentContinueDate"
 const val BookmarkDataFileName = "BookMark"
 const val PhraseAccessCountDataFileName = "PhraseAccessCount"
 
+const val BackGroundImg = "Background"
+
 const val totalPhraseNum = 173
 const val minChapterNum = 1
 const val maxChapterNum = 13

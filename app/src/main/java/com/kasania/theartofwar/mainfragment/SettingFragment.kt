@@ -4,11 +4,15 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.kasania.theartofwar.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_setting.view.*
+import java.util.*
 
 class SettingFragment :Fragment(), MainActivity.OnBackPressedListener {
 
@@ -38,11 +42,24 @@ class SettingFragment :Fragment(), MainActivity.OnBackPressedListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_setting,container,false)
 
+        view.button2.setOnClickListener() {
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putInt(BackGroundImg, 0).apply()
+            activity!!.contents_root.setBackgroundResource(R.drawable.background_main)
+        }
 
+        view.button3.setOnClickListener() {
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putInt(BackGroundImg, 1).apply()
+            activity!!.contents_root.setBackgroundResource(R.drawable.summary_1_background)
+        }
 
-
-
+        view.button4.setOnClickListener() {
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putInt(BackGroundImg, 2).apply()
+            activity!!.contents_root.setBackgroundResource(R.drawable.summary_1_comment)
+        }
 
         return view
     }
+
+
 }
+
