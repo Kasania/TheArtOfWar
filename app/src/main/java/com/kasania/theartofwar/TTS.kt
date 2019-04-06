@@ -9,6 +9,7 @@ import java.util.*
 
 
 
+
 class TTS{
 
     lateinit var tts : TextToSpeech
@@ -25,8 +26,8 @@ class TTS{
                     TextToSpeech.LANG_MISSING_DATA -> false
                     TextToSpeech.LANG_NOT_SUPPORTED -> false
                     else -> {
-                        tts.setPitch(1.0f)
-                        tts.setSpeechRate(1.0f)
+                        tts.setPitch(MainActivity.VaSetPitchValue)
+                        tts.setSpeechRate(MainActivity.VaSetPitchRate)
                         ttsSupport = result
                     }
                 }

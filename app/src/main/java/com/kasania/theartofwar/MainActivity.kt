@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
 
+        var VaSetPitchValue = 1.0f
+
+        var VaSetPitchRate = 1.0f
+
         var currentMainFragmentPage = 0
 
         var todayAccessTimeMil = 0L
@@ -68,6 +72,9 @@ class MainActivity : AppCompatActivity() {
         val lastDate = sharedPref.getInt(SharedPrefKeyLastAccessDate,1)
         val currentLongestDate = sharedPref.getInt(SharedPrefKeyCurrentContinueAccessDate,0)
         val BackGroundImg = sharedPref.getInt(BackGroundImg, 0)
+
+        VaSetPitchValue = sharedPref.getFloat(SetPitchValue, 1.0f)
+        VaSetPitchRate = sharedPref.getFloat(SetPitchRate, 1.0f)
 
         if(BackGroundImg == 0){
             contents_root.setBackgroundResource(R.drawable.background_main)

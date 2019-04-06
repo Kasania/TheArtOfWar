@@ -19,6 +19,8 @@ const val BookmarkDataFileName = "BookMark"
 const val PhraseAccessCountDataFileName = "PhraseAccessCount"
 
 const val BackGroundImg = "Background"
+const val SetPitchValue = "PitchValue"
+const val SetPitchRate = "PitchRate"
 
 const val totalPhraseNum = 173
 const val minChapterNum = 1

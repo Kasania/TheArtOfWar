@@ -57,6 +57,36 @@ class SettingFragment :Fragment(), MainActivity.OnBackPressedListener {
             activity!!.contents_root.setBackgroundResource(R.drawable.summary_1_comment)
         }
 
+        view.button5.setOnClickListener() {
+            val ValPitch = activity!!.getSharedPreferences(SharedPrefName,Context.MODE_PRIVATE).getFloat(SetPitchValue, 1.0f)
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchValue, (ValPitch + 0.1f)).apply()
+            MainActivity.VaSetPitchValue = MainActivity.VaSetPitchValue + 0.1f
+            view.tone.setText(MainActivity.VaSetPitchValue.toString())
+        }
+
+        view.button6.setOnClickListener() {
+            val ValPitch = activity!!.getSharedPreferences(SharedPrefName,Context.MODE_PRIVATE).getFloat(SetPitchValue, 1.0f)
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchValue, (ValPitch - 0.1f)).apply()
+            MainActivity.VaSetPitchValue = MainActivity.VaSetPitchValue - 0.1f
+            view.tone.setText(MainActivity.VaSetPitchValue.toString())
+        }
+
+        view.button7.setOnClickListener() {
+            val ValRate = activity!!.getSharedPreferences(SharedPrefName,Context.MODE_PRIVATE).getFloat(SetPitchRate, 1.0f)
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchRate, (ValRate + 0.1f)).apply()
+            MainActivity.VaSetPitchRate = MainActivity.VaSetPitchRate + 0.1f
+            view.speed.setText(MainActivity.VaSetPitchRate.toString())
+        }
+
+        view.button8.setOnClickListener() {
+            val ValRate = activity!!.getSharedPreferences(SharedPrefName,Context.MODE_PRIVATE).getFloat(SetPitchRate, 1.0f)
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchRate, (ValRate - 0.1f)).apply()
+            MainActivity.VaSetPitchRate = MainActivity.VaSetPitchRate - 0.1f
+            view.speed.setText(MainActivity.VaSetPitchRate.toString())
+        }
+        view.tone.setText(MainActivity.VaSetPitchValue.toString())
+        view.speed.setText(MainActivity.VaSetPitchRate.toString())
+
         return view
     }
 
