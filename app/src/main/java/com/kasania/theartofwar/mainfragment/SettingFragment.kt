@@ -43,7 +43,7 @@ class SettingFragment :Fragment(), MainActivity.OnBackPressedListener {
         val view = inflater.inflate(R.layout.fragment_setting,container,false)
 
         val backgrounddata = activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).getInt(BackGroundImg, 0)
-        val voicedata = activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).getFloat(SetPitchValue, 1.0f)
+        val voicedata = activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).getFloat(SetPitchRate, 1.0f)
 
         if(backgrounddata == 0) {
             view.imageView2.setImageResource(R.drawable.background_select1)
@@ -64,7 +64,7 @@ class SettingFragment :Fragment(), MainActivity.OnBackPressedListener {
 
         }
 
-        if(voicedata == 0.7f) {
+        if(voicedata == 0.6f) {
             view.imageView7.setImageResource(R.drawable.slow)
             view.imageView8.setImageResource(R.drawable.normal_dark)
             view.imageView9.setImageResource(R.drawable.fast_dark)
@@ -110,24 +110,24 @@ class SettingFragment :Fragment(), MainActivity.OnBackPressedListener {
         }
 
         view.imageView7.setOnClickListener() {
-            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchValue, 0.7f).apply()
-            MainActivity.VaSetPitchValue = 0.7f
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchRate, 0.6f).apply()
+            MainActivity.VaSetPitchRate = 0.6f
             view.imageView7.setImageResource(R.drawable.slow)
             view.imageView8.setImageResource(R.drawable.normal_dark)
             view.imageView9.setImageResource(R.drawable.fast_dark)
         }
 
         view.imageView8.setOnClickListener() {
-            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchValue, 1.0f).apply()
-            MainActivity.VaSetPitchValue = 1.0f
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchRate, 1.0f).apply()
+            MainActivity.VaSetPitchRate = 1.0f
             view.imageView7.setImageResource(R.drawable.slow_dark)
             view.imageView8.setImageResource(R.drawable.normal)
             view.imageView9.setImageResource(R.drawable.fast_dark)
         }
 
         view.imageView9.setOnClickListener() {
-            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchValue, 1.3f).apply()
-            MainActivity.VaSetPitchValue = 1.3f
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchRate, 1.4f).apply()
+            MainActivity.VaSetPitchRate = 1.4f
             view.imageView7.setImageResource(R.drawable.slow_dark)
             view.imageView8.setImageResource(R.drawable.normal_dark)
             view.imageView9.setImageResource(R.drawable.fast)
