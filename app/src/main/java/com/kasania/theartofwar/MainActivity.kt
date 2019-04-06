@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.kasania.theartofwar.mainfragment.MainFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_setting.*
 import java.io.FileNotFoundException
 import java.util.*
 
@@ -81,9 +82,9 @@ class MainActivity : AppCompatActivity() {
         }
         else {
             if(BackGroundImg == 1)
-                contents_root.setBackgroundResource(R.drawable.summary_1_background)
+                contents_root.setBackgroundResource(R.drawable.background_sub1)
             else
-                contents_root.setBackgroundResource(R.drawable.summary_1_comment)
+                contents_root.setBackgroundResource(R.drawable.background_sub2)
         }
 
         if(date == lastDate){

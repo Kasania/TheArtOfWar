@@ -64,7 +64,18 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
         if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
             when (StudyMainFragment.currentChapter) {
                 1 -> view.setBackgroundResource(R.drawable.summary_1_background)
-                2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
+                2 -> view.setBackgroundResource(R.drawable.summary_2_background)
+                3 -> view.setBackgroundResource(R.drawable.summary_3_background)
+                4 -> view.setBackgroundResource(R.drawable.summary_4_background)
+                5 -> view.setBackgroundResource(R.drawable.summary_5_background)
+                6 -> view.setBackgroundResource(R.drawable.summary_6_background)
+                7 -> view.setBackgroundResource(R.drawable.summary_7_background)
+                8 -> view.setBackgroundResource(R.drawable.summary_8_background)
+                9 -> view.setBackgroundResource(R.drawable.summary_9_background)
+                10 -> view.setBackgroundResource(R.drawable.summary_10_background)
+                11 -> view.setBackgroundResource(R.drawable.summary_11_background)
+                12 -> view.setBackgroundResource(R.drawable.summary_12_background)
+                13 -> view.setBackgroundResource(R.drawable.summary_13_background)
             }
         }
 
@@ -78,7 +89,18 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
             if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
                 when (StudyMainFragment.currentChapter) {
                     1 -> view.setBackgroundResource(R.drawable.summary_1_background)
-                    2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
+                    2 -> view.setBackgroundResource(R.drawable.summary_2_background)
+                    3 -> view.setBackgroundResource(R.drawable.summary_3_background)
+                    4 -> view.setBackgroundResource(R.drawable.summary_4_background)
+                    5 -> view.setBackgroundResource(R.drawable.summary_5_background)
+                    6 -> view.setBackgroundResource(R.drawable.summary_6_background)
+                    7 -> view.setBackgroundResource(R.drawable.summary_7_background)
+                    8 -> view.setBackgroundResource(R.drawable.summary_8_background)
+                    9 -> view.setBackgroundResource(R.drawable.summary_9_background)
+                    10 -> view.setBackgroundResource(R.drawable.summary_10_background)
+                    11 -> view.setBackgroundResource(R.drawable.summary_11_background)
+                    12 -> view.setBackgroundResource(R.drawable.summary_12_background)
+                    13 -> view.setBackgroundResource(R.drawable.summary_13_background)
                 }
             }
             StudyMainFragment.tts_id.destroy()
@@ -91,7 +113,18 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
             if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
                 when (StudyMainFragment.currentChapter) {
                     1 -> view.setBackgroundResource(R.drawable.summary_1_background)
-                    2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
+                    2 -> view.setBackgroundResource(R.drawable.summary_2_background)
+                    3 -> view.setBackgroundResource(R.drawable.summary_3_background)
+                    4 -> view.setBackgroundResource(R.drawable.summary_4_background)
+                    5 -> view.setBackgroundResource(R.drawable.summary_5_background)
+                    6 -> view.setBackgroundResource(R.drawable.summary_6_background)
+                    7 -> view.setBackgroundResource(R.drawable.summary_7_background)
+                    8 -> view.setBackgroundResource(R.drawable.summary_8_background)
+                    9 -> view.setBackgroundResource(R.drawable.summary_9_background)
+                    10 -> view.setBackgroundResource(R.drawable.summary_10_background)
+                    11 -> view.setBackgroundResource(R.drawable.summary_11_background)
+                    12 -> view.setBackgroundResource(R.drawable.summary_12_background)
+                    13 -> view.setBackgroundResource(R.drawable.summary_13_background)
                 }
             }
             Log.i("TAG", "Found tts in studymenu : ${StudyMainFragment.tts_id}")
@@ -106,7 +139,18 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
             if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
                 when (StudyMainFragment.currentChapter) {
                     1 -> view.setBackgroundResource(R.drawable.summary_1_background)
-                    2 -> view.setBackgroundResource(R.drawable.summary_1_comment)
+                    2 -> view.setBackgroundResource(R.drawable.summary_2_background)
+                    3 -> view.setBackgroundResource(R.drawable.summary_3_background)
+                    4 -> view.setBackgroundResource(R.drawable.summary_4_background)
+                    5 -> view.setBackgroundResource(R.drawable.summary_5_background)
+                    6 -> view.setBackgroundResource(R.drawable.summary_6_background)
+                    7 -> view.setBackgroundResource(R.drawable.summary_7_background)
+                    8 -> view.setBackgroundResource(R.drawable.summary_8_background)
+                    9 -> view.setBackgroundResource(R.drawable.summary_9_background)
+                    10 -> view.setBackgroundResource(R.drawable.summary_10_background)
+                    11 -> view.setBackgroundResource(R.drawable.summary_11_background)
+                    12 -> view.setBackgroundResource(R.drawable.summary_12_background)
+                    13 -> view.setBackgroundResource(R.drawable.summary_13_background)
                 }
             }
             Log.i("TAG", "Found tts in studymenu : ${StudyMainFragment.tts_id}")

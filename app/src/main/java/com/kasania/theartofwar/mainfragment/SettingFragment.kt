@@ -4,17 +4,17 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.kasania.theartofwar.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_setting.view.*
-import java.util.*
 
 class SettingFragment :Fragment(), MainActivity.OnBackPressedListener {
+
 
     override fun onBack() {
         Log.e("Other", "onBack()")
@@ -42,42 +42,97 @@ class SettingFragment :Fragment(), MainActivity.OnBackPressedListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_setting,container,false)
 
-        view.button2.setOnClickListener() {
+        val backgrounddata = activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).getInt(BackGroundImg, 0)
+        val voicedata = activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).getFloat(SetPitchValue, 1.0f)
+
+        if(backgrounddata == 0) {
+            view.imageView2.setImageResource(R.drawable.background_select1)
+            view.imageView3.setImageResource(R.drawable.background_select2_dark)
+            view.imageView4.setImageResource(R.drawable.background_select3_dark)
+        }
+        else {
+            if(backgrounddata == 1){
+                view.imageView2.setImageResource(R.drawable.background_select1_dark)
+                view.imageView3.setImageResource(R.drawable.background_select2)
+                view.imageView4.setImageResource(R.drawable.background_select3_dark)
+            }
+            else {
+                view.imageView2.setImageResource(R.drawable.background_select1_dark)
+                view.imageView3.setImageResource(R.drawable.background_select2_dark)
+                view.imageView4.setImageResource(R.drawable.background_select3)
+            }
+
+        }
+
+        if(voicedata == 0.7f) {
+            view.imageView7.setImageResource(R.drawable.slow)
+            view.imageView8.setImageResource(R.drawable.normal_dark)
+            view.imageView9.setImageResource(R.drawable.fast_dark)
+        }
+        else {
+            if(voicedata == 1.0f){
+                view.imageView7.setImageResource(R.drawable.slow_dark)
+                view.imageView8.setImageResource(R.drawable.normal)
+                view.imageView9.setImageResource(R.drawable.fast_dark)
+            }
+            else {
+                view.imageView7.setImageResource(R.drawable.slow_dark)
+                view.imageView8.setImageResource(R.drawable.normal_dark)
+                view.imageView9.setImageResource(R.drawable.fast)
+            }
+
+        }
+
+
+
+        view.imageView2.setOnClickListener() {
             activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putInt(BackGroundImg, 0).apply()
             activity!!.contents_root.setBackgroundResource(R.drawable.background_main)
+            view.imageView2.setImageResource(R.drawable.background_select1)
+            view.imageView3.setImageResource(R.drawable.background_select2_dark)
+            view.imageView4.setImageResource(R.drawable.background_select3_dark)
         }
 
-        view.button3.setOnClickListener() {
+        view.imageView3.setOnClickListener() {
             activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putInt(BackGroundImg, 1).apply()
-            activity!!.contents_root.setBackgroundResource(R.drawable.summary_1_background)
+            activity!!.contents_root.setBackgroundResource(R.drawable.background_sub1)
+            view.imageView2.setImageResource(R.drawable.background_select1_dark)
+            view.imageView3.setImageResource(R.drawable.background_select2)
+            view.imageView4.setImageResource(R.drawable.background_select3_dark)
         }
 
-        view.button4.setOnClickListener() {
+        view.imageView4.setOnClickListener() {
             activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putInt(BackGroundImg, 2).apply()
-            activity!!.contents_root.setBackgroundResource(R.drawable.summary_1_comment)
+            activity!!.contents_root.setBackgroundResource(R.drawable.background_sub2)
+            view.imageView2.setImageResource(R.drawable.background_select1_dark)
+            view.imageView3.setImageResource(R.drawable.background_select2_dark)
+            view.imageView4.setImageResource(R.drawable.background_select3)
         }
 
-        view.button5.setOnClickListener() {
-            val ValPitch = activity!!.getSharedPreferences(SharedPrefName,Context.MODE_PRIVATE).getFloat(SetPitchValue, 1.0f)
-            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchValue, (ValPitch + 0.1f)).apply()
-            MainActivity.VaSetPitchValue = MainActivity.VaSetPitchValue + 0.1f
-            view.tone.setText(MainActivity.VaSetPitchValue.toString())
+        view.imageView7.setOnClickListener() {
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchValue, 0.7f).apply()
+            MainActivity.VaSetPitchValue = 0.7f
+            view.imageView7.setImageResource(R.drawable.slow)
+            view.imageView8.setImageResource(R.drawable.normal_dark)
+            view.imageView9.setImageResource(R.drawable.fast_dark)
         }
 
-        view.button6.setOnClickListener() {
-            val ValPitch = activity!!.getSharedPreferences(SharedPrefName,Context.MODE_PRIVATE).getFloat(SetPitchValue, 1.0f)
-            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchValue, (ValPitch - 0.1f)).apply()
-            MainActivity.VaSetPitchValue = MainActivity.VaSetPitchValue - 0.1f
-            view.tone.setText(MainActivity.VaSetPitchValue.toString())
+        view.imageView8.setOnClickListener() {
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchValue, 1.0f).apply()
+            MainActivity.VaSetPitchValue = 1.0f
+            view.imageView7.setImageResource(R.drawable.slow_dark)
+            view.imageView8.setImageResource(R.drawable.normal)
+            view.imageView9.setImageResource(R.drawable.fast_dark)
         }
 
-        view.button7.setOnClickListener() {
-            val ValRate = activity!!.getSharedPreferences(SharedPrefName,Context.MODE_PRIVATE).getFloat(SetPitchRate, 1.0f)
-            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchRate, (ValRate + 0.1f)).apply()
-            MainActivity.VaSetPitchRate = MainActivity.VaSetPitchRate + 0.1f
-            view.speed.setText(MainActivity.VaSetPitchRate.toString())
+        view.imageView9.setOnClickListener() {
+            activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchValue, 1.3f).apply()
+            MainActivity.VaSetPitchValue = 1.3f
+            view.imageView7.setImageResource(R.drawable.slow_dark)
+            view.imageView8.setImageResource(R.drawable.normal_dark)
+            view.imageView9.setImageResource(R.drawable.fast)
         }
-
+/*
         view.button8.setOnClickListener() {
             val ValRate = activity!!.getSharedPreferences(SharedPrefName,Context.MODE_PRIVATE).getFloat(SetPitchRate, 1.0f)
             activity!!.getSharedPreferences(SharedPrefName, Context.MODE_PRIVATE).edit().putFloat(SetPitchRate, (ValRate - 0.1f)).apply()
@@ -86,7 +141,7 @@ class SettingFragment :Fragment(), MainActivity.OnBackPressedListener {
         }
         view.tone.setText(MainActivity.VaSetPitchValue.toString())
         view.speed.setText(MainActivity.VaSetPitchRate.toString())
-
+*/
         return view
     }
 
