@@ -63,19 +63,58 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
         }
         if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
             when (StudyMainFragment.currentChapter) {
-                1 -> view.setBackgroundResource(R.drawable.summary_1_background)
-                2 -> view.setBackgroundResource(R.drawable.summary_2_background)
-                3 -> view.setBackgroundResource(R.drawable.summary_3_background)
-                4 -> view.setBackgroundResource(R.drawable.summary_4_background)
-                5 -> view.setBackgroundResource(R.drawable.summary_5_background)
-                6 -> view.setBackgroundResource(R.drawable.summary_6_background)
-                7 -> view.setBackgroundResource(R.drawable.summary_7_background)
-                8 -> view.setBackgroundResource(R.drawable.summary_8_background)
-                9 -> view.setBackgroundResource(R.drawable.summary_9_background)
-                10 -> view.setBackgroundResource(R.drawable.summary_10_background)
-                11 -> view.setBackgroundResource(R.drawable.summary_11_background)
-                12 -> view.setBackgroundResource(R.drawable.summary_12_background)
-                13 -> view.setBackgroundResource(R.drawable.summary_13_background)
+                1 ->{
+                    view.setBackgroundResource(R.drawable.summary_1_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_1)
+                }
+                2 -> {
+                    view.setBackgroundResource(R.drawable.summary_2_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_2)
+                }
+                3 -> {
+                    view.setBackgroundResource(R.drawable.summary_3_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_3)
+                }
+                4 -> {
+                    view.setBackgroundResource(R.drawable.summary_4_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_4)
+                }
+                5 -> {
+                    view.setBackgroundResource(R.drawable.summary_5_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_5)
+                }
+                6 -> {
+                    view.setBackgroundResource(R.drawable.summary_6_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_6)
+                }
+                7 -> {
+                    view.setBackgroundResource(R.drawable.summary_7_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_7)
+                }
+                8 -> {
+                    view.setBackgroundResource(R.drawable.summary_8_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_8)
+                }
+                9 -> {
+                    view.setBackgroundResource(R.drawable.summary_9_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_9)
+                }
+                10 -> {
+                    view.setBackgroundResource(R.drawable.summary_10_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_10)
+                }
+                11 -> {
+                    view.setBackgroundResource(R.drawable.summary_11_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_11)
+                }
+                12 -> {
+                    view.setBackgroundResource(R.drawable.summary_12_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_12)
+                }
+                13 -> {
+                    view.setBackgroundResource(R.drawable.summary_13_background)
+                    view.summary_review.setBackgroundResource(R.drawable.summaryc_13)
+                }
             }
         }
 
@@ -88,19 +127,58 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
             setChapterTextView(view)
             if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
                 when (StudyMainFragment.currentChapter) {
-                    1 -> view.setBackgroundResource(R.drawable.summary_1_background)
-                    2 -> view.setBackgroundResource(R.drawable.summary_2_background)
-                    3 -> view.setBackgroundResource(R.drawable.summary_3_background)
-                    4 -> view.setBackgroundResource(R.drawable.summary_4_background)
-                    5 -> view.setBackgroundResource(R.drawable.summary_5_background)
-                    6 -> view.setBackgroundResource(R.drawable.summary_6_background)
-                    7 -> view.setBackgroundResource(R.drawable.summary_7_background)
-                    8 -> view.setBackgroundResource(R.drawable.summary_8_background)
-                    9 -> view.setBackgroundResource(R.drawable.summary_9_background)
-                    10 -> view.setBackgroundResource(R.drawable.summary_10_background)
-                    11 -> view.setBackgroundResource(R.drawable.summary_11_background)
-                    12 -> view.setBackgroundResource(R.drawable.summary_12_background)
-                    13 -> view.setBackgroundResource(R.drawable.summary_13_background)
+                    1 ->{
+                        view.setBackgroundResource(R.drawable.summary_1_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_1)
+                    }
+                    2 -> {
+                        view.setBackgroundResource(R.drawable.summary_2_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_2)
+                    }
+                    3 -> {
+                        view.setBackgroundResource(R.drawable.summary_3_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_3)
+                    }
+                    4 -> {
+                        view.setBackgroundResource(R.drawable.summary_4_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_4)
+                    }
+                    5 -> {
+                        view.setBackgroundResource(R.drawable.summary_5_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_5)
+                    }
+                    6 -> {
+                        view.setBackgroundResource(R.drawable.summary_6_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_6)
+                    }
+                    7 -> {
+                        view.setBackgroundResource(R.drawable.summary_7_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_7)
+                    }
+                    8 -> {
+                        view.setBackgroundResource(R.drawable.summary_8_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_8)
+                    }
+                    9 -> {
+                        view.setBackgroundResource(R.drawable.summary_9_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_9)
+                    }
+                    10 -> {
+                        view.setBackgroundResource(R.drawable.summary_10_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_10)
+                    }
+                    11 -> {
+                        view.setBackgroundResource(R.drawable.summary_11_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_11)
+                    }
+                    12 -> {
+                        view.setBackgroundResource(R.drawable.summary_12_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_12)
+                    }
+                    13 -> {
+                        view.setBackgroundResource(R.drawable.summary_13_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_13)
+                    }
                 }
             }
             StudyMainFragment.tts_id.destroy()
@@ -110,21 +188,62 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
         view.fa_prev.setOnClickListener {
             updateStudyFragmentWithOffset(-1)
             setChapterTextView(view)
+
             if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
+                view.summary_review.setVisibility(View.GONE)
                 when (StudyMainFragment.currentChapter) {
-                    1 -> view.setBackgroundResource(R.drawable.summary_1_background)
-                    2 -> view.setBackgroundResource(R.drawable.summary_2_background)
-                    3 -> view.setBackgroundResource(R.drawable.summary_3_background)
-                    4 -> view.setBackgroundResource(R.drawable.summary_4_background)
-                    5 -> view.setBackgroundResource(R.drawable.summary_5_background)
-                    6 -> view.setBackgroundResource(R.drawable.summary_6_background)
-                    7 -> view.setBackgroundResource(R.drawable.summary_7_background)
-                    8 -> view.setBackgroundResource(R.drawable.summary_8_background)
-                    9 -> view.setBackgroundResource(R.drawable.summary_9_background)
-                    10 -> view.setBackgroundResource(R.drawable.summary_10_background)
-                    11 -> view.setBackgroundResource(R.drawable.summary_11_background)
-                    12 -> view.setBackgroundResource(R.drawable.summary_12_background)
-                    13 -> view.setBackgroundResource(R.drawable.summary_13_background)
+                    1 ->{
+                        view.setBackgroundResource(R.drawable.summary_1_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_1)
+                    }
+                    2 -> {
+                        view.setBackgroundResource(R.drawable.summary_2_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_2)
+                    }
+                    3 -> {
+                        view.setBackgroundResource(R.drawable.summary_3_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_3)
+                    }
+                    4 -> {
+                        view.setBackgroundResource(R.drawable.summary_4_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_4)
+                    }
+                    5 -> {
+                        view.setBackgroundResource(R.drawable.summary_5_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_5)
+                    }
+                    6 -> {
+                        view.setBackgroundResource(R.drawable.summary_6_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_6)
+                    }
+                    7 -> {
+                        view.setBackgroundResource(R.drawable.summary_7_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_7)
+                    }
+                    8 -> {
+                        view.setBackgroundResource(R.drawable.summary_8_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_8)
+                    }
+                    9 -> {
+                        view.setBackgroundResource(R.drawable.summary_9_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_9)
+                    }
+                    10 -> {
+                        view.setBackgroundResource(R.drawable.summary_10_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_10)
+                    }
+                    11 -> {
+                        view.setBackgroundResource(R.drawable.summary_11_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_11)
+                    }
+                    12 -> {
+                        view.setBackgroundResource(R.drawable.summary_12_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_12)
+                    }
+                    13 -> {
+                        view.setBackgroundResource(R.drawable.summary_13_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_13)
+                    }
                 }
             }
             Log.i("TAG", "Found tts in studymenu : ${StudyMainFragment.tts_id}")
@@ -136,21 +255,62 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
         view.fa_next.setOnClickListener {
             updateStudyFragmentWithOffset(+1)
             setChapterTextView(view)
+
             if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
+                view.summary_review.setVisibility(View.GONE)
                 when (StudyMainFragment.currentChapter) {
-                    1 -> view.setBackgroundResource(R.drawable.summary_1_background)
-                    2 -> view.setBackgroundResource(R.drawable.summary_2_background)
-                    3 -> view.setBackgroundResource(R.drawable.summary_3_background)
-                    4 -> view.setBackgroundResource(R.drawable.summary_4_background)
-                    5 -> view.setBackgroundResource(R.drawable.summary_5_background)
-                    6 -> view.setBackgroundResource(R.drawable.summary_6_background)
-                    7 -> view.setBackgroundResource(R.drawable.summary_7_background)
-                    8 -> view.setBackgroundResource(R.drawable.summary_8_background)
-                    9 -> view.setBackgroundResource(R.drawable.summary_9_background)
-                    10 -> view.setBackgroundResource(R.drawable.summary_10_background)
-                    11 -> view.setBackgroundResource(R.drawable.summary_11_background)
-                    12 -> view.setBackgroundResource(R.drawable.summary_12_background)
-                    13 -> view.setBackgroundResource(R.drawable.summary_13_background)
+                    1 ->{
+                        view.setBackgroundResource(R.drawable.summary_1_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_1)
+                    }
+                    2 -> {
+                        view.setBackgroundResource(R.drawable.summary_2_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_2)
+                    }
+                    3 -> {
+                        view.setBackgroundResource(R.drawable.summary_3_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_3)
+                    }
+                    4 -> {
+                        view.setBackgroundResource(R.drawable.summary_4_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_4)
+                    }
+                    5 -> {
+                        view.setBackgroundResource(R.drawable.summary_5_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_5)
+                    }
+                    6 -> {
+                        view.setBackgroundResource(R.drawable.summary_6_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_6)
+                    }
+                    7 -> {
+                        view.setBackgroundResource(R.drawable.summary_7_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_7)
+                    }
+                    8 -> {
+                        view.setBackgroundResource(R.drawable.summary_8_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_8)
+                    }
+                    9 -> {
+                        view.setBackgroundResource(R.drawable.summary_9_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_9)
+                    }
+                    10 -> {
+                        view.setBackgroundResource(R.drawable.summary_10_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_10)
+                    }
+                    11 -> {
+                        view.setBackgroundResource(R.drawable.summary_11_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_11)
+                    }
+                    12 -> {
+                        view.setBackgroundResource(R.drawable.summary_12_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_12)
+                    }
+                    13 -> {
+                        view.setBackgroundResource(R.drawable.summary_13_background)
+                        view.summary_review.setBackgroundResource(R.drawable.summaryc_13)
+                    }
                 }
             }
             Log.i("TAG", "Found tts in studymenu : ${StudyMainFragment.tts_id}")
@@ -180,19 +340,7 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
         view.fa_comment.setOnClickListener {
             if (StudyMainFragment.currentPhrase == 0) {
                 view.summary_review.setVisibility(if (summary_review.getVisibility() == View.VISIBLE) View.GONE else View.VISIBLE) // 총괄 해석 투명도 설정
-
-                when (StudyMainFragment.currentChapter) { // 총괄 해석 배경 설정하는 곳
-                    1 -> view.summary_review.setBackgroundResource(R.drawable.summary_1_comment)
-                    2 -> view.summary_review.setBackgroundResource(R.drawable.summary_1_background)
-                }
-
-
             }
-            //    when(StudyMainFragment.currentChapter) {
-            //        1 -> view.setBackgroundResource(R.drawable.summary_1)
-            //    }
-            //}
-            //else
             else fragmentManager?.beginTransaction()?.replace(
                 R.id.contents_panel_study_phrase,
                 StudyPhraseCommentFragment()
