@@ -332,8 +332,11 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
             view.fa_interpret.isClickable = false
             val ides = StudyMainFragment.currentPhrase
             Log.i("TAG", "interpret Found fragment: $ides")
-            StudyMainFragment.tts_id.destroy()
-            StudyMainFragment.tts_id.initialize(context!!)
+
+            if (StudyMainFragment.currentPhrase != 0) {
+                StudyMainFragment.tts_id.destroy()
+                StudyMainFragment.tts_id.initialize(context!!)
+            }
 
         }
 
@@ -349,8 +352,11 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
             view.fa_interpret.isClickable = true
             val ides = StudyMainFragment.currentPhrase
             Log.i("TAG", "comment Found fragment: $ides")
-            StudyMainFragment.tts_id.destroy()
-            StudyMainFragment.tts_id.initialize(context!!)
+
+            if (StudyMainFragment.currentPhrase != 0) {
+                StudyMainFragment.tts_id.destroy()
+                StudyMainFragment.tts_id.initialize(context!!)
+            }
 
         }
 

@@ -24,32 +24,31 @@ class StudyChapterSummaryFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_study_chapter_summary, container, false)
+        var ttsSound = ""
 
         addTTS()
         StudyMainFragment.tts_id = tts
+        when (StudyMainFragment.currentChapter) {
+            1 -> ttsSound += "1장 TTS 테스트 \n"
+            2 -> ttsSound += "2장 TTS 테스트 \n"
+            3 -> ttsSound += "3장 TTS 테스트 \n"
+            4 -> ttsSound += "4장 TTS 테스트 \n"
+            5 -> ttsSound += "5장 TTS 테스트 \n"
+            6 -> ttsSound += "6장 TTS 테스트 \n"
+            7 -> ttsSound += "7장 TTS 테스트 \n"
+            8 -> ttsSound += "8장 TTS 테스트 \n"
+            9 -> ttsSound += "9장 TTS 테스트 \n"
+            10 -> ttsSound += "10장 TTS 테스트 \n"
+            11 -> ttsSound += "11장 TTS 테스트 \n"
+            12 -> ttsSound += "12장 TTS 테스트 \n"
+            13 -> ttsSound += "13장 TTS 테스트 \n"
+        }
 
 
-//        initTTS()
+        view.setOnClickListener {
+            tts.speech(ttsSound)
+        }
 
-
-        /*val id = resources.getIdentifier("@string/chapterSummary${StudyMainFragment.currentChapter}","String",context?.packageName)
-
-        val summaryValue = getText(id).split("//")
-
-        for (s in summaryValue){
-            val textView = TextView(context)
-            textView.text = StudyMainFragment.convertColoredText(s)
-            textView.textSize = 20f
-            textView.setTextColor(ContextCompat.getColor(context!!,R.color.Black))
-            val commentViewLayout = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-            commentViewLayout.setMargins(10,10,10,10)
-            textView.layoutParams = commentViewLayout
-
-            textView.setOnClickListener {
-//                speech(s)
-            }
-            //view.sv_chapter_summary.addView(textView)
-        }*/
         return view
     }
 
