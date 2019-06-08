@@ -432,7 +432,7 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
             "${resources.getString(R.string.chapter_prefix_name)} ${StudyMainFragment.currentChapter} ${resources.getString(
                 R.string.chapter_postfix_name
             )} $displayPhrase"
-        v.tv_study_current_chapter?.text = currentChapterText
+
     }
 
 

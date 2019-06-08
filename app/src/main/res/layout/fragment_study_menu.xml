@@ -90,15 +90,6 @@
                 app:layout_constraintEnd_toEndOf="@id/guideline31"
                 app:backgroundTint="#71C0FF"
                 android:src="@drawable/review"/>
-        <TextView
-                android:text="TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_study_current_chapter" android:layout_marginEnd="330dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="112dp"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
-                android:layout_marginBottom="600dp" app:layout_constraintBottom_toBottomOf="parent"/>
         <android.support.constraint.Guideline
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
@@ -160,7 +151,8 @@
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginStart="32dp" android:layout_marginTop="32dp" android:layout_marginEnd="32dp"
                     android:layout_marginBottom="32dp"
-                    android:visibility="invisible">
+                    android:visibility="invisible" app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintVertical_bias="0.0">
 
             </android.support.constraint.ConstraintLayout>
         </android.support.constraint.ConstraintLayout>

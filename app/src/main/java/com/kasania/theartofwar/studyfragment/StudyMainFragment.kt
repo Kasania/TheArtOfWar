@@ -159,7 +159,6 @@ class StudyMainFragment : Fragment(){//, MainActivity.OnBackPressedListener{
             else -> "$currentPhrase 절"
         }
         val currentChapterText = "${resources.getString(R.string.chapter_prefix_name)} $currentChapter ${resources.getString(R.string.chapter_postfix_name)} $displayPhrase"
-        v.tv_study_current_chapter?.text = currentChapterText
     }
 
 }
