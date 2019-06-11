@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
+import android.support.v7.content.res.AppCompatResources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,11 +15,8 @@ import kotlinx.android.synthetic.main.fragment_study_menu.view.*
 import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import kotlinx.android.synthetic.main.fragment_study_chapter_summary.*
-import android.system.Os.shutdown
-import com.kasania.theartofwar.studyfragment.StudyMainFragment.Companion.tts_id
-import kotlinx.android.synthetic.main.fragment_study_phrase_interpret.*
-import kotlinx.android.synthetic.main.fragment_study_phrase_interpret.view.*
+
+
 
 
 class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
@@ -61,60 +59,63 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
             else
                 view.fa_fav.setImageResource(R.drawable.bmark_final_white)
         }
-        if (StudyMainFragment.currentPhrase == 0) { // 총괄 배경화면 지정
-            when (StudyMainFragment.currentChapter) {
-                1 ->{
-                    view.setBackgroundResource(R.drawable.summary_1_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_1)
-                }
-                2 -> {
-                    view.setBackgroundResource(R.drawable.summary_2_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_2)
-                }
-                3 -> {
-                    view.setBackgroundResource(R.drawable.summary_3_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_3)
-                }
-                4 -> {
-                    view.setBackgroundResource(R.drawable.summary_4_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_4)
-                }
-                5 -> {
-                    view.setBackgroundResource(R.drawable.summary_5_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_5)
-                }
-                6 -> {
-                    view.setBackgroundResource(R.drawable.summary_6_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_6)
-                }
-                7 -> {
-                    view.setBackgroundResource(R.drawable.summary_7_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_7)
-                }
-                8 -> {
-                    view.setBackgroundResource(R.drawable.summary_8_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_8)
-                }
-                9 -> {
-                    view.setBackgroundResource(R.drawable.summary_9_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_9)
-                }
-                10 -> {
-                    view.setBackgroundResource(R.drawable.summary_10_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_10)
-                }
-                11 -> {
-                    view.setBackgroundResource(R.drawable.summary_11_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_11)
-                }
-                12 -> {
-                    view.setBackgroundResource(R.drawable.summary_12_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_12)
-                }
-                13 -> {
-                    view.setBackgroundResource(R.drawable.summary_13_background)
-                    view.summary_review.setBackgroundResource(R.drawable.summaryc_13)
-                }
+        // 총괄 배경화면 지정
+        if (StudyMainFragment.currentPhrase == 0) when (StudyMainFragment.currentChapter) {
+            1 ->{
+                view.setBackgroundResource(R.drawable.summary_1_background)
+                //view.summary_review.setBackgroundResource(R.drawable.summaryc_1)
+                view.summary_review.setImageResource(R.drawable.summaryc_1)
+
+
+
+            }
+            2 -> {
+                view.setBackgroundResource(R.drawable.summary_2_background)
+                view.summary_review.setImageResource(R.drawable.summaryc_2)
+            }
+            3 -> {
+                view.setBackgroundResource(R.drawable.summary_3_background)
+                view.summary_review.setImageResource(R.drawable.summaryc_3)
+            }
+            4 -> {
+                view.setBackgroundResource(R.drawable.summary_4_background)
+                view.summary_review.setImageResource(R.drawable.summaryc_4)
+            }
+            5 -> {
+                view.setBackgroundResource(R.drawable.summary_5_background)
+                view.summary_review.setImageResource(R.drawable.summaryc_5)
+            }
+            6 -> {
+                view.setBackgroundResource(R.drawable.summary_6_background)
+                view.summary_review.setImageResource(R.drawable.summaryc_6)
+            }
+            7 -> {
+                view.setBackgroundResource(R.drawable.summary_7_background)
+                view.summary_review.setImageResource(R.drawable.summaryc_7)
+            }
+            8 -> {
+                view.setBackgroundResource(R.drawable.summary_8_background)
+                view.summary_review.setImageResource(R.drawable.summaryc_8)
+            }
+            9 -> {
+                view.setBackgroundResource(R.drawable.summary_9_background)
+                view.summary_review.setImageResource(R.drawable.summaryc_9)
+            }
+            10 -> {
+                view.setBackgroundResource(R.drawable.summary_10_background)
+                view.summary_review.setImageResource(R.drawable.summaryc_10)
+            }
+            11 -> {
+                view.setBackgroundResource(R.drawable.summary_11_background)
+                view.summary_review.setImageResource(R.drawable.summaryc_11)
+            }
+            12 -> {
+                view.setBackgroundResource(R.drawable.summary_12_background)
+                view.summary_review.setImageResource(R.drawable.summaryc_12)
+            }
+            13 -> {
+                view.setBackgroundResource(R.drawable.summary_13_background)
+                view.summary_review.setImageResource(R.drawable.summaryc_13)
             }
         }
 
@@ -129,55 +130,55 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
                 when (StudyMainFragment.currentChapter) {
                     1 ->{
                         view.setBackgroundResource(R.drawable.summary_1_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_1)
+                        view.summary_review.setImageResource(R.drawable.summaryc_1)
                     }
                     2 -> {
                         view.setBackgroundResource(R.drawable.summary_2_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_2)
+                        view.summary_review.setImageResource(R.drawable.summaryc_2)
                     }
                     3 -> {
                         view.setBackgroundResource(R.drawable.summary_3_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_3)
+                        view.summary_review.setImageResource(R.drawable.summaryc_3)
                     }
                     4 -> {
                         view.setBackgroundResource(R.drawable.summary_4_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_4)
+                        view.summary_review.setImageResource(R.drawable.summaryc_4)
                     }
                     5 -> {
                         view.setBackgroundResource(R.drawable.summary_5_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_5)
+                        view.summary_review.setImageResource(R.drawable.summaryc_5)
                     }
                     6 -> {
                         view.setBackgroundResource(R.drawable.summary_6_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_6)
+                        view.summary_review.setImageResource(R.drawable.summaryc_6)
                     }
                     7 -> {
                         view.setBackgroundResource(R.drawable.summary_7_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_7)
+                        view.summary_review.setImageResource(R.drawable.summaryc_7)
                     }
                     8 -> {
                         view.setBackgroundResource(R.drawable.summary_8_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_8)
+                        view.summary_review.setImageResource(R.drawable.summaryc_8)
                     }
                     9 -> {
                         view.setBackgroundResource(R.drawable.summary_9_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_9)
+                        view.summary_review.setImageResource(R.drawable.summaryc_9)
                     }
                     10 -> {
                         view.setBackgroundResource(R.drawable.summary_10_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_10)
+                        view.summary_review.setImageResource(R.drawable.summaryc_10)
                     }
                     11 -> {
                         view.setBackgroundResource(R.drawable.summary_11_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_11)
+                        view.summary_review.setImageResource(R.drawable.summaryc_11)
                     }
                     12 -> {
                         view.setBackgroundResource(R.drawable.summary_12_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_12)
+                        view.summary_review.setImageResource(R.drawable.summaryc_12)
                     }
                     13 -> {
                         view.setBackgroundResource(R.drawable.summary_13_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_13)
+                        view.summary_review.setImageResource(R.drawable.summaryc_13)
                     }
                 }
             }
@@ -194,55 +195,55 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
                 when (StudyMainFragment.currentChapter) {
                     1 ->{
                         view.setBackgroundResource(R.drawable.summary_1_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_1)
+                        view.summary_review.setImageResource(R.drawable.summaryc_1)
                     }
                     2 -> {
                         view.setBackgroundResource(R.drawable.summary_2_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_2)
+                        view.summary_review.setImageResource(R.drawable.summaryc_2)
                     }
                     3 -> {
                         view.setBackgroundResource(R.drawable.summary_3_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_3)
+                        view.summary_review.setImageResource(R.drawable.summaryc_3)
                     }
                     4 -> {
                         view.setBackgroundResource(R.drawable.summary_4_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_4)
+                        view.summary_review.setImageResource(R.drawable.summaryc_4)
                     }
                     5 -> {
                         view.setBackgroundResource(R.drawable.summary_5_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_5)
+                        view.summary_review.setImageResource(R.drawable.summaryc_5)
                     }
                     6 -> {
                         view.setBackgroundResource(R.drawable.summary_6_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_6)
+                        view.summary_review.setImageResource(R.drawable.summaryc_6)
                     }
                     7 -> {
                         view.setBackgroundResource(R.drawable.summary_7_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_7)
+                        view.summary_review.setImageResource(R.drawable.summaryc_7)
                     }
                     8 -> {
                         view.setBackgroundResource(R.drawable.summary_8_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_8)
+                        view.summary_review.setImageResource(R.drawable.summaryc_8)
                     }
                     9 -> {
                         view.setBackgroundResource(R.drawable.summary_9_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_9)
+                        view.summary_review.setImageResource(R.drawable.summaryc_9)
                     }
                     10 -> {
                         view.setBackgroundResource(R.drawable.summary_10_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_10)
+                        view.summary_review.setImageResource(R.drawable.summaryc_10)
                     }
                     11 -> {
                         view.setBackgroundResource(R.drawable.summary_11_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_11)
+                        view.summary_review.setImageResource(R.drawable.summaryc_11)
                     }
                     12 -> {
                         view.setBackgroundResource(R.drawable.summary_12_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_12)
+                        view.summary_review.setImageResource(R.drawable.summaryc_12)
                     }
                     13 -> {
                         view.setBackgroundResource(R.drawable.summary_13_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_13)
+                        view.summary_review.setImageResource(R.drawable.summaryc_13)
                     }
                 }
             }
@@ -261,55 +262,55 @@ class StudyMenuFragment: Fragment(), MainActivity.OnBackPressedListener {
                 when (StudyMainFragment.currentChapter) {
                     1 ->{
                         view.setBackgroundResource(R.drawable.summary_1_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_1)
+                        view.summary_review.setImageResource(R.drawable.summaryc_1)
                     }
                     2 -> {
                         view.setBackgroundResource(R.drawable.summary_2_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_2)
+                        view.summary_review.setImageResource(R.drawable.summaryc_2)
                     }
                     3 -> {
                         view.setBackgroundResource(R.drawable.summary_3_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_3)
+                        view.summary_review.setImageResource(R.drawable.summaryc_3)
                     }
                     4 -> {
                         view.setBackgroundResource(R.drawable.summary_4_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_4)
+                        view.summary_review.setImageResource(R.drawable.summaryc_4)
                     }
                     5 -> {
                         view.setBackgroundResource(R.drawable.summary_5_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_5)
+                        view.summary_review.setImageResource(R.drawable.summaryc_5)
                     }
                     6 -> {
                         view.setBackgroundResource(R.drawable.summary_6_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_6)
+                        view.summary_review.setImageResource(R.drawable.summaryc_6)
                     }
                     7 -> {
                         view.setBackgroundResource(R.drawable.summary_7_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_7)
+                        view.summary_review.setImageResource(R.drawable.summaryc_7)
                     }
                     8 -> {
                         view.setBackgroundResource(R.drawable.summary_8_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_8)
+                        view.summary_review.setImageResource(R.drawable.summaryc_8)
                     }
                     9 -> {
                         view.setBackgroundResource(R.drawable.summary_9_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_9)
+                        view.summary_review.setImageResource(R.drawable.summaryc_9)
                     }
                     10 -> {
                         view.setBackgroundResource(R.drawable.summary_10_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_10)
+                        view.summary_review.setImageResource(R.drawable.summaryc_10)
                     }
                     11 -> {
                         view.setBackgroundResource(R.drawable.summary_11_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_11)
+                        view.summary_review.setImageResource(R.drawable.summaryc_11)
                     }
                     12 -> {
                         view.setBackgroundResource(R.drawable.summary_12_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_12)
+                        view.summary_review.setImageResource(R.drawable.summaryc_12)
                     }
                     13 -> {
                         view.setBackgroundResource(R.drawable.summary_13_background)
-                        view.summary_review.setBackgroundResource(R.drawable.summaryc_13)
+                        view.summary_review.setImageResource(R.drawable.summaryc_13)
                     }
                 }
             }

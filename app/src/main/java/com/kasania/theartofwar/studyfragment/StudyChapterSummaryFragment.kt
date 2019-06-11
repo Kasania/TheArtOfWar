@@ -174,8 +174,9 @@ class StudyChapterSummaryFragment : Fragment() {
         }
 
 
-        view.setOnClickListener {
+        view.voice_btn.setOnClickListener {
             tts.speech(ttsSound)
+
         }
 
         return view
