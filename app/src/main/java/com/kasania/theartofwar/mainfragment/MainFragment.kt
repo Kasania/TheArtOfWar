@@ -18,8 +18,7 @@ class MainFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_main,container,false)
 
-        val ft = fragmentManager!!
-            .beginTransaction()
+        val ft = fragmentManager!!.beginTransaction()
             when(MainActivity.currentMainFragmentPage){
                 0 -> ft.replace(R.id.contents_panel_main,HomeFragment())
                 1 -> ft.replace(R.id.contents_panel_main, SubjectSelectFragment())

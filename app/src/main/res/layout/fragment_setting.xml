@@ -19,6 +19,13 @@
             android:layout_height="0dp"
             android:layout_width="match_parent" app:srcCompat="@drawable/voice_top" tools:layout_editor_absoluteY="0dp"
             tools:layout_editor_absoluteX="0dp" android:id="@+id/imageView11"/>
+    <ImageView
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="@+id/guideline47"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline48"
+            android:layout_height="0dp"
+            android:layout_width="match_parent" app:srcCompat="@drawable/credit" tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp" android:id="@+id/imageView6"/>
     <LinearLayout
             android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="@+id/guideline36"
@@ -90,4 +97,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline49" app:layout_constraintGuide_percent="0.35"/>
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guideline48"
+            app:layout_constraintGuide_percent="0.8"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline48"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp" tools:layout_editor_absoluteX="0dp" app:layout_constraintVertical_bias="0.0">
+        <LinearLayout android:layout_width="match_parent" app:layout_constraintTop_toTopOf="@+id/guideline48"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      android:layout_height="0dp"
+                      android:orientation="vertical">
+            <TextView
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:text="기획\n6군단 작전처장 대령 정영환\n6군단 작전항공장교 소령 홍기업\n6군단 작전장교 대위 강창설\n\n제작\n761통신대대 중위 이정욱\n761통신대대 병장 임정빈\n\n도움\n761통신대대 대대장 중령 정경용\n761통신대대 중대장 대위 김민상\n761통신대대 본부중대장 중위 박호진\n761통신대대 중위 남우협\n6군단 작전처 상병 정제영\n"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView"/>
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
