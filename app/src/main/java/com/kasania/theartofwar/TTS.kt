@@ -20,7 +20,7 @@ class TTS{
         this.context = context
         tts = TextToSpeech(context, TextToSpeech.OnInitListener { status ->
             if (status == TextToSpeech.SUCCESS) {
-                val result = tts.setLanguage(Locale.KOREAN)
+                val result = tts.setLanguage(Locale.KOREA)
                 ttsSupport = result
                 when (result) {
                     TextToSpeech.LANG_MISSING_DATA -> false

@@ -21,5 +21,5 @@
             app:layout_constraintBottom_toBottomOf="@+id/guideline50"
             app:layout_constraintEnd_toEndOf="@+id/guideline51" app:srcCompat="@android:drawable/ic_btn_speak_now"
             android:id="@+id/voice_btn" android:background="@android:color/transparent"
-            />
+    />
 </android.support.constraint.ConstraintLayout>
