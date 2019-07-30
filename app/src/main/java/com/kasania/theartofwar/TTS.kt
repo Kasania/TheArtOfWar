@@ -3,8 +3,12 @@ package com.kasania.theartofwar
 import android.content.Context
 import android.os.Build
 import android.speech.tts.TextToSpeech
+import android.support.v4.content.ContextCompat
 import android.widget.Toast
 import java.util.*
+
+
+
 
 class TTS{
 
@@ -16,19 +20,20 @@ class TTS{
         this.context = context
         tts = TextToSpeech(context, TextToSpeech.OnInitListener { status ->
             if (status == TextToSpeech.SUCCESS) {
-                val result = tts.setLanguage(Locale.KOREAN)
+                val result = tts.setLanguage(Locale.KOREA)
                 ttsSupport = result
                 when (result) {
                     TextToSpeech.LANG_MISSING_DATA -> false
                     TextToSpeech.LANG_NOT_SUPPORTED -> false
                     else -> {
-                        tts.setPitch(1.0f)
-                        tts.setSpeechRate(1.0f)
+                        tts.setPitch(MainActivity.VaSetPitchValue)
+                        tts.setSpeechRate(MainActivity.VaSetPitchRate)
                         ttsSupport = result
                     }
                 }
             }
         })
+
     }
 
     fun speech(text:String){
@@ -45,13 +50,15 @@ class TTS{
         }
     }
 
-//    fun stop(){
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-//            tts.speak("", TextToSpeech.QUEUE_FLUSH, null, null)
-//        // API 20
-//        else
-//            tts.speak("", TextToSpeech.QUEUE_FLUSH, null)
-//    }
+    fun stop(){
+       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            tts.speak("", TextToSpeech.QUEUE_FLUSH, null, null)
+        // API 20
+        else
+            tts.speak("", TextToSpeech.QUEUE_FLUSH, null)
+    }
+
+
 
     fun destroy(){
 

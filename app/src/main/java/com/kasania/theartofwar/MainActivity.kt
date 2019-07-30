@@ -2,15 +2,22 @@ package com.kasania.theartofwar
 
 import android.content.Context
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.kasania.theartofwar.mainfragment.MainFragment
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_setting.*
 import java.io.FileNotFoundException
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
     companion object {
+
+        var VaSetPitchValue = 1.0f
+
+        var VaSetPitchRate = 1.0f
 
         var currentMainFragmentPage = 0
 
@@ -55,16 +62,30 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.contents_root, MainFragment())
             .commit()
 
+
     }
 
     private fun checkPresent() {
         val today = Calendar.getInstance()
         val date = today.get(Calendar.DAY_OF_YEAR)
-
         val sharedPref = getSharedPreferences(SharedPrefName,Context.MODE_PRIVATE)
         val totalDate = sharedPref.getInt(SharedPrefKeyTotalAccessDate,0)
         val lastDate = sharedPref.getInt(SharedPrefKeyLastAccessDate,1)
         val currentLongestDate = sharedPref.getInt(SharedPrefKeyCurrentContinueAccessDate,0)
+        val BackGroundImg = sharedPref.getInt(BackGroundImg, 0)
+
+        VaSetPitchValue = sharedPref.getFloat(SetPitchValue, 1.0f)
+        VaSetPitchRate = sharedPref.getFloat(SetPitchRate, 1.0f)
+
+        if(BackGroundImg == 0){
+            contents_root.setBackgroundResource(R.drawable.background_main)
+        }
+        else {
+            if(BackGroundImg == 1)
+                contents_root.setBackgroundResource(R.drawable.background_sub1)
+            else
+                contents_root.setBackgroundResource(R.drawable.background_sub2)
+        }
 
         if(date == lastDate){
             Log.d("LastDate","Today")
@@ -100,6 +121,8 @@ class MainActivity : AppCompatActivity() {
         Log.d("TotalAccessTime",sharedPref.getLong(SharedPrefKeyTotalAccessTimeMil,0L).toString())
 
     }
+
+
 
     override fun onStop() {
         super.onStop()
@@ -161,4 +184,53 @@ class MainActivity : AppCompatActivity() {
 //        }
 //    }
 
+
+private var pressedTime: Long = 0
+
+    // 리스너 생성
+    interface OnBackPressedListener {
+        fun onBack()
+    }
+
+    // 리스너 객체 생성
+    private var mBackListener: OnBackPressedListener? = null
+    // 리스너 설정 메소드
+    fun setOnBackPressedListener(listener: OnBackPressedListener?) {
+        mBackListener = listener
+    }
+
+    // 뒤로가기 버튼을 눌렀을 때의 오버라이드 메소드
+    override fun onBackPressed() {
+        // 다른 Fragment 에서 리스너를 설정했을 때 처리됩니다.
+        if (mBackListener != null) {
+            mBackListener!!.onBack()
+            Log.e("!!!", "Listener is not null")
+            // 리스너가 설정되지 않은 상태(예를들어 메인Fragment)라면
+            // 뒤로가기 버튼을 연속적으로 두번 눌렀을 때 앱이 종료됩니다.
+        } else {
+            Log.e("!!!", "Listener is null")
+            if (pressedTime == 0L) {
+                Snackbar.make(findViewById(R.id.contents_root),
+                    " 한 번 더 누르면 종료됩니다.", Snackbar.LENGTH_LONG
+                ).show()
+                pressedTime = System.currentTimeMillis()
+            } else {
+                val seconds = (System.currentTimeMillis() - pressedTime).toInt()
+
+                if (seconds > 2000) {
+                    Snackbar.make(
+                        findViewById(R.id.contents_root),
+                        " 한 번 더 누르면 종료됩니다.", Snackbar.LENGTH_LONG
+                    ).show()
+                    pressedTime = 0
+                } else {
+                    onStop()
+                    super.onBackPressed()
+                    Log.e("!!!", "onBackPressed : finish, killProcess")
+                    finish()
+                    android.os.Process.killProcess(android.os.Process.myPid())
+                }
+            }
+        }
+    }
 }

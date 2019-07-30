@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                              xmlns:app="http://schemas.android.com/apk/res-auto"
-                                             android:layout_width="match_parent"
+                                             xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
                                              android:layout_height="match_parent"
                                              android:id="@+id/contents_subject_selection">
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true">
+            android:fillViewport="true" tools:layout_editor_absoluteY="0dp" tools:layout_editor_absoluteX="16dp">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:orientation="vertical" android:weightSum="13" android:layout_margin="8dp">
+            <ImageButton
+                    android:layout_width="match_parent"
+                    android:id="@+id/btn_subject_0"
+                    android:layout_height="wrap_content" android:src="@drawable/btn_subject_0"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent" android:adjustViewBounds="true"
+                    android:scaleType="fitXY" android:drawingCacheQuality="auto" android:layout_margin="4dp">
+            </ImageButton>
             <ImageButton
                     android:layout_width="match_parent"
                     android:id="@+id/btn_subject_1"
@@ -68,6 +77,60 @@
                     android:layout_width="match_parent"
                     android:id="@+id/btn_subject_7"
                     android:layout_height="wrap_content" android:src="@drawable/btn_subject_7"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent" android:adjustViewBounds="true"
+                    android:scaleType="fitXY" android:drawingCacheQuality="auto" android:layout_margin="4dp">
+            </ImageButton>
+            <ImageButton
+                    android:layout_width="match_parent"
+                    android:id="@+id/btn_subject_8"
+                    android:layout_height="wrap_content" android:src="@drawable/btn_subject_8"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent" android:adjustViewBounds="true"
+                    android:scaleType="fitXY" android:drawingCacheQuality="auto" android:layout_margin="4dp">
+            </ImageButton>
+            <ImageButton
+                    android:layout_width="match_parent"
+                    android:id="@+id/btn_subject_9"
+                    android:layout_height="wrap_content" android:src="@drawable/btn_subject_9"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent" android:adjustViewBounds="true"
+                    android:scaleType="fitXY" android:drawingCacheQuality="auto" android:layout_margin="4dp">
+            </ImageButton>
+            <ImageButton
+                    android:layout_width="match_parent"
+                    android:id="@+id/btn_subject_10"
+                    android:layout_height="wrap_content" android:src="@drawable/btn_subject_10"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent" android:adjustViewBounds="true"
+                    android:scaleType="fitXY" android:drawingCacheQuality="auto" android:layout_margin="4dp">
+            </ImageButton>
+            <ImageButton
+                    android:layout_width="match_parent"
+                    android:id="@+id/btn_subject_11"
+                    android:layout_height="wrap_content" android:src="@drawable/btn_subject_11"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent" android:adjustViewBounds="true"
+                    android:scaleType="fitXY" android:drawingCacheQuality="auto" android:layout_margin="4dp">
+            </ImageButton>
+            <ImageButton
+                    android:layout_width="match_parent"
+                    android:id="@+id/btn_subject_12"
+                    android:layout_height="wrap_content" android:src="@drawable/btn_subject_12"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent" android:adjustViewBounds="true"
+                    android:scaleType="fitXY" android:drawingCacheQuality="auto" android:layout_margin="4dp">
+            </ImageButton>
+            <ImageButton
+                    android:layout_width="match_parent"
+                    android:id="@+id/btn_subject_13"
+                    android:layout_height="wrap_content" android:src="@drawable/btn_subject_13"
                     android:layout_weight="1"
                     android:layout_gravity="center_horizontal"
                     android:background="@android:color/transparent" android:adjustViewBounds="true"

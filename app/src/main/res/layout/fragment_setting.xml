@@ -1,23 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                              xmlns:app="http://schemas.android.com/apk/res-auto"
-                                             android:layout_width="match_parent"
+                                             xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
                                              android:layout_height="match_parent"
 >
 
+    <ImageView
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline24"
+            android:layout_height="0dp"
+            android:layout_width="match_parent" app:srcCompat="@drawable/theme_top" tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp" android:id="@+id/imageView10"/>
+    <ImageView
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="@+id/guideline49"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline36"
+            android:layout_height="0dp"
+            android:layout_width="match_parent" app:srcCompat="@drawable/voice_top" tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp" android:id="@+id/imageView11"/>
+    <ImageView
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="@+id/guideline47"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline48"
+            android:layout_height="0dp"
+            android:layout_width="match_parent" app:srcCompat="@drawable/credit" tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp" android:id="@+id/imageView6"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="@+id/guideline36"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline47"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            tools:layout_editor_absoluteX="30dp" app:layout_constraintVertical_bias="0.0">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/slow"
+                android:id="@+id/imageView7" android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/normal"
+                android:id="@+id/imageView8" android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/fast"
+                android:id="@+id/imageView9" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="@+id/guideline24"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline49"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            tools:layout_editor_absoluteX="30dp" app:layout_constraintVertical_bias="0.0">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/background_select1"
+                android:id="@+id/imageView2" android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@+id/guideline36"
+                app:layout_constraintTop_toTopOf="@+id/guideline24" app:srcCompat="@drawable/background_select2"
+                android:id="@+id/imageView3" android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/background_select3"
+                android:id="@+id/imageView4" android:layout_weight="1"/>
+    </LinearLayout>
     <android.support.constraint.Guideline
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/guideline24"
             app:layout_constraintGuide_percent="0.1"/>
-    <android.support.v4.widget.NestedScrollView
-            android:layout_width="0dp"
-            android:layout_height="0dp" android:fillViewport="true"
-            app:layout_constraintTop_toTopOf="@+id/guideline24" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guideline36"
+            app:layout_constraintGuide_percent="0.45"/>
+    <android.support.constraint.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline45" app:layout_constraintGuide_percent="0.33"/>
+    <android.support.constraint.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline46" app:layout_constraintGuide_percent="0.66"/>
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline47" app:layout_constraintGuide_percent="0.7"/>
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline49" app:layout_constraintGuide_percent="0.35"/>
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guideline48"
+            app:layout_constraintGuide_percent="0.8"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline48"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp" tools:layout_editor_absoluteX="0dp" app:layout_constraintVertical_bias="0.0">
+        <LinearLayout android:layout_width="match_parent" app:layout_constraintTop_toTopOf="@+id/guideline48"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      android:layout_height="0dp"
                       android:orientation="vertical">
+            <TextView
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:text="기획\n대령 정영환\n소령 홍기업\n대위 강창설\n\n제작\n중위 이정욱\n병장 임정빈\n상병 정제영\n\n"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView"/>
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

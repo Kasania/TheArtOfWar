@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentTransaction
 import android.text.Html
-import android.text.Spannable
 import android.text.Spanned
 import android.util.Log
 import android.view.KeyEvent
@@ -16,25 +15,47 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.kasania.theartofwar.*
+import kotlinx.android.synthetic.main.fragment_study_chapter_summary.view.*
 import kotlinx.android.synthetic.main.fragment_study_main.view.*
+import kotlinx.android.synthetic.main.fragment_study_menu.*
+import kotlinx.android.synthetic.main.fragment_study_menu.view.*
 
 
-class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
-//    override fun onBackPressed(): Boolean {
-//        for(b in 0..fragmentManager!!.backStackEntryCount){
-//            fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
-//        }
-//        return true
-//    }
+class StudyMainFragment : Fragment(){//, MainActivity.OnBackPressedListener{
 
+/*
+    override fun onBack() {
+        Log.e("Other", "onBack()")
+        // 리스너를 설정하기 위해 Activity 를 받아옵니다.
+        val activity = activity as MainActivity?
+        // 한번 뒤로가기 버튼을 눌렀다면 Listener 를 null 로 해제해줍니다.
+        //activity!!.setOnBackPressedListener()
+        activity?.setOnBackPressedListener(null)
+        // MainFragment 로 교체
+        val ide = fragmentManager!!.getBackStackEntryAt(0).name
+        fragmentManager!!.popBackStack(ide, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        Log.i("TAG", "Found fragment: $ide")
+
+    }
+
+    // Fragment 호출 시 반드시 호출되는 오버라이드 메소드입니다.
+    override//                     혹시 Context 로 안되시는분은 Activity 로 바꿔보시기 바랍니다.
+    fun onAttach(context: Context?) {
+        super.onAttach(context)
+        Log.e("Other", "onAttach()")
+        (context as MainActivity).setOnBackPressedListener(this)
+    }
+*/
     companion object {
+        lateinit var tts_id : TTS
         var currentChapter: Int = 1
         var currentPhrase: Int = 0
 
         private fun setContentsView(ft:FragmentTransaction){
+
             when(currentPhrase){
-                0 -> ft.replace(R.id.contents_panel_study_main,StudyChapterSummaryFragment())
-                else -> ft.replace(R.id.contents_panel_study_main,StudyPhraseMainFragment())
+                0 -> ft.replace(R.id.contents_panel_study_phrase,StudyChapterSummaryFragment())
+                else -> ft.replace(R.id.contents_panel_study_phrase,StudyPhraseInterpretFragment())
             }
             MainActivity.increaseAccessCount(currentChapter, currentPhrase)
         }
@@ -46,23 +67,25 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
             if(enableAnimation){
                 ft.setCustomAnimations(R.anim.slide_in_bottom,R.anim.slide_out_top,R.anim.slide_in_top,R.anim.slide_out_bottom)
             }
+
             ft.replace(R.id.contents_root,StudyMainFragment().newInstance())
                 .addToBackStack("StudyMain")
+            ft.replace(R.id.contents_mainmenu,StudyMenuFragment())
             ft.commit()
         }
 
         fun changeStudyContents(fm:FragmentManager?, chapter:Int = 1, phrase:Int = 0,action:Int = 1){
-            currentChapter = chapter
-            currentPhrase = phrase
-            val ft = fm!!.beginTransaction()
-            if(enableAnimation)
-            when (action){
-                1 -> ft.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right)
-                2 -> ft.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left)
-                3 -> ft.setCustomAnimations(R.anim.slide_in_bottom, R.anim.slide_out_top)
-            }
-            setContentsView(ft)
-            ft.commit()
+                currentChapter = chapter
+                currentPhrase = phrase
+                val ft = fm!!.beginTransaction()
+                if(enableAnimation)
+                    when (action){
+                        1 -> ft.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right)
+                        2 -> ft.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left)
+                        3 -> ft.setCustomAnimations(R.anim.slide_in_bottom, R.anim.slide_out_top)
+                    }
+                setContentsView(ft)
+                ft.commit()
         }
 
         fun convertColoredText(s:String):Spanned{
@@ -72,6 +95,7 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
                 Html.fromHtml(s)
             }
         }
+
 
     }
     private fun newInstance():StudyMainFragment{
@@ -86,10 +110,8 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
     {
 
         val view = inflater.inflate(R.layout.fragment_study_main, container, false)
-
         startTime = System.currentTimeMillis()
         setChapterTextView(view)
-
         changeStudyContents(fragmentManager, currentChapter, currentPhrase,0)
 
 
@@ -102,36 +124,14 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
             false
         })
 
-        view.tv_study_current_chapter.setOnClickListener {
-            MainActivity.toggleBookMark(currentChapter, currentPhrase)
-            if(MainActivity.isCheckedBookMark(currentChapter, currentPhrase)){
-                Toast.makeText(context,"즐겨찾기 설정",Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(context,"즐겨찾기 해제",Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        view.btn_study_back_to_chapter.setOnClickListener {
+                /*view.btn_study_back_to_chapter.setOnClickListener {
             for(b in 0..fragmentManager!!.backStackEntryCount){
                 fragmentManager!!.popBackStack("StudyMain", FragmentManager.POP_BACK_STACK_INCLUSIVE)
             }
-        }
-
-        view.btn_study_quick_select.setOnClickListener {
-            QuickChapterSelectDialog().newInstance().show(fragmentManager,"Quick Select")
-            setChapterTextView(view)
-        }
-
-        view.btn_study_phrase_prev.setOnClickListener {
-            updateStudyFragmentWithOffset(-1)
-            setChapterTextView(view)
-        }
+        }*/
+        // 뒤로가기버튼
 
 
-        view.btn_study_phrase_next.setOnClickListener {
-            updateStudyFragmentWithOffset(+1)
-            setChapterTextView(view)
-        }
 
         return view
     }
@@ -151,36 +151,7 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
         super.onStop()
     }
 
-    private fun updateStudyFragmentWithOffset(phraseOffset:Int){
 
-        var phrase = currentPhrase + phraseOffset
-        var chapter = currentChapter
-
-        if(phrase< 0){
-            //negative
-            chapter--
-            if (chapter < minChapterNum){
-                chapter = maxChapterNum
-            }
-            phrase = maxPhraseNum[chapter] + (phrase + 1)
-
-        }else if(phrase > maxPhraseNum[currentChapter]){
-            //positive
-            chapter++
-            if (chapter > maxChapterNum){
-                chapter = minChapterNum
-            }
-            phrase -= (maxPhraseNum[currentChapter] + 1)
-        }
-        //to negative 1 / positive 2
-        val animationDir = when(phraseOffset){
-            -1 -> 1
-            1 -> 2
-            else -> 1
-        }
-
-        changeStudyContents(fragmentManager,chapter,phrase,animationDir)
-    }
 
     private fun setChapterTextView(v:View){
         val displayPhrase = when (currentPhrase){
@@ -188,7 +159,6 @@ class StudyMainFragment : Fragment()/*, IOnBackPressed*/{
             else -> "$currentPhrase 절"
         }
         val currentChapterText = "${resources.getString(R.string.chapter_prefix_name)} $currentChapter ${resources.getString(R.string.chapter_postfix_name)} $displayPhrase"
-        v.tv_study_current_chapter?.text = currentChapterText
     }
 
 }

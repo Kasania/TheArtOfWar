@@ -17,6 +17,10 @@
     <string name="confirm_reset_statistics">통계 기록을 삭제하시겠습니까?</string>
     <string name="say_yes">예</string>
     <string name="say_no">아니오</string>
+    <string name="title_activity_menu_">Menu_Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 
 </resources>
